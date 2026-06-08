@@ -1,0 +1,2593 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gpx version="1.1" creator="outdooractive - http://www.outdooractive.com" xmlns="http://www.topografix.com/GPX/1/1" xmlns:oa="http://www.outdooractive.com/GPX/Extensions/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.outdooractive.com/GPX/Extensions/1 https://www.outdooractive.com/schema/gpx_extensions.xsd">
+  <metadata>
+    <name>Wäller Tour Bachgeflüster - Marienstatt (Eröffnung am 30. Mai 2026)</name>
+    <author>
+      <name>Lisa Effert - Hachenburger Westerwald - Tourist-Information Hachenburger Westerwald</name>
+    </author>
+    <link href="https://www.outdooractive.com/r/807064767"/>
+    <time>2026-05-14T06:15:32.005Z</time>
+    <extensions>
+      <oa:oaCategory>hikingTourTrail</oa:oaCategory>
+    </extensions>
+  </metadata>
+  <trk>
+    <name>Wäller Tour Bachgeflüster - Marienstatt (Eröffnung am 30. Mai 2026)</name>
+    <desc>Achtung: Aktuell ist die Tour noch nicht durchgehend ausgeschildert/markiert.  </desc>
+    <type>hikingTourTrail</type>
+    <trkseg>
+      <trkpt lat="50.685215" lon="7.798298">
+        <ele>238.4</ele>
+        <name>Kriegerkapelle, Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.685214" lon="7.798301">
+        <ele>238.4</ele>
+      </trkpt>
+      <trkpt lat="50.68519" lon="7.798476">
+        <ele>237.6</ele>
+      </trkpt>
+      <trkpt lat="50.685164" lon="7.798663">
+        <ele>236.8</ele>
+      </trkpt>
+      <trkpt lat="50.685135" lon="7.798856">
+        <ele>235.8</ele>
+      </trkpt>
+      <trkpt lat="50.685111" lon="7.799328">
+        <ele>234.5</ele>
+      </trkpt>
+      <trkpt lat="50.685087" lon="7.7998">
+        <ele>234.4</ele>
+      </trkpt>
+      <trkpt lat="50.685063" lon="7.800272">
+        <ele>234.3</ele>
+      </trkpt>
+      <trkpt lat="50.685036" lon="7.800661">
+        <ele>233.9</ele>
+      </trkpt>
+      <trkpt lat="50.685049" lon="7.800662">
+        <ele>233.9</ele>
+        <name>Abtei Marienstatt, Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.685348" lon="7.800666">
+        <ele>233.6</ele>
+      </trkpt>
+      <trkpt lat="50.685623" lon="7.800669">
+        <ele>235.0</ele>
+        <name>Kloster Marienstatt, Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.685631" lon="7.800669">
+        <ele>235.1</ele>
+      </trkpt>
+      <trkpt lat="50.685641" lon="7.801127">
+        <ele>235.1</ele>
+      </trkpt>
+      <trkpt lat="50.685651" lon="7.801585">
+        <ele>235.0</ele>
+      </trkpt>
+      <trkpt lat="50.685664" lon="7.802202">
+        <ele>235.0</ele>
+      </trkpt>
+      <trkpt lat="50.685668" lon="7.802363">
+        <ele>235.1</ele>
+      </trkpt>
+      <trkpt lat="50.68566" lon="7.802753">
+        <ele>235.3</ele>
+      </trkpt>
+      <trkpt lat="50.685631" lon="7.803423">
+        <ele>235.2</ele>
+      </trkpt>
+      <trkpt lat="50.685599" lon="7.80394">
+        <ele>234.5</ele>
+      </trkpt>
+      <trkpt lat="50.685567" lon="7.804456">
+        <ele>233.5</ele>
+      </trkpt>
+      <trkpt lat="50.685535" lon="7.804973">
+        <ele>232.4</ele>
+      </trkpt>
+      <trkpt lat="50.685491" lon="7.805431">
+        <ele>231.6</ele>
+      </trkpt>
+      <trkpt lat="50.685448" lon="7.805889">
+        <ele>231.2</ele>
+      </trkpt>
+      <trkpt lat="50.68535" lon="7.806431">
+        <ele>232.6</ele>
+      </trkpt>
+      <trkpt lat="50.685327" lon="7.806531">
+        <ele>233.7</ele>
+      </trkpt>
+      <trkpt lat="50.685298" lon="7.806658">
+        <ele>235.8</ele>
+        <name>Marienstatt, Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.685289" lon="7.806694">
+        <ele>236.4</ele>
+      </trkpt>
+      <trkpt lat="50.685307" lon="7.806738">
+        <ele>236.8</ele>
+      </trkpt>
+      <trkpt lat="50.685379" lon="7.806921">
+        <ele>238.6</ele>
+        <name>Marienstatt, Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.685527" lon="7.807142">
+        <ele>239.9</ele>
+      </trkpt>
+      <trkpt lat="50.685822" lon="7.807395">
+        <ele>239.9</ele>
+      </trkpt>
+      <trkpt lat="50.685925" lon="7.807553">
+        <ele>241.0</ele>
+      </trkpt>
+      <trkpt lat="50.685939" lon="7.807564">
+        <ele>241.0</ele>
+      </trkpt>
+      <trkpt lat="50.685939" lon="7.807563">
+        <ele>241.0</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.685925" lon="7.807553">
+        <ele>241.0</ele>
+      </trkpt>
+      <trkpt lat="50.686039" lon="7.807859">
+        <ele>244.4</ele>
+      </trkpt>
+      <trkpt lat="50.686227" lon="7.808288">
+        <ele>248.9</ele>
+      </trkpt>
+      <trkpt lat="50.686444" lon="7.808638">
+        <ele>252.2</ele>
+      </trkpt>
+      <trkpt lat="50.686447" lon="7.808644">
+        <ele>252.2</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.686661" lon="7.808989">
+        <ele>256.7</ele>
+      </trkpt>
+      <trkpt lat="50.686878" lon="7.809339">
+        <ele>262.2</ele>
+      </trkpt>
+      <trkpt lat="50.687128" lon="7.809619">
+        <ele>266.7</ele>
+      </trkpt>
+      <trkpt lat="50.687328" lon="7.809869">
+        <ele>271.2</ele>
+      </trkpt>
+      <trkpt lat="50.687528" lon="7.81012">
+        <ele>275.0</ele>
+      </trkpt>
+      <trkpt lat="50.687765" lon="7.810357">
+        <ele>278.0</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.68779" lon="7.810382">
+        <ele>278.3</ele>
+      </trkpt>
+      <trkpt lat="50.687813" lon="7.810695">
+        <ele>281.9</ele>
+      </trkpt>
+      <trkpt lat="50.687866" lon="7.810963">
+        <ele>284.9</ele>
+      </trkpt>
+      <trkpt lat="50.687982" lon="7.811219">
+        <ele>287.6</ele>
+      </trkpt>
+      <trkpt lat="50.68807" lon="7.811457">
+        <ele>289.9</ele>
+      </trkpt>
+      <trkpt lat="50.687888" lon="7.811506">
+        <ele>290.0</ele>
+      </trkpt>
+      <trkpt lat="50.687701" lon="7.811441">
+        <ele>289.3</ele>
+      </trkpt>
+      <trkpt lat="50.687512" lon="7.811289">
+        <ele>288.0</ele>
+      </trkpt>
+      <trkpt lat="50.687267" lon="7.810968">
+        <ele>284.6</ele>
+      </trkpt>
+      <trkpt lat="50.687159" lon="7.810799">
+        <ele>282.7</ele>
+      </trkpt>
+      <trkpt lat="50.687015" lon="7.810672">
+        <ele>281.3</ele>
+      </trkpt>
+      <trkpt lat="50.686763" lon="7.810477">
+        <ele>279.8</ele>
+      </trkpt>
+      <trkpt lat="50.686561" lon="7.810206">
+        <ele>277.5</ele>
+      </trkpt>
+      <trkpt lat="50.686457" lon="7.810069">
+        <ele>276.5</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.686441" lon="7.810048">
+        <ele>276.3</ele>
+      </trkpt>
+      <trkpt lat="50.686083" lon="7.81044">
+        <ele>283.8</ele>
+      </trkpt>
+      <trkpt lat="50.685724" lon="7.810832">
+        <ele>289.5</ele>
+      </trkpt>
+      <trkpt lat="50.685366" lon="7.811224">
+        <ele>293.8</ele>
+      </trkpt>
+      <trkpt lat="50.685008" lon="7.811617">
+        <ele>297.1</ele>
+      </trkpt>
+      <trkpt lat="50.68465" lon="7.812009">
+        <ele>299.1</ele>
+      </trkpt>
+      <trkpt lat="50.684556" lon="7.812122">
+        <ele>299.4</ele>
+      </trkpt>
+      <trkpt lat="50.684605" lon="7.812183">
+        <ele>299.4</ele>
+        <name>K 21, Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.684764" lon="7.812377">
+        <ele>299.4</ele>
+      </trkpt>
+      <trkpt lat="50.684736" lon="7.812481">
+        <ele>299.3</ele>
+      </trkpt>
+      <trkpt lat="50.684712" lon="7.812574">
+        <ele>299.3</ele>
+      </trkpt>
+      <trkpt lat="50.684692" lon="7.812661">
+        <ele>299.4</ele>
+      </trkpt>
+      <trkpt lat="50.684538" lon="7.812798">
+        <ele>299.6</ele>
+      </trkpt>
+      <trkpt lat="50.684344" lon="7.812946">
+        <ele>300.1</ele>
+      </trkpt>
+      <trkpt lat="50.684159" lon="7.813072">
+        <ele>300.3</ele>
+      </trkpt>
+      <trkpt lat="50.684148" lon="7.813078">
+        <ele>300.2</ele>
+        <name>K 21, Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.683886" lon="7.813226">
+        <ele>300.1</ele>
+      </trkpt>
+      <trkpt lat="50.683792" lon="7.813264">
+        <ele>300.0</ele>
+      </trkpt>
+      <trkpt lat="50.683647" lon="7.813304">
+        <ele>300.0</ele>
+      </trkpt>
+      <trkpt lat="50.683397" lon="7.813473">
+        <ele>300.8</ele>
+      </trkpt>
+      <trkpt lat="50.683263" lon="7.813564">
+        <ele>301.4</ele>
+      </trkpt>
+      <trkpt lat="50.683018" lon="7.81367">
+        <ele>302.0</ele>
+      </trkpt>
+      <trkpt lat="50.682773" lon="7.813775">
+        <ele>302.1</ele>
+      </trkpt>
+      <trkpt lat="50.68271" lon="7.814177">
+        <ele>304.5</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.682688" lon="7.814317">
+        <ele>305.4</ele>
+      </trkpt>
+      <trkpt lat="50.682708" lon="7.814616">
+        <ele>307.4</ele>
+      </trkpt>
+      <trkpt lat="50.682737" lon="7.815031">
+        <ele>310.2</ele>
+      </trkpt>
+      <trkpt lat="50.683008" lon="7.814963">
+        <ele>310.7</ele>
+      </trkpt>
+      <trkpt lat="50.683293" lon="7.81493">
+        <ele>310.9</ele>
+      </trkpt>
+      <trkpt lat="50.683557" lon="7.814953">
+        <ele>312.8</ele>
+      </trkpt>
+      <trkpt lat="50.683732" lon="7.815005">
+        <ele>314.9</ele>
+      </trkpt>
+      <trkpt lat="50.683935" lon="7.815127">
+        <ele>316.0</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.683936" lon="7.815128">
+        <ele>316.1</ele>
+      </trkpt>
+      <trkpt lat="50.684129" lon="7.815181">
+        <ele>315.9</ele>
+      </trkpt>
+      <trkpt lat="50.684455" lon="7.815381">
+        <ele>316.6</ele>
+      </trkpt>
+      <trkpt lat="50.684676" lon="7.815858">
+        <ele>319.4</ele>
+      </trkpt>
+      <trkpt lat="50.684898" lon="7.816334">
+        <ele>322.3</ele>
+      </trkpt>
+      <trkpt lat="50.685154" lon="7.816858">
+        <ele>324.8</ele>
+      </trkpt>
+      <trkpt lat="50.68519" lon="7.81693">
+        <ele>325.0</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.685411" lon="7.817382">
+        <ele>326.5</ele>
+      </trkpt>
+      <trkpt lat="50.685646" lon="7.817871">
+        <ele>327.1</ele>
+      </trkpt>
+      <trkpt lat="50.685726" lon="7.818159">
+        <ele>327.3</ele>
+      </trkpt>
+      <trkpt lat="50.685829" lon="7.81852">
+        <ele>327.1</ele>
+      </trkpt>
+      <trkpt lat="50.685985" lon="7.818965">
+        <ele>325.6</ele>
+      </trkpt>
+      <trkpt lat="50.686141" lon="7.819409">
+        <ele>323.0</ele>
+      </trkpt>
+      <trkpt lat="50.686297" lon="7.819853">
+        <ele>319.9</ele>
+      </trkpt>
+      <trkpt lat="50.686487" lon="7.820396">
+        <ele>315.7</ele>
+      </trkpt>
+      <trkpt lat="50.686654" lon="7.82087">
+        <ele>312.1</ele>
+        <name>50.686654,7.820870</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.686987" lon="7.820394">
+        <ele>311.9</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.687008" lon="7.820338">
+        <ele>312.0</ele>
+      </trkpt>
+      <trkpt lat="50.687011" lon="7.820149">
+        <ele>312.6</ele>
+      </trkpt>
+      <trkpt lat="50.686993" lon="7.819765">
+        <ele>314.0</ele>
+      </trkpt>
+      <trkpt lat="50.686998" lon="7.81959">
+        <ele>314.6</ele>
+      </trkpt>
+      <trkpt lat="50.687037" lon="7.819456">
+        <ele>314.7</ele>
+      </trkpt>
+      <trkpt lat="50.687098" lon="7.819385">
+        <ele>314.2</ele>
+      </trkpt>
+      <trkpt lat="50.687228" lon="7.819267">
+        <ele>312.4</ele>
+      </trkpt>
+      <trkpt lat="50.687386" lon="7.819127">
+        <ele>310.3</ele>
+      </trkpt>
+      <trkpt lat="50.687241" lon="7.818643">
+        <ele>311.3</ele>
+      </trkpt>
+      <trkpt lat="50.687134" lon="7.818328">
+        <ele>312.6</ele>
+      </trkpt>
+      <trkpt lat="50.687123" lon="7.818281">
+        <ele>312.9</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.687002" lon="7.817771">
+        <ele>315.8</ele>
+      </trkpt>
+      <trkpt lat="50.686986" lon="7.817688">
+        <ele>316.2</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.686915" lon="7.816193">
+        <ele>317.03594</ele>
+      </trkpt>
+      <trkpt lat="50.687348" lon="7.815179">
+        <ele>312.7</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.687376" lon="7.815148">
+        <ele>312.4</ele>
+      </trkpt>
+      <trkpt lat="50.68749" lon="7.815199">
+        <ele>312.1</ele>
+      </trkpt>
+      <trkpt lat="50.687712" lon="7.815503">
+        <ele>310.8</ele>
+      </trkpt>
+      <trkpt lat="50.687755" lon="7.815474">
+        <ele>310.3</ele>
+      </trkpt>
+      <trkpt lat="50.687805" lon="7.815414">
+        <ele>309.8</ele>
+      </trkpt>
+      <trkpt lat="50.687998" lon="7.815011">
+        <ele>307.9</ele>
+      </trkpt>
+      <trkpt lat="50.688192" lon="7.814608">
+        <ele>306.1</ele>
+      </trkpt>
+      <trkpt lat="50.688297" lon="7.814423">
+        <ele>304.9</ele>
+      </trkpt>
+      <trkpt lat="50.688362" lon="7.814368">
+        <ele>304.5</ele>
+      </trkpt>
+      <trkpt lat="50.688476" lon="7.814314">
+        <ele>304.0</ele>
+      </trkpt>
+      <trkpt lat="50.688859" lon="7.814131">
+        <ele>301.9</ele>
+      </trkpt>
+      <trkpt lat="50.689241" lon="7.813949">
+        <ele>300.7</ele>
+      </trkpt>
+      <trkpt lat="50.689546" lon="7.813788">
+        <ele>300.8</ele>
+      </trkpt>
+      <trkpt lat="50.68985" lon="7.813627">
+        <ele>301.4</ele>
+      </trkpt>
+      <trkpt lat="50.690155" lon="7.813467">
+        <ele>303.5</ele>
+      </trkpt>
+      <trkpt lat="50.690114" lon="7.813398">
+        <ele>303.5</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.690155" lon="7.813467">
+        <ele>303.5</ele>
+      </trkpt>
+      <trkpt lat="50.690431" lon="7.813129">
+        <ele>304.9</ele>
+      </trkpt>
+      <trkpt lat="50.690708" lon="7.812792">
+        <ele>303.7</ele>
+      </trkpt>
+      <trkpt lat="50.690984" lon="7.812455">
+        <ele>301.9</ele>
+      </trkpt>
+      <trkpt lat="50.691374" lon="7.812741">
+        <ele>296.1</ele>
+      </trkpt>
+      <trkpt lat="50.69147" lon="7.812813">
+        <ele>295.0</ele>
+      </trkpt>
+      <trkpt lat="50.691715" lon="7.81299">
+        <ele>292.0</ele>
+      </trkpt>
+      <trkpt lat="50.69196" lon="7.813168">
+        <ele>289.0</ele>
+      </trkpt>
+      <trkpt lat="50.692007" lon="7.813202">
+        <ele>288.3</ele>
+      </trkpt>
+      <trkpt lat="50.692049" lon="7.813233">
+        <ele>287.8</ele>
+      </trkpt>
+      <trkpt lat="50.692244" lon="7.813358">
+        <ele>284.0</ele>
+      </trkpt>
+      <trkpt lat="50.69233" lon="7.813376">
+        <ele>282.4</ele>
+      </trkpt>
+      <trkpt lat="50.692423" lon="7.813364">
+        <ele>281.0</ele>
+      </trkpt>
+      <trkpt lat="50.692536" lon="7.813365">
+        <ele>279.2</ele>
+      </trkpt>
+      <trkpt lat="50.692607" lon="7.813391">
+        <ele>277.9</ele>
+      </trkpt>
+      <trkpt lat="50.69261" lon="7.813472">
+        <ele>277.1</ele>
+      </trkpt>
+      <trkpt lat="50.692596" lon="7.813548">
+        <ele>276.5</ele>
+        <name>Marienstätter Weg, Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.692577" lon="7.813649">
+        <ele>275.7</ele>
+      </trkpt>
+      <trkpt lat="50.692669" lon="7.813741">
+        <ele>274.1</ele>
+      </trkpt>
+      <trkpt lat="50.692734" lon="7.813714">
+        <ele>273.6</ele>
+      </trkpt>
+      <trkpt lat="50.692899" lon="7.813506">
+        <ele>272.6</ele>
+      </trkpt>
+      <trkpt lat="50.693078" lon="7.813445">
+        <ele>270.6</ele>
+      </trkpt>
+      <trkpt lat="50.693296" lon="7.81335">
+        <ele>268.3</ele>
+      </trkpt>
+      <trkpt lat="50.693514" lon="7.813254">
+        <ele>266.3</ele>
+      </trkpt>
+      <trkpt lat="50.693751" lon="7.813172">
+        <ele>264.4</ele>
+      </trkpt>
+      <trkpt lat="50.69379" lon="7.813104">
+        <ele>264.5</ele>
+      </trkpt>
+      <trkpt lat="50.693942" lon="7.812761">
+        <ele>265.5</ele>
+      </trkpt>
+      <trkpt lat="50.694074" lon="7.812445">
+        <ele>265.9</ele>
+      </trkpt>
+      <trkpt lat="50.694147" lon="7.812294">
+        <ele>265.5</ele>
+      </trkpt>
+      <trkpt lat="50.694181" lon="7.812167">
+        <ele>265.3</ele>
+      </trkpt>
+      <trkpt lat="50.694214" lon="7.811992">
+        <ele>265.1</ele>
+      </trkpt>
+      <trkpt lat="50.694268" lon="7.811503">
+        <ele>264.2</ele>
+      </trkpt>
+      <trkpt lat="50.694302" lon="7.811106">
+        <ele>262.3</ele>
+      </trkpt>
+      <trkpt lat="50.694336" lon="7.810709">
+        <ele>260.3</ele>
+      </trkpt>
+      <trkpt lat="50.694434" lon="7.810732">
+        <ele>259.3</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.69478" lon="7.81081">
+        <ele>255.8</ele>
+      </trkpt>
+      <trkpt lat="50.694897" lon="7.810799">
+        <ele>255.1</ele>
+      </trkpt>
+      <trkpt lat="50.694968" lon="7.810743">
+        <ele>254.6</ele>
+      </trkpt>
+      <trkpt lat="50.695013" lon="7.810707">
+        <ele>254.5</ele>
+      </trkpt>
+      <trkpt lat="50.695082" lon="7.810662">
+        <ele>254.3</ele>
+      </trkpt>
+      <trkpt lat="50.695317" lon="7.810962">
+        <ele>256.8</ele>
+      </trkpt>
+      <trkpt lat="50.695436" lon="7.810964">
+        <ele>259.0</ele>
+      </trkpt>
+      <trkpt lat="50.69549" lon="7.810975">
+        <ele>260.0</ele>
+      </trkpt>
+      <trkpt lat="50.695542" lon="7.810982">
+        <ele>261.1</ele>
+      </trkpt>
+      <trkpt lat="50.695564" lon="7.810996">
+        <ele>261.7</ele>
+      </trkpt>
+      <trkpt lat="50.69556" lon="7.81103">
+        <ele>261.7</ele>
+      </trkpt>
+      <trkpt lat="50.695557" lon="7.811059">
+        <ele>261.7</ele>
+      </trkpt>
+      <trkpt lat="50.695553" lon="7.811239">
+        <ele>262.2</ele>
+      </trkpt>
+      <trkpt lat="50.695552" lon="7.811584">
+        <ele>262.7</ele>
+      </trkpt>
+      <trkpt lat="50.695596" lon="7.811874">
+        <ele>262.4</ele>
+      </trkpt>
+      <trkpt lat="50.695644" lon="7.812018">
+        <ele>262.1</ele>
+      </trkpt>
+      <trkpt lat="50.695712" lon="7.812186">
+        <ele>261.7</ele>
+      </trkpt>
+      <trkpt lat="50.695772" lon="7.812365">
+        <ele>260.6</ele>
+      </trkpt>
+      <trkpt lat="50.695819" lon="7.812508">
+        <ele>261.1</ele>
+      </trkpt>
+      <trkpt lat="50.695844" lon="7.812666">
+        <ele>260.4</ele>
+      </trkpt>
+      <trkpt lat="50.695842" lon="7.812867">
+        <ele>260.0</ele>
+      </trkpt>
+      <trkpt lat="50.695827" lon="7.813095">
+        <ele>259.6</ele>
+      </trkpt>
+      <trkpt lat="50.695823" lon="7.813188">
+        <ele>259.5</ele>
+      </trkpt>
+      <trkpt lat="50.695803" lon="7.813417">
+        <ele>260.5</ele>
+      </trkpt>
+      <trkpt lat="50.695795" lon="7.813556">
+        <ele>261.3</ele>
+      </trkpt>
+      <trkpt lat="50.6958" lon="7.813771">
+        <ele>262.6</ele>
+      </trkpt>
+      <trkpt lat="50.695817" lon="7.813998">
+        <ele>263.5</ele>
+      </trkpt>
+      <trkpt lat="50.695853" lon="7.814181">
+        <ele>264.1</ele>
+      </trkpt>
+      <trkpt lat="50.695888" lon="7.81431">
+        <ele>264.6</ele>
+      </trkpt>
+      <trkpt lat="50.695966" lon="7.814663">
+        <ele>265.1</ele>
+      </trkpt>
+      <trkpt lat="50.69607" lon="7.815035">
+        <ele>265.5</ele>
+      </trkpt>
+      <trkpt lat="50.696171" lon="7.815263">
+        <ele>266.2</ele>
+      </trkpt>
+      <trkpt lat="50.696274" lon="7.815553">
+        <ele>266.6</ele>
+      </trkpt>
+      <trkpt lat="50.69633" lon="7.81568">
+        <ele>267.0</ele>
+      </trkpt>
+      <trkpt lat="50.696446" lon="7.816084">
+        <ele>267.5</ele>
+      </trkpt>
+      <trkpt lat="50.696634" lon="7.816666">
+        <ele>268.3</ele>
+      </trkpt>
+      <trkpt lat="50.696892" lon="7.817216">
+        <ele>269.8</ele>
+      </trkpt>
+      <trkpt lat="50.697074" lon="7.81756">
+        <ele>270.7</ele>
+      </trkpt>
+      <trkpt lat="50.697344" lon="7.817875">
+        <ele>273.5</ele>
+      </trkpt>
+      <trkpt lat="50.697445" lon="7.818088">
+        <ele>274.0</ele>
+      </trkpt>
+      <trkpt lat="50.697565" lon="7.818423">
+        <ele>274.0</ele>
+      </trkpt>
+      <trkpt lat="50.697613" lon="7.818638">
+        <ele>273.3</ele>
+      </trkpt>
+      <trkpt lat="50.697727" lon="7.819011">
+        <ele>272.8</ele>
+      </trkpt>
+      <trkpt lat="50.697841" lon="7.819383">
+        <ele>273.0</ele>
+      </trkpt>
+      <trkpt lat="50.697891" lon="7.819727">
+        <ele>272.8</ele>
+      </trkpt>
+      <trkpt lat="50.697923" lon="7.820097">
+        <ele>272.4</ele>
+      </trkpt>
+      <trkpt lat="50.697932" lon="7.820377">
+        <ele>272.2</ele>
+      </trkpt>
+      <trkpt lat="50.69793" lon="7.820762">
+        <ele>272.7</ele>
+      </trkpt>
+      <trkpt lat="50.69792" lon="7.821002">
+        <ele>273.0</ele>
+      </trkpt>
+      <trkpt lat="50.697883" lon="7.821351">
+        <ele>272.9</ele>
+      </trkpt>
+      <trkpt lat="50.697853" lon="7.821883">
+        <ele>272.9</ele>
+      </trkpt>
+      <trkpt lat="50.697841" lon="7.822254">
+        <ele>272.6</ele>
+      </trkpt>
+      <trkpt lat="50.697832" lon="7.822394">
+        <ele>272.3</ele>
+      </trkpt>
+      <trkpt lat="50.697878" lon="7.822673">
+        <ele>273.7</ele>
+      </trkpt>
+      <trkpt lat="50.697906" lon="7.823067">
+        <ele>274.8</ele>
+      </trkpt>
+      <trkpt lat="50.697933" lon="7.823382">
+        <ele>275.5</ele>
+      </trkpt>
+      <trkpt lat="50.697969" lon="7.823631">
+        <ele>275.1</ele>
+      </trkpt>
+      <trkpt lat="50.697997" lon="7.823776">
+        <ele>274.9</ele>
+      </trkpt>
+      <trkpt lat="50.69805" lon="7.823992">
+        <ele>275.1</ele>
+      </trkpt>
+      <trkpt lat="50.698118" lon="7.824188">
+        <ele>275.0</ele>
+      </trkpt>
+      <trkpt lat="50.698188" lon="7.824342">
+        <ele>275.0</ele>
+      </trkpt>
+      <trkpt lat="50.698316" lon="7.82456">
+        <ele>275.8</ele>
+      </trkpt>
+      <trkpt lat="50.69856" lon="7.824989">
+        <ele>277.0</ele>
+      </trkpt>
+      <trkpt lat="50.698866" lon="7.825438">
+        <ele>280.6</ele>
+      </trkpt>
+      <trkpt lat="50.69897" lon="7.825692">
+        <ele>281.1</ele>
+      </trkpt>
+      <trkpt lat="50.698998" lon="7.825799">
+        <ele>280.9</ele>
+      </trkpt>
+      <trkpt lat="50.699124" lon="7.826266">
+        <ele>279.7</ele>
+      </trkpt>
+      <trkpt lat="50.69925" lon="7.826734">
+        <ele>277.8</ele>
+      </trkpt>
+      <trkpt lat="50.69928" lon="7.826846">
+        <ele>277.3</ele>
+        <name>50.699280,7.826846</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.69919" lon="7.827297">
+        <ele>272.90952</ele>
+      </trkpt>
+      <trkpt lat="50.69904" lon="7.827405">
+        <ele>271.52461</ele>
+      </trkpt>
+      <trkpt lat="50.699013" lon="7.827609">
+        <ele>272.06502</ele>
+      </trkpt>
+      <trkpt lat="50.698571" lon="7.827534">
+        <ele>273.71101</ele>
+        <name>Atzelgift, Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.698355" lon="7.828018">
+        <ele>278.42959</ele>
+      </trkpt>
+      <trkpt lat="50.697451" lon="7.831624">
+        <ele>281.21663</ele>
+      </trkpt>
+      <trkpt lat="50.696954" lon="7.831471">
+        <ele>283.14597</ele>
+      </trkpt>
+      <trkpt lat="50.696763" lon="7.831299">
+        <ele>284.67473</ele>
+      </trkpt>
+      <trkpt lat="50.696572" lon="7.831809">
+        <ele>285.4</ele>
+        <name>L281, Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.696549" lon="7.831818">
+        <ele>285.6</ele>
+      </trkpt>
+      <trkpt lat="50.696549" lon="7.831829">
+        <ele>285.6</ele>
+      </trkpt>
+      <trkpt lat="50.696549" lon="7.831879">
+        <ele>285.8</ele>
+      </trkpt>
+      <trkpt lat="50.696539" lon="7.832016">
+        <ele>286.4</ele>
+      </trkpt>
+      <trkpt lat="50.696521" lon="7.832126">
+        <ele>286.9</ele>
+      </trkpt>
+      <trkpt lat="50.696443" lon="7.832679">
+        <ele>287.5</ele>
+      </trkpt>
+      <trkpt lat="50.69641" lon="7.832956">
+        <ele>288.3</ele>
+      </trkpt>
+      <trkpt lat="50.696352" lon="7.833524">
+        <ele>289.6</ele>
+      </trkpt>
+      <trkpt lat="50.696292" lon="7.833764">
+        <ele>290.1</ele>
+      </trkpt>
+      <trkpt lat="50.696227" lon="7.83394">
+        <ele>290.5</ele>
+      </trkpt>
+      <trkpt lat="50.696159" lon="7.834019">
+        <ele>291.2</ele>
+      </trkpt>
+      <trkpt lat="50.696031" lon="7.83416">
+        <ele>292.5</ele>
+      </trkpt>
+      <trkpt lat="50.695944" lon="7.834273">
+        <ele>293.4</ele>
+      </trkpt>
+      <trkpt lat="50.695916" lon="7.834336">
+        <ele>293.7</ele>
+        <name>50.695916,7.834336</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.695615" lon="7.835076">
+        <ele>296.58543</ele>
+      </trkpt>
+      <trkpt lat="50.695649" lon="7.835537">
+        <ele>293.33896</ele>
+      </trkpt>
+      <trkpt lat="50.695527" lon="7.836059">
+        <ele>292.62433</ele>
+      </trkpt>
+      <trkpt lat="50.695319" lon="7.836424">
+        <ele>293.82001</ele>
+      </trkpt>
+      <trkpt lat="50.695479" lon="7.836664">
+        <ele>290.03025</ele>
+      </trkpt>
+      <trkpt lat="50.695449" lon="7.837545">
+        <ele>288.91819</ele>
+      </trkpt>
+      <trkpt lat="50.696132" lon="7.837951">
+        <ele>291.58784</ele>
+      </trkpt>
+      <trkpt lat="50.696281" lon="7.837533">
+        <ele>291.43929</ele>
+      </trkpt>
+      <trkpt lat="50.696695" lon="7.836213">
+        <ele>289.0538</ele>
+      </trkpt>
+      <trkpt lat="50.697381" lon="7.834239">
+        <ele>286.45564</ele>
+      </trkpt>
+      <trkpt lat="50.698156" lon="7.833404">
+        <ele>283.4806</ele>
+      </trkpt>
+      <trkpt lat="50.698492" lon="7.835044">
+        <ele>290.1</ele>
+        <name>Nisterweg, Luckenbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.698497" lon="7.835072">
+        <ele>290.2</ele>
+      </trkpt>
+      <trkpt lat="50.698537" lon="7.835015">
+        <ele>290.1</ele>
+      </trkpt>
+      <trkpt lat="50.698774" lon="7.834655">
+        <ele>289.6</ele>
+      </trkpt>
+      <trkpt lat="50.69901" lon="7.834296">
+        <ele>290.7</ele>
+      </trkpt>
+      <trkpt lat="50.699224" lon="7.833954">
+        <ele>290.3</ele>
+      </trkpt>
+      <trkpt lat="50.69933" lon="7.833792">
+        <ele>290.0</ele>
+      </trkpt>
+      <trkpt lat="50.69963" lon="7.833391">
+        <ele>288.8</ele>
+      </trkpt>
+      <trkpt lat="50.699677" lon="7.833316">
+        <ele>288.5</ele>
+        <name>Nisterweg, Luckenbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699739" lon="7.833157">
+        <ele>287.92192</ele>
+      </trkpt>
+      <trkpt lat="50.700847" lon="7.832535">
+        <ele>290.33304</ele>
+      </trkpt>
+      <trkpt lat="50.700868" lon="7.831816">
+        <ele>295.77328</ele>
+      </trkpt>
+      <trkpt lat="50.701092" lon="7.831762">
+        <ele>296.89101</ele>
+      </trkpt>
+      <trkpt lat="50.701194" lon="7.831612">
+        <ele>299.88422</ele>
+      </trkpt>
+      <trkpt lat="50.702118" lon="7.831236">
+        <ele>306.06027</ele>
+      </trkpt>
+      <trkpt lat="50.702601" lon="7.831118">
+        <ele>310.59064</ele>
+      </trkpt>
+      <trkpt lat="50.70294" lon="7.831322">
+        <ele>309.07983</ele>
+      </trkpt>
+      <trkpt lat="50.703199" lon="7.831573">
+        <ele>309.6</ele>
+        <name>Luckenbach, Luckenbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.703229" lon="7.831616">
+        <ele>309.3</ele>
+      </trkpt>
+      <trkpt lat="50.703387" lon="7.831833">
+        <ele>308.5</ele>
+      </trkpt>
+      <trkpt lat="50.703417" lon="7.831874">
+        <ele>308.4</ele>
+      </trkpt>
+      <trkpt lat="50.703674" lon="7.832227">
+        <ele>308.1</ele>
+      </trkpt>
+      <trkpt lat="50.703983" lon="7.832397">
+        <ele>312.4</ele>
+      </trkpt>
+      <trkpt lat="50.704105" lon="7.832469">
+        <ele>313.6</ele>
+      </trkpt>
+      <trkpt lat="50.704128" lon="7.832483">
+        <ele>313.8</ele>
+      </trkpt>
+      <trkpt lat="50.704189" lon="7.83255">
+        <ele>313.7</ele>
+      </trkpt>
+      <trkpt lat="50.704202" lon="7.832579">
+        <ele>313.5</ele>
+        <name>Luckenbach, Luckenbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>19</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.704424" lon="7.832571">
+        <ele>317.30153</ele>
+      </trkpt>
+      <trkpt lat="50.704417" lon="7.832507">
+        <ele>318.4837</ele>
+      </trkpt>
+      <trkpt lat="50.704539" lon="7.832794">
+        <ele>314.09412</ele>
+      </trkpt>
+      <trkpt lat="50.704651" lon="7.83272">
+        <ele>315.5</ele>
+        <name>Luckenbach, Luckenbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>19</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.704625" lon="7.832714">
+        <ele>315.7</ele>
+      </trkpt>
+      <trkpt lat="50.704586" lon="7.832666">
+        <ele>316.5</ele>
+      </trkpt>
+      <trkpt lat="50.704563" lon="7.832611">
+        <ele>317.5</ele>
+      </trkpt>
+      <trkpt lat="50.704551" lon="7.832502">
+        <ele>319.5</ele>
+      </trkpt>
+      <trkpt lat="50.704557" lon="7.83249">
+        <ele>319.7</ele>
+      </trkpt>
+      <trkpt lat="50.704551" lon="7.832502">
+        <ele>319.5</ele>
+        <name>Luckenbach, Luckenbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.7044" lon="7.83233">
+        <ele>321.8</ele>
+      </trkpt>
+      <trkpt lat="50.704174" lon="7.832122">
+        <ele>322.3</ele>
+      </trkpt>
+      <trkpt lat="50.703918" lon="7.831932">
+        <ele>320.4</ele>
+      </trkpt>
+      <trkpt lat="50.703663" lon="7.83161">
+        <ele>320.9</ele>
+      </trkpt>
+      <trkpt lat="50.703473" lon="7.831221">
+        <ele>325.5</ele>
+      </trkpt>
+      <trkpt lat="50.703358" lon="7.830952">
+        <ele>330.2</ele>
+      </trkpt>
+      <trkpt lat="50.703269" lon="7.830798">
+        <ele>333.1</ele>
+      </trkpt>
+      <trkpt lat="50.703112" lon="7.83063">
+        <ele>336.1</ele>
+      </trkpt>
+      <trkpt lat="50.702946" lon="7.830507">
+        <ele>337.9</ele>
+      </trkpt>
+      <trkpt lat="50.702718" lon="7.830364">
+        <ele>337.6</ele>
+      </trkpt>
+      <trkpt lat="50.70249" lon="7.83022">
+        <ele>337.4</ele>
+      </trkpt>
+      <trkpt lat="50.702229" lon="7.830122">
+        <ele>336.6</ele>
+      </trkpt>
+      <trkpt lat="50.702219" lon="7.830114">
+        <ele>336.7</ele>
+        <name>Luckenbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.702229" lon="7.830122">
+        <ele>336.6</ele>
+      </trkpt>
+      <trkpt lat="50.701875" lon="7.830378">
+        <ele>329.9</ele>
+      </trkpt>
+      <trkpt lat="50.701554" lon="7.830607">
+        <ele>324.1</ele>
+      </trkpt>
+      <trkpt lat="50.701233" lon="7.830836">
+        <ele>318.0</ele>
+      </trkpt>
+      <trkpt lat="50.700911" lon="7.831065">
+        <ele>311.5</ele>
+      </trkpt>
+      <trkpt lat="50.700746" lon="7.831176">
+        <ele>307.0</ele>
+        <name>50.700746,7.831176</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.700719" lon="7.831471">
+        <ele>301.88231</ele>
+      </trkpt>
+      <trkpt lat="50.700413" lon="7.831492">
+        <ele>296.55658</ele>
+      </trkpt>
+      <trkpt lat="50.7001" lon="7.831589">
+        <ele>291.88601</ele>
+      </trkpt>
+      <trkpt lat="50.699969" lon="7.832324">
+        <ele>288.39457</ele>
+      </trkpt>
+      <trkpt lat="50.699847" lon="7.832308">
+        <ele>287.83846</ele>
+      </trkpt>
+      <trkpt lat="50.699679" lon="7.831949">
+        <ele>287.12709</ele>
+      </trkpt>
+      <trkpt lat="50.699548" lon="7.831815">
+        <ele>286.34304</ele>
+      </trkpt>
+      <trkpt lat="50.699441" lon="7.831785">
+        <ele>285.62681</ele>
+      </trkpt>
+      <trkpt lat="50.699366" lon="7.831785">
+        <ele>285.14201</ele>
+      </trkpt>
+      <trkpt lat="50.699315" lon="7.831648">
+        <ele>284.8044</ele>
+      </trkpt>
+      <trkpt lat="50.699099" lon="7.831573">
+        <ele>283.35427</ele>
+      </trkpt>
+      <trkpt lat="50.699082" lon="7.831501">
+        <ele>283.18376</ele>
+      </trkpt>
+      <trkpt lat="50.699145" lon="7.831239">
+        <ele>283.5</ele>
+        <name>Evangelische Gustav-Adolf-Kapelle Atzelgift/Luckenbach, Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>19</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699163" lon="7.831174">
+        <ele>283.6</ele>
+      </trkpt>
+      <trkpt lat="50.699095" lon="7.831037">
+        <ele>283.0</ele>
+      </trkpt>
+      <trkpt lat="50.699097" lon="7.830563">
+        <ele>283.3</ele>
+      </trkpt>
+      <trkpt lat="50.699137" lon="7.830078">
+        <ele>283.4</ele>
+        <name>Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>19</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.69914" lon="7.830046">
+        <ele>283.4</ele>
+      </trkpt>
+      <trkpt lat="50.699175" lon="7.82989">
+        <ele>283.3</ele>
+      </trkpt>
+      <trkpt lat="50.699451" lon="7.829371">
+        <ele>284.1</ele>
+      </trkpt>
+      <trkpt lat="50.699508" lon="7.829249">
+        <ele>284.1</ele>
+      </trkpt>
+      <trkpt lat="50.699533" lon="7.829149">
+        <ele>283.8</ele>
+      </trkpt>
+      <trkpt lat="50.699534" lon="7.829121">
+        <ele>283.6</ele>
+        <name>Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699551" lon="7.828769">
+        <ele>281.4</ele>
+      </trkpt>
+      <trkpt lat="50.699567" lon="7.828078">
+        <ele>279.8</ele>
+      </trkpt>
+      <trkpt lat="50.699556" lon="7.82788">
+        <ele>279.2</ele>
+        <name>Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>19</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699544" lon="7.827682">
+        <ele>278.6</ele>
+      </trkpt>
+      <trkpt lat="50.699531" lon="7.827619">
+        <ele>278.2</ele>
+      </trkpt>
+      <trkpt lat="50.699443" lon="7.82733">
+        <ele>276.2</ele>
+        <name>Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>19</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699565" lon="7.827062">
+        <ele>280.40398</ele>
+      </trkpt>
+      <trkpt lat="50.699497" lon="7.826997">
+        <ele>279.70051</ele>
+      </trkpt>
+      <trkpt lat="50.699572" lon="7.826933">
+        <ele>281.83995</ele>
+      </trkpt>
+      <trkpt lat="50.699529" lon="7.826684">
+        <ele>283.564</ele>
+      </trkpt>
+      <trkpt lat="50.699575" lon="7.826633">
+        <ele>285.12814</ele>
+      </trkpt>
+      <trkpt lat="50.699521" lon="7.826402">
+        <ele>287.25214</ele>
+      </trkpt>
+      <trkpt lat="50.699614" lon="7.826206">
+        <ele>293.13167</ele>
+      </trkpt>
+      <trkpt lat="50.699577" lon="7.826077">
+        <ele>294.54437</ele>
+      </trkpt>
+      <trkpt lat="50.699614" lon="7.825898">
+        <ele>299.48868</ele>
+      </trkpt>
+      <trkpt lat="50.699556" lon="7.825442">
+        <ele>307.01887</ele>
+      </trkpt>
+      <trkpt lat="50.699629" lon="7.825334">
+        <ele>312.0</ele>
+        <name>Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>19</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699613" lon="7.825316">
+        <ele>311.7</ele>
+      </trkpt>
+      <trkpt lat="50.69958" lon="7.82525">
+        <ele>311.5</ele>
+      </trkpt>
+      <trkpt lat="50.69955" lon="7.825165">
+        <ele>311.8</ele>
+      </trkpt>
+      <trkpt lat="50.699425" lon="7.824765">
+        <ele>312.8</ele>
+      </trkpt>
+      <trkpt lat="50.699299" lon="7.824366">
+        <ele>313.9</ele>
+      </trkpt>
+      <trkpt lat="50.699186" lon="7.823976">
+        <ele>316.0</ele>
+      </trkpt>
+      <trkpt lat="50.699186" lon="7.823964">
+        <ele>316.1</ele>
+        <name>Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699185" lon="7.823319">
+        <ele>326.1</ele>
+      </trkpt>
+      <trkpt lat="50.699164" lon="7.823065">
+        <ele>324.3</ele>
+      </trkpt>
+      <trkpt lat="50.699151" lon="7.822762">
+        <ele>321.9</ele>
+      </trkpt>
+      <trkpt lat="50.699143" lon="7.822263">
+        <ele>319.2</ele>
+      </trkpt>
+      <trkpt lat="50.699178" lon="7.821825">
+        <ele>319.0</ele>
+      </trkpt>
+      <trkpt lat="50.699212" lon="7.821386">
+        <ele>319.1</ele>
+      </trkpt>
+      <trkpt lat="50.699201" lon="7.821082">
+        <ele>317.9</ele>
+      </trkpt>
+      <trkpt lat="50.699192" lon="7.820916">
+        <ele>317.2</ele>
+      </trkpt>
+      <trkpt lat="50.699191" lon="7.820898">
+        <ele>317.1</ele>
+      </trkpt>
+      <trkpt lat="50.69919" lon="7.820881">
+        <ele>317.0</ele>
+      </trkpt>
+      <trkpt lat="50.699186" lon="7.820814">
+        <ele>316.7</ele>
+      </trkpt>
+      <trkpt lat="50.699173" lon="7.82026">
+        <ele>315.7</ele>
+      </trkpt>
+      <trkpt lat="50.699177" lon="7.819824">
+        <ele>316.5</ele>
+      </trkpt>
+      <trkpt lat="50.699166" lon="7.819645">
+        <ele>316.7</ele>
+        <name>Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699164" lon="7.819609">
+        <ele>316.7</ele>
+      </trkpt>
+      <trkpt lat="50.699112" lon="7.819372">
+        <ele>315.8</ele>
+      </trkpt>
+      <trkpt lat="50.698981" lon="7.819136">
+        <ele>312.4</ele>
+      </trkpt>
+      <trkpt lat="50.698842" lon="7.818655">
+        <ele>310.5</ele>
+      </trkpt>
+      <trkpt lat="50.698728" lon="7.818283">
+        <ele>309.3</ele>
+      </trkpt>
+      <trkpt lat="50.698615" lon="7.817946">
+        <ele>308.9</ele>
+      </trkpt>
+      <trkpt lat="50.698502" lon="7.817609">
+        <ele>309.0</ele>
+      </trkpt>
+      <trkpt lat="50.698405" lon="7.817333">
+        <ele>309.2</ele>
+      </trkpt>
+      <trkpt lat="50.698402" lon="7.817312">
+        <ele>309.3</ele>
+      </trkpt>
+      <trkpt lat="50.698369" lon="7.817084">
+        <ele>310.7</ele>
+      </trkpt>
+      <trkpt lat="50.698397" lon="7.816855">
+        <ele>313.5</ele>
+      </trkpt>
+      <trkpt lat="50.698449" lon="7.816614">
+        <ele>316.5</ele>
+      </trkpt>
+      <trkpt lat="50.698484" lon="7.816408">
+        <ele>318.5</ele>
+      </trkpt>
+      <trkpt lat="50.698532" lon="7.81643">
+        <ele>319.6</ele>
+        <name>Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.698484" lon="7.816408">
+        <ele>318.5</ele>
+      </trkpt>
+      <trkpt lat="50.698436" lon="7.816121">
+        <ele>318.1</ele>
+      </trkpt>
+      <trkpt lat="50.698369" lon="7.815724">
+        <ele>316.9</ele>
+      </trkpt>
+      <trkpt lat="50.698311" lon="7.81545">
+        <ele>315.6</ele>
+      </trkpt>
+      <trkpt lat="50.698277" lon="7.815314">
+        <ele>314.8</ele>
+      </trkpt>
+      <trkpt lat="50.698227" lon="7.815193">
+        <ele>313.6</ele>
+      </trkpt>
+      <trkpt lat="50.698095" lon="7.814872">
+        <ele>310.6</ele>
+      </trkpt>
+      <trkpt lat="50.698056" lon="7.814768">
+        <ele>309.9</ele>
+      </trkpt>
+      <trkpt lat="50.698038" lon="7.814653">
+        <ele>309.6</ele>
+      </trkpt>
+      <trkpt lat="50.698017" lon="7.814525">
+        <ele>309.3</ele>
+      </trkpt>
+      <trkpt lat="50.698051" lon="7.814348">
+        <ele>310.3</ele>
+      </trkpt>
+      <trkpt lat="50.698175" lon="7.814188">
+        <ele>313.0</ele>
+      </trkpt>
+      <trkpt lat="50.698252" lon="7.814043">
+        <ele>314.7</ele>
+      </trkpt>
+      <trkpt lat="50.698289" lon="7.813952">
+        <ele>315.6</ele>
+      </trkpt>
+      <trkpt lat="50.698305" lon="7.813873">
+        <ele>316.0</ele>
+      </trkpt>
+      <trkpt lat="50.698327" lon="7.813766">
+        <ele>316.7</ele>
+      </trkpt>
+      <trkpt lat="50.698328" lon="7.813637">
+        <ele>317.1</ele>
+      </trkpt>
+      <trkpt lat="50.698315" lon="7.81348">
+        <ele>317.5</ele>
+      </trkpt>
+      <trkpt lat="50.698239" lon="7.81306">
+        <ele>318.6</ele>
+      </trkpt>
+      <trkpt lat="50.698164" lon="7.81264">
+        <ele>320.8</ele>
+      </trkpt>
+      <trkpt lat="50.698156" lon="7.812472">
+        <ele>322.1</ele>
+      </trkpt>
+      <trkpt lat="50.69817" lon="7.81237">
+        <ele>322.9</ele>
+      </trkpt>
+      <trkpt lat="50.698188" lon="7.812301">
+        <ele>323.4</ele>
+      </trkpt>
+      <trkpt lat="50.6982" lon="7.812262">
+        <ele>323.7</ele>
+      </trkpt>
+      <trkpt lat="50.698272" lon="7.812244">
+        <ele>324.3</ele>
+        <name>Atzelgift, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.698462" lon="7.812199">
+        <ele>326.1</ele>
+      </trkpt>
+      <trkpt lat="50.698749" lon="7.812144">
+        <ele>328.4</ele>
+      </trkpt>
+      <trkpt lat="50.698917" lon="7.812207">
+        <ele>329.6</ele>
+      </trkpt>
+      <trkpt lat="50.69897" lon="7.812063">
+        <ele>329.9</ele>
+      </trkpt>
+      <trkpt lat="50.699184" lon="7.811487">
+        <ele>329.0</ele>
+      </trkpt>
+      <trkpt lat="50.699397" lon="7.81091">
+        <ele>325.9</ele>
+      </trkpt>
+      <trkpt lat="50.699611" lon="7.810334">
+        <ele>321.5</ele>
+      </trkpt>
+      <trkpt lat="50.699825" lon="7.809758">
+        <ele>316.3</ele>
+      </trkpt>
+      <trkpt lat="50.699968" lon="7.809335">
+        <ele>312.3</ele>
+      </trkpt>
+      <trkpt lat="50.700111" lon="7.808913">
+        <ele>308.2</ele>
+      </trkpt>
+      <trkpt lat="50.700192" lon="7.808705">
+        <ele>306.2</ele>
+      </trkpt>
+      <trkpt lat="50.700353" lon="7.808287">
+        <ele>299.6</ele>
+      </trkpt>
+      <trkpt lat="50.700498" lon="7.807911">
+        <ele>296.0</ele>
+        <name>Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.700515" lon="7.807869">
+        <ele>295.6</ele>
+      </trkpt>
+      <trkpt lat="50.700233" lon="7.807596">
+        <ele>294.6</ele>
+      </trkpt>
+      <trkpt lat="50.699952" lon="7.807324">
+        <ele>293.4</ele>
+      </trkpt>
+      <trkpt lat="50.699759" lon="7.807128">
+        <ele>290.6</ele>
+      </trkpt>
+      <trkpt lat="50.699566" lon="7.806932">
+        <ele>287.9</ele>
+      </trkpt>
+      <trkpt lat="50.699487" lon="7.806898">
+        <ele>287.2</ele>
+      </trkpt>
+      <trkpt lat="50.69939" lon="7.806906">
+        <ele>286.8</ele>
+      </trkpt>
+      <trkpt lat="50.699386" lon="7.806908">
+        <ele>286.8</ele>
+        <name>50.699386,7.806908</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>19</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699258" lon="7.806215">
+        <ele>274.35358</ele>
+      </trkpt>
+      <trkpt lat="50.698931" lon="7.80628">
+        <ele>271.21386</ele>
+      </trkpt>
+      <trkpt lat="50.698904" lon="7.805808">
+        <ele>262.82447</ele>
+      </trkpt>
+      <trkpt lat="50.698087" lon="7.805872">
+        <ele>255.2606</ele>
+      </trkpt>
+      <trkpt lat="50.697914" lon="7.805081">
+        <ele>248.3975</ele>
+      </trkpt>
+      <trkpt lat="50.698017" lon="7.804957">
+        <ele>248.03727</ele>
+      </trkpt>
+      <trkpt lat="50.698651" lon="7.804375">
+        <ele>246.7924</ele>
+      </trkpt>
+      <trkpt lat="50.699001" lon="7.804059">
+        <ele>246.00897</ele>
+      </trkpt>
+      <trkpt lat="50.699334" lon="7.803772">
+        <ele>245.17578</ele>
+      </trkpt>
+      <trkpt lat="50.699516" lon="7.803654">
+        <ele>244.91897</ele>
+      </trkpt>
+      <trkpt lat="50.700073" lon="7.803378">
+        <ele>244.96441</ele>
+      </trkpt>
+      <trkpt lat="50.700409" lon="7.803203">
+        <ele>244.90834</ele>
+      </trkpt>
+      <trkpt lat="50.700651" lon="7.80304">
+        <ele>244.49244</ele>
+      </trkpt>
+      <trkpt lat="50.700644" lon="7.802688">
+        <ele>241.7079</ele>
+      </trkpt>
+      <trkpt lat="50.700616" lon="7.802548">
+        <ele>241.4</ele>
+        <name>Nisterstraße, Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.700631" lon="7.802549">
+        <ele>241.4</ele>
+      </trkpt>
+      <trkpt lat="50.700811" lon="7.802526">
+        <ele>241.0</ele>
+      </trkpt>
+      <trkpt lat="50.701058" lon="7.802375">
+        <ele>240.2</ele>
+      </trkpt>
+      <trkpt lat="50.701113" lon="7.80231">
+        <ele>240.0</ele>
+      </trkpt>
+      <trkpt lat="50.701272" lon="7.802161">
+        <ele>239.7</ele>
+      </trkpt>
+      <trkpt lat="50.701458" lon="7.801858">
+        <ele>239.7</ele>
+      </trkpt>
+      <trkpt lat="50.701585" lon="7.801655">
+        <ele>239.3</ele>
+        <name>Schutzhuette, Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>19</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.70159" lon="7.801646">
+        <ele>239.3</ele>
+      </trkpt>
+      <trkpt lat="50.701586" lon="7.80152">
+        <ele>239.9</ele>
+      </trkpt>
+      <trkpt lat="50.701648" lon="7.801514">
+        <ele>239.4</ele>
+      </trkpt>
+      <trkpt lat="50.701699" lon="7.801522">
+        <ele>238.9</ele>
+        <name>50.701699,7.801522</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.701816" lon="7.80158">
+        <ele>237.79997</ele>
+      </trkpt>
+      <trkpt lat="50.701904" lon="7.801473">
+        <ele>237.72672</ele>
+      </trkpt>
+      <trkpt lat="50.702631" lon="7.800727">
+        <ele>237.43472</ele>
+      </trkpt>
+      <trkpt lat="50.703189" lon="7.800159">
+        <ele>235.64996</ele>
+      </trkpt>
+      <trkpt lat="50.703858" lon="7.799724">
+        <ele>235.85401</ele>
+      </trkpt>
+      <trkpt lat="50.704255" lon="7.799462">
+        <ele>237.98102</ele>
+      </trkpt>
+      <trkpt lat="50.704435" lon="7.79929">
+        <ele>240.497</ele>
+      </trkpt>
+      <trkpt lat="50.704517" lon="7.798941">
+        <ele>238.56671</ele>
+      </trkpt>
+      <trkpt lat="50.704466" lon="7.798405">
+        <ele>237.53405</ele>
+      </trkpt>
+      <trkpt lat="50.704407" lon="7.797545">
+        <ele>242.39245</ele>
+      </trkpt>
+      <trkpt lat="50.703256" lon="7.796265">
+        <ele>234.2</ele>
+        <name>50.703265,7.796236</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.7032" lon="7.79622">
+        <ele>234.1</ele>
+      </trkpt>
+      <trkpt lat="50.703217" lon="7.796076">
+        <ele>235.3</ele>
+      </trkpt>
+      <trkpt lat="50.70323" lon="7.79597">
+        <ele>236.2</ele>
+      </trkpt>
+      <trkpt lat="50.703238" lon="7.795813">
+        <ele>237.6</ele>
+      </trkpt>
+      <trkpt lat="50.703207" lon="7.795563">
+        <ele>239.2</ele>
+      </trkpt>
+      <trkpt lat="50.703142" lon="7.795288">
+        <ele>240.2</ele>
+      </trkpt>
+      <trkpt lat="50.70308" lon="7.794915">
+        <ele>241.3</ele>
+      </trkpt>
+      <trkpt lat="50.70306" lon="7.794809">
+        <ele>241.3</ele>
+      </trkpt>
+      <trkpt lat="50.703116" lon="7.794319">
+        <ele>242.6</ele>
+      </trkpt>
+      <trkpt lat="50.703116" lon="7.794312">
+        <ele>242.7</ele>
+        <name>Fauna-Flora-Habitat-Gebiet Nistertal und Kroppacher Schweiz, Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.703116" lon="7.794319">
+        <ele>242.6</ele>
+      </trkpt>
+      <trkpt lat="50.70296" lon="7.794167">
+        <ele>239.1</ele>
+      </trkpt>
+      <trkpt lat="50.70286" lon="7.793504">
+        <ele>235.2</ele>
+      </trkpt>
+      <trkpt lat="50.702869" lon="7.79334">
+        <ele>235.1</ele>
+      </trkpt>
+      <trkpt lat="50.70294" lon="7.792872">
+        <ele>236.0</ele>
+      </trkpt>
+      <trkpt lat="50.70302" lon="7.792433">
+        <ele>237.0</ele>
+      </trkpt>
+      <trkpt lat="50.703067" lon="7.792024">
+        <ele>236.9</ele>
+      </trkpt>
+      <trkpt lat="50.703116" lon="7.791813">
+        <ele>238.0</ele>
+      </trkpt>
+      <trkpt lat="50.703152" lon="7.791588">
+        <ele>238.4</ele>
+      </trkpt>
+      <trkpt lat="50.70318" lon="7.791344">
+        <ele>238.8</ele>
+      </trkpt>
+      <trkpt lat="50.703184" lon="7.791126">
+        <ele>238.1</ele>
+      </trkpt>
+      <trkpt lat="50.703157" lon="7.790816">
+        <ele>235.7</ele>
+      </trkpt>
+      <trkpt lat="50.703145" lon="7.790521">
+        <ele>234.0</ele>
+      </trkpt>
+      <trkpt lat="50.703145" lon="7.790321">
+        <ele>232.8</ele>
+      </trkpt>
+      <trkpt lat="50.703163" lon="7.789989">
+        <ele>232.8</ele>
+      </trkpt>
+      <trkpt lat="50.703186" lon="7.789567">
+        <ele>233.1</ele>
+      </trkpt>
+      <trkpt lat="50.70324" lon="7.789129">
+        <ele>234.0</ele>
+      </trkpt>
+      <trkpt lat="50.703244" lon="7.789078">
+        <ele>233.8</ele>
+        <name>Heunigshöhlenpfad, Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.703272" lon="7.788714">
+        <ele>232.7</ele>
+      </trkpt>
+      <trkpt lat="50.703316" lon="7.78837">
+        <ele>229.7</ele>
+      </trkpt>
+      <trkpt lat="50.703367" lon="7.788165">
+        <ele>229.4</ele>
+      </trkpt>
+      <trkpt lat="50.70337" lon="7.788077">
+        <ele>229.7</ele>
+      </trkpt>
+      <trkpt lat="50.703336" lon="7.787812">
+        <ele>230.8</ele>
+        <name>Fauna-Flora-Habitat-Gebiet Nistertal und Kroppacher Schweiz, Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.703314" lon="7.787637">
+        <ele>231.6</ele>
+      </trkpt>
+      <trkpt lat="50.703182" lon="7.78722">
+        <ele>230.3</ele>
+      </trkpt>
+      <trkpt lat="50.703049" lon="7.786802">
+        <ele>228.3</ele>
+      </trkpt>
+      <trkpt lat="50.703021" lon="7.786665">
+        <ele>227.8</ele>
+      </trkpt>
+      <trkpt lat="50.703013" lon="7.78627">
+        <ele>227.9</ele>
+      </trkpt>
+      <trkpt lat="50.703009" lon="7.786026">
+        <ele>227.9</ele>
+        <name>Fauna-Flora-Habitat-Gebiet Nistertal und Kroppacher Schweiz, Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.703006" lon="7.785875">
+        <ele>227.9</ele>
+      </trkpt>
+      <trkpt lat="50.702949" lon="7.785828">
+        <ele>226.8</ele>
+      </trkpt>
+      <trkpt lat="50.702876" lon="7.78582">
+        <ele>225.4</ele>
+      </trkpt>
+      <trkpt lat="50.702746" lon="7.785828">
+        <ele>223.5</ele>
+      </trkpt>
+      <trkpt lat="50.702685" lon="7.785856">
+        <ele>222.6</ele>
+      </trkpt>
+      <trkpt lat="50.702631" lon="7.785882">
+        <ele>222.6</ele>
+        <name>Fauna-Flora-Habitat-Gebiet Nistertal und Kroppacher Schweiz, Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.702497" lon="7.785945">
+        <ele>222.6</ele>
+      </trkpt>
+      <trkpt lat="50.702216" lon="7.786134">
+        <ele>227.1</ele>
+      </trkpt>
+      <trkpt lat="50.702045" lon="7.786245">
+        <ele>230.5</ele>
+      </trkpt>
+      <trkpt lat="50.701899" lon="7.786367">
+        <ele>233.7</ele>
+      </trkpt>
+      <trkpt lat="50.701681" lon="7.786497">
+        <ele>238.4</ele>
+        <name>50.701681,7.786497</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.701476" lon="7.786367">
+        <ele>242.14341</ele>
+      </trkpt>
+      <trkpt lat="50.701149" lon="7.786053">
+        <ele>249.6</ele>
+        <name>Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.701146" lon="7.786049">
+        <ele>249.7</ele>
+      </trkpt>
+      <trkpt lat="50.7011" lon="7.785974">
+        <ele>250.7</ele>
+      </trkpt>
+      <trkpt lat="50.701021" lon="7.785937">
+        <ele>252.8</ele>
+      </trkpt>
+      <trkpt lat="50.700902" lon="7.785994">
+        <ele>256.2</ele>
+      </trkpt>
+      <trkpt lat="50.700897" lon="7.785996">
+        <ele>256.3</ele>
+      </trkpt>
+      <trkpt lat="50.700821" lon="7.785903">
+        <ele>258.3</ele>
+      </trkpt>
+      <trkpt lat="50.70073" lon="7.785742">
+        <ele>260.5</ele>
+      </trkpt>
+      <trkpt lat="50.700618" lon="7.785644">
+        <ele>263.4</ele>
+      </trkpt>
+      <trkpt lat="50.700412" lon="7.785074">
+        <ele>267.8</ele>
+      </trkpt>
+      <trkpt lat="50.700205" lon="7.784504">
+        <ele>271.6</ele>
+      </trkpt>
+      <trkpt lat="50.699998" lon="7.783935">
+        <ele>274.1</ele>
+      </trkpt>
+      <trkpt lat="50.699979" lon="7.783587">
+        <ele>274.1</ele>
+      </trkpt>
+      <trkpt lat="50.699962" lon="7.783544">
+        <ele>274.3</ele>
+        <name>Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699924" lon="7.783453">
+        <ele>274.8</ele>
+      </trkpt>
+      <trkpt lat="50.699844" lon="7.783431">
+        <ele>275.5</ele>
+      </trkpt>
+      <trkpt lat="50.69987" lon="7.783955">
+        <ele>275.6</ele>
+      </trkpt>
+      <trkpt lat="50.699693" lon="7.784009">
+        <ele>276.2</ele>
+      </trkpt>
+      <trkpt lat="50.699595" lon="7.784506">
+        <ele>277.4</ele>
+      </trkpt>
+      <trkpt lat="50.699585" lon="7.784557">
+        <ele>277.7</ele>
+        <name>Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699496" lon="7.785004">
+        <ele>280.3</ele>
+      </trkpt>
+      <trkpt lat="50.699397" lon="7.785501">
+        <ele>284.1</ele>
+      </trkpt>
+      <trkpt lat="50.699325" lon="7.785916">
+        <ele>288.5</ele>
+      </trkpt>
+      <trkpt lat="50.699253" lon="7.786331">
+        <ele>292.4</ele>
+      </trkpt>
+      <trkpt lat="50.699164" lon="7.786563">
+        <ele>293.9</ele>
+        <name>Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.699156" lon="7.786585">
+        <ele>294.0</ele>
+      </trkpt>
+      <trkpt lat="50.698991" lon="7.78669">
+        <ele>295.0</ele>
+      </trkpt>
+      <trkpt lat="50.69887" lon="7.786599">
+        <ele>293.9</ele>
+      </trkpt>
+      <trkpt lat="50.698765" lon="7.786555">
+        <ele>292.2</ele>
+      </trkpt>
+      <trkpt lat="50.698613" lon="7.786406">
+        <ele>286.8</ele>
+      </trkpt>
+      <trkpt lat="50.698578" lon="7.786386">
+        <ele>285.6</ele>
+      </trkpt>
+      <trkpt lat="50.698534" lon="7.786396">
+        <ele>284.7</ele>
+      </trkpt>
+      <trkpt lat="50.698482" lon="7.786393">
+        <ele>283.3</ele>
+      </trkpt>
+      <trkpt lat="50.698417" lon="7.786412">
+        <ele>281.9</ele>
+      </trkpt>
+      <trkpt lat="50.698335" lon="7.786468">
+        <ele>280.8</ele>
+      </trkpt>
+      <trkpt lat="50.698076" lon="7.786663">
+        <ele>276.7</ele>
+        <name>Hohe Ley, Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.69801" lon="7.786712">
+        <ele>275.6</ele>
+      </trkpt>
+      <trkpt lat="50.698054" lon="7.787036">
+        <ele>282.8</ele>
+      </trkpt>
+      <trkpt lat="50.698051" lon="7.787146">
+        <ele>284.6</ele>
+      </trkpt>
+      <trkpt lat="50.698027" lon="7.787208">
+        <ele>285.0</ele>
+      </trkpt>
+      <trkpt lat="50.697925" lon="7.787384">
+        <ele>285.5</ele>
+      </trkpt>
+      <trkpt lat="50.697913" lon="7.787425">
+        <ele>286.0</ele>
+      </trkpt>
+      <trkpt lat="50.697914" lon="7.78743">
+        <ele>286.1</ele>
+      </trkpt>
+      <trkpt lat="50.697924" lon="7.787496">
+        <ele>287.5</ele>
+      </trkpt>
+      <trkpt lat="50.697838" lon="7.78756">
+        <ele>286.8</ele>
+      </trkpt>
+      <trkpt lat="50.69772" lon="7.787783">
+        <ele>289.1</ele>
+      </trkpt>
+      <trkpt lat="50.697627" lon="7.787893">
+        <ele>289.8</ele>
+      </trkpt>
+      <trkpt lat="50.697538" lon="7.78806">
+        <ele>291.8</ele>
+      </trkpt>
+      <trkpt lat="50.697494" lon="7.788126">
+        <ele>292.4</ele>
+        <name>Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.697089" lon="7.788814">
+        <ele>299.19374</ele>
+      </trkpt>
+      <trkpt lat="50.696845" lon="7.788916">
+        <ele>298.41521</ele>
+      </trkpt>
+      <trkpt lat="50.696634" lon="7.78934">
+        <ele>300.54666</ele>
+      </trkpt>
+      <trkpt lat="50.696359" lon="7.789513">
+        <ele>298.3</ele>
+        <name>Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.696346" lon="7.78952">
+        <ele>298.2</ele>
+      </trkpt>
+      <trkpt lat="50.696221" lon="7.789626">
+        <ele>297.6</ele>
+      </trkpt>
+      <trkpt lat="50.69599" lon="7.789914">
+        <ele>297.4</ele>
+      </trkpt>
+      <trkpt lat="50.695722" lon="7.790277">
+        <ele>296.7</ele>
+      </trkpt>
+      <trkpt lat="50.695454" lon="7.790639">
+        <ele>294.9</ele>
+      </trkpt>
+      <trkpt lat="50.695203" lon="7.791021">
+        <ele>290.8</ele>
+      </trkpt>
+      <trkpt lat="50.695094" lon="7.791229">
+        <ele>289.5</ele>
+      </trkpt>
+      <trkpt lat="50.695074" lon="7.791273">
+        <ele>289.3</ele>
+        <name>Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.695037" lon="7.791358">
+        <ele>289.0</ele>
+      </trkpt>
+      <trkpt lat="50.695007" lon="7.791696">
+        <ele>292.8</ele>
+      </trkpt>
+      <trkpt lat="50.694954" lon="7.792087">
+        <ele>295.3</ele>
+      </trkpt>
+      <trkpt lat="50.694904" lon="7.792313">
+        <ele>295.7</ele>
+      </trkpt>
+      <trkpt lat="50.694766" lon="7.792771">
+        <ele>295.3</ele>
+      </trkpt>
+      <trkpt lat="50.694463" lon="7.79316">
+        <ele>287.8</ele>
+      </trkpt>
+      <trkpt lat="50.694445" lon="7.793234">
+        <ele>288.0</ele>
+      </trkpt>
+      <trkpt lat="50.694437" lon="7.792939">
+        <ele>284.0</ele>
+      </trkpt>
+      <trkpt lat="50.694435" lon="7.792841">
+        <ele>282.6</ele>
+      </trkpt>
+      <trkpt lat="50.69443" lon="7.792705">
+        <ele>280.6</ele>
+      </trkpt>
+      <trkpt lat="50.694428" lon="7.792672">
+        <ele>280.1</ele>
+      </trkpt>
+      <trkpt lat="50.694375" lon="7.792333">
+        <ele>273.2</ele>
+      </trkpt>
+      <trkpt lat="50.694383" lon="7.792116">
+        <ele>270.3</ele>
+      </trkpt>
+      <trkpt lat="50.69438" lon="7.792038">
+        <ele>269.0</ele>
+      </trkpt>
+      <trkpt lat="50.694351" lon="7.791813">
+        <ele>264.3</ele>
+      </trkpt>
+      <trkpt lat="50.694303" lon="7.791678">
+        <ele>260.1</ele>
+      </trkpt>
+      <trkpt lat="50.694251" lon="7.791486">
+        <ele>255.0</ele>
+        <name>Dachschiefergrube &quot;Assberg&quot;, Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.694231" lon="7.791414">
+        <ele>253.1</ele>
+      </trkpt>
+      <trkpt lat="50.69421" lon="7.791342">
+        <ele>251.2</ele>
+      </trkpt>
+      <trkpt lat="50.694163" lon="7.791298">
+        <ele>248.6</ele>
+      </trkpt>
+      <trkpt lat="50.694113" lon="7.79119">
+        <ele>245.3</ele>
+      </trkpt>
+      <trkpt lat="50.694061" lon="7.790924">
+        <ele>241.0</ele>
+      </trkpt>
+      <trkpt lat="50.694095" lon="7.790733">
+        <ele>241.2</ele>
+        <name>Limbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.694134" lon="7.790511">
+        <ele>241.4</ele>
+      </trkpt>
+      <trkpt lat="50.694142" lon="7.790271">
+        <ele>240.3</ele>
+      </trkpt>
+      <trkpt lat="50.694144" lon="7.790195">
+        <ele>240.0</ele>
+      </trkpt>
+      <trkpt lat="50.694133" lon="7.789804">
+        <ele>237.5</ele>
+      </trkpt>
+      <trkpt lat="50.694131" lon="7.789784">
+        <ele>237.4</ele>
+        <name>Fauna-Flora-Habitat-Gebiet Nistertal und Kroppacher Schweiz, Astert, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.694133" lon="7.789804">
+        <ele>237.5</ele>
+      </trkpt>
+      <trkpt lat="50.694032" lon="7.789808">
+        <ele>232.6</ele>
+      </trkpt>
+      <trkpt lat="50.693959" lon="7.789795">
+        <ele>228.2</ele>
+      </trkpt>
+      <trkpt lat="50.693867" lon="7.789804">
+        <ele>222.6</ele>
+      </trkpt>
+      <trkpt lat="50.693784" lon="7.789816">
+        <ele>221.6</ele>
+      </trkpt>
+      <trkpt lat="50.693675" lon="7.789802">
+        <ele>222.4</ele>
+      </trkpt>
+      <trkpt lat="50.693553" lon="7.789768">
+        <ele>223.4</ele>
+      </trkpt>
+      <trkpt lat="50.693382" lon="7.789729">
+        <ele>223.5</ele>
+      </trkpt>
+      <trkpt lat="50.693232" lon="7.789696">
+        <ele>223.9</ele>
+      </trkpt>
+      <trkpt lat="50.693205" lon="7.78969">
+        <ele>224.1</ele>
+      </trkpt>
+      <trkpt lat="50.69313" lon="7.789674">
+        <ele>224.4</ele>
+      </trkpt>
+      <trkpt lat="50.692993" lon="7.789645">
+        <ele>225.4</ele>
+      </trkpt>
+      <trkpt lat="50.692893" lon="7.78966">
+        <ele>226.4</ele>
+        <name>Astert, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.692829" lon="7.78967">
+        <ele>227.0</ele>
+      </trkpt>
+      <trkpt lat="50.692506" lon="7.789777">
+        <ele>231.4</ele>
+      </trkpt>
+      <trkpt lat="50.692254" lon="7.789836">
+        <ele>235.9</ele>
+      </trkpt>
+      <trkpt lat="50.692002" lon="7.789895">
+        <ele>241.0</ele>
+      </trkpt>
+      <trkpt lat="50.691628" lon="7.789846">
+        <ele>247.8</ele>
+        <name>Astert, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.691563" lon="7.789838">
+        <ele>249.0</ele>
+      </trkpt>
+      <trkpt lat="50.691482" lon="7.790229">
+        <ele>245.0</ele>
+      </trkpt>
+      <trkpt lat="50.691425" lon="7.79043">
+        <ele>242.5</ele>
+      </trkpt>
+      <trkpt lat="50.691344" lon="7.790603">
+        <ele>240.7</ele>
+      </trkpt>
+      <trkpt lat="50.691201" lon="7.790716">
+        <ele>240.2</ele>
+      </trkpt>
+      <trkpt lat="50.691021" lon="7.790807">
+        <ele>240.1</ele>
+      </trkpt>
+      <trkpt lat="50.690717" lon="7.790895">
+        <ele>240.8</ele>
+      </trkpt>
+      <trkpt lat="50.690412" lon="7.790983">
+        <ele>241.2</ele>
+      </trkpt>
+      <trkpt lat="50.690089" lon="7.791154">
+        <ele>239.5</ele>
+      </trkpt>
+      <trkpt lat="50.689945" lon="7.791202">
+        <ele>239.3</ele>
+      </trkpt>
+      <trkpt lat="50.689775" lon="7.79126">
+        <ele>239.0</ele>
+      </trkpt>
+      <trkpt lat="50.689495" lon="7.791368">
+        <ele>238.6</ele>
+      </trkpt>
+      <trkpt lat="50.689184" lon="7.791486">
+        <ele>238.7</ele>
+      </trkpt>
+      <trkpt lat="50.688958" lon="7.791543">
+        <ele>239.6</ele>
+      </trkpt>
+      <trkpt lat="50.688711" lon="7.791652">
+        <ele>240.2</ele>
+      </trkpt>
+      <trkpt lat="50.688554" lon="7.791853">
+        <ele>238.8</ele>
+      </trkpt>
+      <trkpt lat="50.688403" lon="7.792047">
+        <ele>238.5</ele>
+      </trkpt>
+      <trkpt lat="50.688311" lon="7.792127">
+        <ele>239.3</ele>
+      </trkpt>
+      <trkpt lat="50.688085" lon="7.792274">
+        <ele>240.5</ele>
+      </trkpt>
+      <trkpt lat="50.687859" lon="7.792421">
+        <ele>241.7</ele>
+      </trkpt>
+      <trkpt lat="50.687797" lon="7.792459">
+        <ele>242.3</ele>
+      </trkpt>
+      <trkpt lat="50.687634" lon="7.792558">
+        <ele>244.0</ele>
+      </trkpt>
+      <trkpt lat="50.687515" lon="7.792673">
+        <ele>244.9</ele>
+      </trkpt>
+      <trkpt lat="50.687413" lon="7.792847">
+        <ele>245.2</ele>
+      </trkpt>
+      <trkpt lat="50.687217" lon="7.793399">
+        <ele>244.7</ele>
+      </trkpt>
+      <trkpt lat="50.687082" lon="7.793823">
+        <ele>245.3</ele>
+      </trkpt>
+      <trkpt lat="50.687076" lon="7.79384">
+        <ele>245.4</ele>
+        <name>Müschenbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.686897" lon="7.794342">
+        <ele>247.9</ele>
+      </trkpt>
+      <trkpt lat="50.686852" lon="7.794589">
+        <ele>248.2</ele>
+      </trkpt>
+      <trkpt lat="50.687045" lon="7.794593">
+        <ele>243.0</ele>
+      </trkpt>
+      <trkpt lat="50.687077" lon="7.794607">
+        <ele>242.2</ele>
+      </trkpt>
+      <trkpt lat="50.687226" lon="7.794992">
+        <ele>236.8</ele>
+      </trkpt>
+      <trkpt lat="50.687238" lon="7.795196">
+        <ele>235.7</ele>
+      </trkpt>
+      <trkpt lat="50.68722" lon="7.795361">
+        <ele>235.5</ele>
+      </trkpt>
+      <trkpt lat="50.68718" lon="7.795598">
+        <ele>235.6</ele>
+      </trkpt>
+      <trkpt lat="50.687137" lon="7.795793">
+        <ele>235.9</ele>
+      </trkpt>
+      <trkpt lat="50.687135" lon="7.795797">
+        <ele>236.0</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>16</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.687049" lon="7.795951">
+        <ele>237.6</ele>
+      </trkpt>
+      <trkpt lat="50.68693" lon="7.796613">
+        <ele>237.9</ele>
+      </trkpt>
+      <trkpt lat="50.686865" lon="7.796915">
+        <ele>238.3</ele>
+      </trkpt>
+      <trkpt lat="50.686775" lon="7.79718">
+        <ele>239.8</ele>
+      </trkpt>
+      <trkpt lat="50.686759" lon="7.797217">
+        <ele>240.1</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.686705" lon="7.797341">
+        <ele>241.3</ele>
+      </trkpt>
+      <trkpt lat="50.686614" lon="7.797444">
+        <ele>243.8</ele>
+      </trkpt>
+      <trkpt lat="50.686535" lon="7.797489">
+        <ele>245.8</ele>
+      </trkpt>
+      <trkpt lat="50.686407" lon="7.797545">
+        <ele>248.0</ele>
+      </trkpt>
+      <trkpt lat="50.686278" lon="7.797502">
+        <ele>248.8</ele>
+      </trkpt>
+      <trkpt lat="50.685965" lon="7.797206">
+        <ele>251.0</ele>
+      </trkpt>
+      <trkpt lat="50.685686" lon="7.796976">
+        <ele>252.2</ele>
+      </trkpt>
+      <trkpt lat="50.685664" lon="7.797018">
+        <ele>251.5</ele>
+        <name>Müschenbach, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.685508" lon="7.797317">
+        <ele>246.8</ele>
+      </trkpt>
+      <trkpt lat="50.685416" lon="7.797478">
+        <ele>244.8</ele>
+      </trkpt>
+      <trkpt lat="50.68535" lon="7.79763">
+        <ele>243.3</ele>
+      </trkpt>
+      <trkpt lat="50.685317" lon="7.797766">
+        <ele>242.3</ele>
+      </trkpt>
+      <trkpt lat="50.685301" lon="7.797838">
+        <ele>241.8</ele>
+        <name>Streithausen, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.685257" lon="7.798044">
+        <ele>240.5</ele>
+      </trkpt>
+      <trkpt lat="50.68523" lon="7.798194">
+        <ele>239.6</ele>
+      </trkpt>
+      <trkpt lat="50.685214" lon="7.798301">
+        <ele>238.4</ele>
+      </trkpt>
+      <trkpt lat="50.685214" lon="7.798304">
+        <ele>238.4</ele>
+        <name>Kriegerkapelle, Streithausen, Hachenburg</name>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

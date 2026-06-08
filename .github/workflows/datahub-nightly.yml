@@ -1,0 +1,147 @@
+name: DataHub nightly build
+
+# Holt naechtlich saemtliche Daten aus dem DataHub Rheinland-Pfalz, baut alle
+# *-datahub.js Dateien und committet die Aenderungen zurueck ins Repo.
+#
+# Voraussetzung: Im Repo unter Settings > Secrets and variables > Actions ist
+# das Geheimnis DATAHUB_TOKEN (oder alternativ DATAHUB_USER und DATAHUB_PASS)
+# hinterlegt.
+
+on:
+  schedule:
+    - cron: '0 2 * * *'         # taeglich 02:00 UTC (~03:00 / 04:00 Uhr DE)
+  workflow_dispatch: {}          # manuelles Ausloesen ueber die GitHub-Oberflaeche
+
+permissions:
+  contents: write                # damit der Workflow zurueck ins Repo committen darf
+
+# Verhindert parallele Laeufe (zwei Builds gleichzeitig wuerden sich beim
+# Commit gegenseitig stoeren).
+concurrency:
+  group: datahub-nightly
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    # Sicherheitspuffer: ein voller Download + Build dauert typisch 60-90 Min.
+    # Wir lassen 5 Stunden zu, falls der DataHub mal traege ist.
+    timeout-minutes: 300
+
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # ════════════════════════════════════════════════════════════════════
+      # ALTE JSON-ZWISCHENDATEIEN ENTFERNEN, damit immer frisch geladen wird.
+      # (Die Download-Skripte ueberspringen vorhandene Dateien -- das ist beim
+      #  manuellen Arbeiten gewollt, beim Nightly aber unerwuenscht.)
+      # ════════════════════════════════════════════════════════════════════
+      - name: Alte Zwischendateien aufraeumen
+        run: |
+          rm -f pois-*.json
+          rm -f unterkuenfte-*.json
+          rm -f gastro-*.json
+          rm -f wandern-*.json
+          rm -f rad-*.json
+          rm -f ww-*.json
+
+      # ════════════════════════════════════════════════════════════════════
+      # DOWNLOADS (auth-Daten kommen aus den Secrets)
+      # ════════════════════════════════════════════════════════════════════
+      - name: POIs herunterladen
+        env:
+          DATAHUB_TOKEN: ${{ secrets.DATAHUB_TOKEN }}
+          DATAHUB_USER:  ${{ secrets.DATAHUB_USER }}
+          DATAHUB_PASS:  ${{ secrets.DATAHUB_PASS }}
+        run: python download_pois.py
+
+      - name: Unterkuenfte herunterladen
+        env:
+          DATAHUB_TOKEN: ${{ secrets.DATAHUB_TOKEN }}
+          DATAHUB_USER:  ${{ secrets.DATAHUB_USER }}
+          DATAHUB_PASS:  ${{ secrets.DATAHUB_PASS }}
+        run: python download_unterkuenfte.py
+
+      - name: Gastronomie herunterladen
+        env:
+          DATAHUB_TOKEN: ${{ secrets.DATAHUB_TOKEN }}
+          DATAHUB_USER:  ${{ secrets.DATAHUB_USER }}
+          DATAHUB_PASS:  ${{ secrets.DATAHUB_PASS }}
+        run: python download_gastronomie.py
+
+      - name: Wandertouren herunterladen
+        env:
+          DATAHUB_TOKEN: ${{ secrets.DATAHUB_TOKEN }}
+          DATAHUB_USER:  ${{ secrets.DATAHUB_USER }}
+          DATAHUB_PASS:  ${{ secrets.DATAHUB_PASS }}
+        run: python download_wandertouren.py
+
+      - name: Radtouren herunterladen
+        env:
+          DATAHUB_TOKEN: ${{ secrets.DATAHUB_TOKEN }}
+          DATAHUB_USER:  ${{ secrets.DATAHUB_USER }}
+          DATAHUB_PASS:  ${{ secrets.DATAHUB_PASS }}
+        run: python download_radtouren.py
+
+      - name: Veranstaltungen herunterladen
+        env:
+          DATAHUB_TOKEN: ${{ secrets.DATAHUB_TOKEN }}
+          DATAHUB_USER:  ${{ secrets.DATAHUB_USER }}
+          DATAHUB_PASS:  ${{ secrets.DATAHUB_PASS }}
+        run: python download_veranstaltungen.py
+
+      - name: Konzepte/Labels herunterladen
+        env:
+          DATAHUB_TOKEN: ${{ secrets.DATAHUB_TOKEN }}
+          DATAHUB_USER:  ${{ secrets.DATAHUB_USER }}
+          DATAHUB_PASS:  ${{ secrets.DATAHUB_PASS }}
+        run: python download_concepts.py
+
+      # ════════════════════════════════════════════════════════════════════
+      # BUILDS (erzeugen die *-datahub.js Dateien)
+      # ════════════════════════════════════════════════════════════════════
+      - name: POIs bauen
+        run: python build_pois.py pois-*.json -o pois-datahub.js
+
+      - name: Unterkuenfte bauen
+        run: python build_unterkuenfte.py unterkuenfte-*.json -o unterkuenfte-datahub.js
+
+      - name: Gastronomie bauen
+        run: python build_gastronomie.py gastro-*.json -o gastronomie-datahub.js
+
+      - name: Wandertouren bauen
+        run: python build_wandertouren.py wandern-*.json -o wandertouren-datahub.js
+
+      - name: Radtouren bauen
+        run: python build_radtouren.py rad-*.json -o radtouren-datahub.js
+
+      - name: Veranstaltungen bauen
+        run: python build_veranstaltungen.py ww-*.json -o veranstaltungen-datahub.js
+
+      # ════════════════════════════════════════════════════════════════════
+      # AENDERUNGEN COMMITTEN -- nur wenn sich tatsaechlich etwas geaendert hat
+      # ════════════════════════════════════════════════════════════════════
+      - name: Statistik ausgeben
+        run: |
+          echo "Erzeugte Dateien:"
+          ls -lh *-datahub.js 2>/dev/null || echo "  (keine *-datahub.js gefunden)"
+
+      - name: Aenderungen committen (nur bei Diff)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Nur die Output-JS-Dateien stagen (die *-1.json Zwischendateien
+          # gehoeren NICHT ins Repo -- sind in .gitignore eingetragen).
+          git add -- '*-datahub.js' 2>/dev/null || true
+          if git diff --staged --quiet; then
+            echo "Keine Aenderungen -- nichts zu committen."
+          else
+            git commit -m "chore: DataHub-Daten aktualisiert ($(date +%Y-%m-%d))"
+            git push
+          fi

@@ -1,0 +1,117 @@
+/* ════════════════════════════════════════════════════════════════
+   Inhaltsseiten im App-Stil
+   - Westerwald-Box
+   - Westerwälder Ernte
+   ════════════════════════════════════════════════════════════════ */
+
+window._INHALTE = {
+
+westerwaldBox:
+  '<div class="bilder-slider" data-slider-id="ww-box" '
++   'data-images=\'['
++     '{"url":"https://wir-westerwaelder.de/fileadmin/_processed_/3/2/csm_IMG-20240919-WA0000_a1e092edae.webp","alt":"Westerwald-Box Beispiel"},'
++     '{"url":"https://wir-westerwaelder.de/fileadmin/_processed_/f/e/csm_IMG-20240919-WA0001_7d3e3754ec.webp","alt":"Westerwald-Box Beispiel"},'
++     '{"url":"https://wir-westerwaelder.de/fileadmin/_processed_/b/f/csm_WW_Box_Ostern_Augst_e0b1441706.webp","alt":"WW-Box zu Ostern – Wällerhof Augst"},'
++     '{"url":"https://wir-westerwaelder.de/fileadmin/_processed_/5/e/csm_IMG_2621_a6060325b7.webp","alt":"WW-Box an Weihnachten im Tannenhof"},'
++     '{"url":"https://wir-westerwaelder.de/fileadmin/_processed_/5/9/csm_IMG-20240919-WA0009_59db4694b8.webp","alt":"WW-Box Weihnachten"},'
++     '{"url":"https://wir-westerwaelder.de/fileadmin/_processed_/f/c/csm_IMG-20240919-WA0006_439882476c.webp","alt":"Weihnachtsbox"},'
++     '{"url":"https://wir-westerwaelder.de/fileadmin/_processed_/5/8/csm_Hof_Ronig_47fa118c9b.webp","alt":"Westerwald-Box Hof Ronig"},'
++     '{"url":"https://wir-westerwaelder.de/fileadmin/_processed_/7/e/csm_IMG-20240109-WA0018_e4afe19f8f.webp","alt":"Westerwald-Box im Herbst"},'
++     '{"url":"https://wir-westerwaelder.de/fileadmin/_processed_/d/7/csm_1000074558_8e6eeb66fd.webp","alt":"Valentinstagsbox"}'
++   ']\'>'
++   '<div class="slider-bilder"></div>'
++   '<button class="slider-pfeil slider-prev" aria-label="Vorheriges Bild">&lsaquo;</button>'
++   '<button class="slider-pfeil slider-next" aria-label="Nächstes Bild">&rsaquo;</button>'
++   '<div class="slider-punkte"></div>'
++   '<div class="slider-counter"></div>'
++ '</div>'
+
++ '<h3>Die WW-Box – Regionalität mit Stil</h3>'
++ '<p>Die <strong>Westerwald-Box</strong> ist mehr als nur ein „Präsentkorb" – sie ist ein echtes Aushängeschild für die Vielfalt und Qualität regionaler Produkte aus dem Westerwald. Mit ihrem modernen Design und einer hochwertigen Aufmachung bietet sie <strong>Erzeugern und Direktvermarktern</strong> aus der Region eine attraktive Möglichkeit, ihre Produkte stilvoll zu präsentieren.</p>'
++ '<p>Ob als Geschenkidee, für den Verkauf ab Hof oder als Werbemittel: Die WW-Box macht sichtbar, was den Westerwald ausmacht – <strong>handgemachte Qualität, Regionalität und starke Betriebe</strong>. Unter dem gemeinsamen Label <strong>„Made in Westerwald"</strong> profitieren alle teilnehmenden Anbieter vom positiven Image und einem echten Multiplikatoreffekt.</p>'
+
++ '<div class="dropdown offen">'
++ '<div class="dropdown-header" onclick="this.parentNode.classList.toggle(\'offen\')">'
++ '<div class="dropdown-titel">Was ist drin?</div>'
++ '<div class="dropdown-pfeil">▾</div></div>'
++ '<div class="dropdown-inhalt">'
++ '<p>Der Inhalt der Westerwald-Box wird saisonal und je nach Anbieter individuell zusammengestellt. Typische Bestandteile sind:</p>'
++ '<ul>'
++ '<li>Wurst- und Fleischwaren regionaler Erzeuger</li>'
++ '<li>Spirituosen, Liköre und Weine aus heimischen Brennereien und Weingütern</li>'
++ '<li>Honig, Marmeladen, Eingemachtes</li>'
++ '<li>Eier, Nudeln, Backwaren</li>'
++ '<li>Saisonale Spezialitäten zu Ostern, Weihnachten oder Valentinstag</li>'
++ '</ul>'
++ '<p>Im Bilderslider oben sieht man Beispiele, wie die Box von verschiedenen Erzeugern bestückt wurde.</p>'
++ '</div></div>'
+
++ '<div class="dropdown">'
++ '<div class="dropdown-header" onclick="this.parentNode.classList.toggle(\'offen\')">'
++ '<div class="dropdown-titel">Bestellung & Bezugsquellen</div>'
++ '<div class="dropdown-pfeil">▾</div></div>'
++ '<div class="dropdown-inhalt">'
++ '<p>Die Westerwald-Box ist bei zahlreichen Direktvermarktern und Hofläden im Westerwald erhältlich. Eine vollständige Übersicht aller teilnehmenden Betriebe findest du unten auf dieser Seite.</p>'
++ '<p>Direktvermarkter, die die Westerwald-Box in ihrem Sortiment anbieten möchten, können sich an die Wir Westerwälder gAöR wenden.</p>'
++ '<p><strong>Kontakt:</strong><br>'
++ 'Wir Westerwälder gAöR<br>'
++ 'Königsberger Str. 40, 56269 Dierdorf<br>'
++ 'Telefon: <a href="tel:+49268995929-40">02689 95929-40</a><br>'
++ 'E-Mail: <a href="mailto:info@wir-westerwaelder.de">info@wir-westerwaelder.de</a></p>'
++ '<p><a href="https://wir-westerwaelder.de/fileadmin/WW-Box/Download/Westerwald-Box-Bestellformular-rel2_112023.pdf" target="_blank" rel="noopener">Bestellformular für regionale Erzeuger (PDF) ↗</a><br>'
++ '<a href="https://wir-westerwaelder.de/westerwald-box/" target="_blank" rel="noopener">Original-Seite auf wir-westerwaelder.de ↗</a></p>'
++ '</div></div>'
+
++ '<h3>Wo erhalten Sie die Westerwald-Box?</h3>'
++ '<p>Folgende 16 Betriebe bieten die Westerwald-Box in ihrem Sortiment an. Tippe auf einen Betrieb für Details.</p>'
++ '<div class="liste betriebe-liste" id="ww-box-betriebe-liste"></div>',
+
+westerwaelderErnte:
+  '<h3>Westerwälder Ernte</h3>'
++ '<p>„Westerwälder Ernte" ist eine Initiative der Wir Westerwälder gAöR, die Verbraucherinnen und Verbraucher mit den Erzeugern und Direktvermarktern der Region vernetzt. Im Mittelpunkt stehen saisonale, nachhaltig erzeugte Produkte aus dem Westerwald – frisch vom Hof, vom Acker oder aus der Manufaktur.</p>'
+
++ '<div class="dropdown offen">'
++ '<div class="dropdown-header" onclick="this.parentNode.classList.toggle(\'offen\')">'
++ '<div class="dropdown-titel">Idee und Ziel</div>'
++ '<div class="dropdown-pfeil">▾</div></div>'
++ '<div class="dropdown-inhalt">'
++ '<p>Die Westerwälder Ernte versteht sich als Marken- und Vermarktungsdach für regionale Lebensmittel. Ziel ist es, kurze Wege zwischen Erzeuger und Verbraucher zu fördern, regionale Wertschöpfung zu stärken und das Bewusstsein für saisonale Produkte zu schärfen.</p>'
++ '<p>Über das Logo „Westerwälder Ernte" können Verbraucher Produkte erkennen, die im Westerwald erzeugt, verarbeitet oder veredelt wurden.</p>'
++ '</div></div>'
+
++ '<div class="dropdown">'
++ '<div class="dropdown-header" onclick="this.parentNode.classList.toggle(\'offen\')">'
++ '<div class="dropdown-titel">Saisonkalender</div>'
++ '<div class="dropdown-pfeil">▾</div></div>'
++ '<div class="dropdown-inhalt">'
++ '<p>Die Westerwälder Ernte begleitet das Jahr mit einem Saisonkalender, der zeigt, welche heimischen Erzeugnisse zu welcher Zeit verfügbar sind:</p>'
++ '<p><strong>Frühjahr (März – Mai):</strong> Spargel, Bärlauch, junger Salat, Radieschen, Rhabarber, Lammfleisch.</p>'
++ '<p><strong>Sommer (Juni – August):</strong> Erdbeeren, Heidelbeeren, Süßkirschen, Tomaten, Gurken, Honig der Frühtracht.</p>'
++ '<p><strong>Herbst (September – November):</strong> Äpfel, Birnen, Pflaumen, Kartoffeln, Kürbis, Wild aus heimischen Wäldern.</p>'
++ '<p><strong>Winter (Dezember – Februar):</strong> Lagergemüse (Möhren, Pastinaken, Sellerie), Wirsing, Lauch, Eingelegtes und Eingewecktes der Manufakturen.</p>'
++ '</div></div>'
+
++ '<div class="dropdown">'
++ '<div class="dropdown-header" onclick="this.parentNode.classList.toggle(\'offen\')">'
++ '<div class="dropdown-titel">Wer macht mit?</div>'
++ '<div class="dropdown-pfeil">▾</div></div>'
++ '<div class="dropdown-inhalt">'
++ '<p>An der Westerwälder Ernte beteiligen sich landwirtschaftliche Betriebe, Hofläden, Imkereien, Manufakturen, Brennereien, Bäckereien, Metzgereien sowie verarbeitende Betriebe aus den Kreisen Altenkirchen, Neuwied, Westerwaldkreis und dem hessischen Westerwald.</p>'
++ '<p>Eine Übersicht der teilnehmenden Erzeuger ist über den Regionalen Einkaufsführer Westerwald verfügbar (siehe Menüpunkt „Regionaler Einkaufsführer").</p>'
++ '</div></div>'
+
++ '<div class="dropdown">'
++ '<div class="dropdown-header" onclick="this.parentNode.classList.toggle(\'offen\')">'
++ '<div class="dropdown-titel">Mitmachen & Kontakt</div>'
++ '<div class="dropdown-pfeil">▾</div></div>'
++ '<div class="dropdown-inhalt">'
++ '<p>Erzeuger und verarbeitende Betriebe aus dem Westerwald können sich an der Westerwälder Ernte beteiligen. Anfragen zur Aufnahme oder zur Verwendung des Logos beantwortet die Wir Westerwälder gAöR.</p>'
++ '<p><strong>Kontakt:</strong><br>'
++ 'Wir Westerwälder gAöR<br>'
++ 'Königsberger Str. 40, 56269 Dierdorf<br>'
++ 'Telefon: <a href="tel:+49268995929-40">02689 95929-40</a><br>'
++ 'E-Mail: <a href="mailto:info@wir-westerwaelder.de">info@wir-westerwaelder.de</a></p>'
++ '<p><a href="https://wir-westerwaelder.de/westerwaelder-ernte/" target="_blank" rel="noopener">Original-Seite auf wir-westerwaelder.de ↗</a></p>'
++ '</div></div>'
+
+};

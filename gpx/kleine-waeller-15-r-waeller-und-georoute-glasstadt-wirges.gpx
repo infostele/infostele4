@@ -1,0 +1,1329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gpx version="1.1" creator="outdooractive - http://www.outdooractive.com" xmlns="http://www.topografix.com/GPX/1/1" xmlns:oa="http://www.outdooractive.com/GPX/Extensions/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.outdooractive.com/GPX/Extensions/1 https://www.outdooractive.com/schema/gpx_extensions.xsd">
+  <metadata>
+    <name>Kleiner Wäller und GeoRoute Glasstadt Wirges - Wirges</name>
+    <author>
+      <name>Eva Lehna - Verbandsgemeinde Wirges</name>
+    </author>
+    <link href="https://www.outdooractive.com/r/806181053"/>
+    <time>2026-05-13T07:58:16.222Z</time>
+    <extensions>
+      <oa:oaCategory>hikingTourTrail</oa:oaCategory>
+    </extensions>
+  </metadata>
+  <trk>
+    <name>Kleiner Wäller und GeoRoute Glasstadt Wirges - Wirges</name>
+    <desc>Die Route führt dich auf einem ausgedehnten Spaziergang durch die Geschichte der Stadt Wirges. Tauche ein und erlebe die Entwicklung vom Dorf zu einem Zentrum der Industriekultur.</desc>
+    <type>hikingTourTrail</type>
+    <trkseg>
+      <trkpt lat="50.467824" lon="7.785536">
+        <ele>283.9</ele>
+        <name>Bahnhofstraße, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.467807" lon="7.785542">
+        <ele>283.9</ele>
+      </trkpt>
+      <trkpt lat="50.467762" lon="7.785489">
+        <ele>283.9</ele>
+      </trkpt>
+      <trkpt lat="50.467704" lon="7.785433">
+        <ele>283.9</ele>
+      </trkpt>
+      <trkpt lat="50.4675" lon="7.785274">
+        <ele>283.8</ele>
+      </trkpt>
+      <trkpt lat="50.467431" lon="7.78522">
+        <ele>283.8</ele>
+      </trkpt>
+      <trkpt lat="50.467438" lon="7.785106">
+        <ele>283.9</ele>
+      </trkpt>
+      <trkpt lat="50.467482" lon="7.784545">
+        <ele>284.9</ele>
+      </trkpt>
+      <trkpt lat="50.467515" lon="7.784403">
+        <ele>285.3</ele>
+      </trkpt>
+      <trkpt lat="50.467566" lon="7.784446">
+        <ele>285.2</ele>
+      </trkpt>
+      <trkpt lat="50.467649" lon="7.784501">
+        <ele>285.2</ele>
+      </trkpt>
+      <trkpt lat="50.467884" lon="7.784637">
+        <ele>285.1</ele>
+      </trkpt>
+      <trkpt lat="50.46812" lon="7.784772">
+        <ele>284.9</ele>
+      </trkpt>
+      <trkpt lat="50.468301" lon="7.784854">
+        <ele>284.8</ele>
+      </trkpt>
+      <trkpt lat="50.468731" lon="7.785051">
+        <ele>284.5</ele>
+      </trkpt>
+      <trkpt lat="50.46916" lon="7.785247">
+        <ele>284.3</ele>
+      </trkpt>
+      <trkpt lat="50.469321" lon="7.785321">
+        <ele>284.3</ele>
+        <name>Parkplatz Verallia AG, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.469589" lon="7.785444">
+        <ele>284.2</ele>
+      </trkpt>
+      <trkpt lat="50.470017" lon="7.785646">
+        <ele>284.2</ele>
+      </trkpt>
+      <trkpt lat="50.470444" lon="7.785847">
+        <ele>284.1</ele>
+      </trkpt>
+      <trkpt lat="50.470872" lon="7.786049">
+        <ele>284.0</ele>
+      </trkpt>
+      <trkpt lat="50.471068" lon="7.786144">
+        <ele>283.9</ele>
+      </trkpt>
+      <trkpt lat="50.471424" lon="7.786314">
+        <ele>283.4</ele>
+      </trkpt>
+      <trkpt lat="50.471779" lon="7.786484">
+        <ele>282.5</ele>
+      </trkpt>
+      <trkpt lat="50.471858" lon="7.786525">
+        <ele>282.1</ele>
+      </trkpt>
+      <trkpt lat="50.471918" lon="7.786555">
+        <ele>281.8</ele>
+      </trkpt>
+      <trkpt lat="50.471994" lon="7.786582">
+        <ele>281.4</ele>
+      </trkpt>
+      <trkpt lat="50.472068" lon="7.786598">
+        <ele>281.0</ele>
+      </trkpt>
+      <trkpt lat="50.472133" lon="7.786599">
+        <ele>280.8</ele>
+      </trkpt>
+      <trkpt lat="50.472219" lon="7.786591">
+        <ele>280.5</ele>
+      </trkpt>
+      <trkpt lat="50.472314" lon="7.786569">
+        <ele>280.4</ele>
+      </trkpt>
+      <trkpt lat="50.472484" lon="7.786542">
+        <ele>280.0</ele>
+      </trkpt>
+      <trkpt lat="50.472556" lon="7.786538">
+        <ele>279.7</ele>
+        <name>Siemensstraße, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.472601" lon="7.786536">
+        <ele>279.6</ele>
+      </trkpt>
+      <trkpt lat="50.472666" lon="7.786546">
+        <ele>279.3</ele>
+      </trkpt>
+      <trkpt lat="50.472735" lon="7.786581">
+        <ele>279.0</ele>
+      </trkpt>
+      <trkpt lat="50.472807" lon="7.786647">
+        <ele>278.5</ele>
+      </trkpt>
+      <trkpt lat="50.47289" lon="7.786749">
+        <ele>277.8</ele>
+      </trkpt>
+      <trkpt lat="50.472944" lon="7.786843">
+        <ele>277.2</ele>
+      </trkpt>
+      <trkpt lat="50.472981" lon="7.786921">
+        <ele>276.8</ele>
+      </trkpt>
+      <trkpt lat="50.473075" lon="7.786673">
+        <ele>277.5</ele>
+      </trkpt>
+      <trkpt lat="50.473274" lon="7.786159">
+        <ele>277.1</ele>
+      </trkpt>
+      <trkpt lat="50.47299" lon="7.785768">
+        <ele>278.9</ele>
+      </trkpt>
+      <trkpt lat="50.472706" lon="7.785378">
+        <ele>281.9</ele>
+      </trkpt>
+      <trkpt lat="50.47283" lon="7.785009">
+        <ele>281.6</ele>
+      </trkpt>
+      <trkpt lat="50.472953" lon="7.784641">
+        <ele>280.3</ele>
+        <name>Ritz Instrument Transformers, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.473253" lon="7.784722">
+        <ele>277.5</ele>
+      </trkpt>
+      <trkpt lat="50.473554" lon="7.784802">
+        <ele>275.9</ele>
+      </trkpt>
+      <trkpt lat="50.473855" lon="7.784883">
+        <ele>274.7</ele>
+      </trkpt>
+      <trkpt lat="50.473905" lon="7.784896">
+        <ele>274.6</ele>
+      </trkpt>
+      <trkpt lat="50.473961" lon="7.785034">
+        <ele>274.5</ele>
+      </trkpt>
+      <trkpt lat="50.474073" lon="7.785308">
+        <ele>274.2</ele>
+      </trkpt>
+      <trkpt lat="50.474135" lon="7.785389">
+        <ele>274.1</ele>
+      </trkpt>
+      <trkpt lat="50.474151" lon="7.78538">
+        <ele>274.0</ele>
+        <name>50.474151,7.785380</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.474135" lon="7.785389">
+        <ele>274.1</ele>
+      </trkpt>
+      <trkpt lat="50.474219" lon="7.785497">
+        <ele>273.8</ele>
+      </trkpt>
+      <trkpt lat="50.474321" lon="7.78573">
+        <ele>272.8</ele>
+      </trkpt>
+      <trkpt lat="50.474398" lon="7.785778">
+        <ele>272.2</ele>
+      </trkpt>
+      <trkpt lat="50.474654" lon="7.785658">
+        <ele>271.8</ele>
+      </trkpt>
+      <trkpt lat="50.474721" lon="7.785655">
+        <ele>271.8</ele>
+        <name>50.474721,7.785655</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.474843" lon="7.78565">
+        <ele>271.7</ele>
+      </trkpt>
+      <trkpt lat="50.475165" lon="7.785529">
+        <ele>274.1</ele>
+      </trkpt>
+      <trkpt lat="50.475308" lon="7.785666">
+        <ele>274.8</ele>
+      </trkpt>
+      <trkpt lat="50.4754" lon="7.785811">
+        <ele>275.2</ele>
+      </trkpt>
+      <trkpt lat="50.475635" lon="7.785746">
+        <ele>278.3</ele>
+      </trkpt>
+      <trkpt lat="50.47587" lon="7.785682">
+        <ele>281.4</ele>
+      </trkpt>
+      <trkpt lat="50.475957" lon="7.785981">
+        <ele>282.9</ele>
+      </trkpt>
+      <trkpt lat="50.475993" lon="7.786309">
+        <ele>283.6</ele>
+      </trkpt>
+      <trkpt lat="50.476031" lon="7.786701">
+        <ele>283.1</ele>
+      </trkpt>
+      <trkpt lat="50.476069" lon="7.787092">
+        <ele>282.8</ele>
+      </trkpt>
+      <trkpt lat="50.476086" lon="7.787229">
+        <ele>283.3</ele>
+      </trkpt>
+      <trkpt lat="50.47609" lon="7.787263">
+        <ele>283.6</ele>
+      </trkpt>
+      <trkpt lat="50.476096" lon="7.787304">
+        <ele>284.1</ele>
+      </trkpt>
+      <trkpt lat="50.476099" lon="7.78736">
+        <ele>283.9</ele>
+      </trkpt>
+      <trkpt lat="50.476099" lon="7.787419">
+        <ele>283.1</ele>
+      </trkpt>
+      <trkpt lat="50.47613" lon="7.787463">
+        <ele>282.3</ele>
+      </trkpt>
+      <trkpt lat="50.476146" lon="7.787483">
+        <ele>282.0</ele>
+      </trkpt>
+      <trkpt lat="50.476182" lon="7.787505">
+        <ele>281.9</ele>
+      </trkpt>
+      <trkpt lat="50.476216" lon="7.787512">
+        <ele>282.0</ele>
+      </trkpt>
+      <trkpt lat="50.476232" lon="7.787595">
+        <ele>282.3</ele>
+      </trkpt>
+      <trkpt lat="50.476253" lon="7.787672">
+        <ele>282.6</ele>
+      </trkpt>
+      <trkpt lat="50.476295" lon="7.787838">
+        <ele>283.3</ele>
+      </trkpt>
+      <trkpt lat="50.476311" lon="7.787876">
+        <ele>283.5</ele>
+      </trkpt>
+      <trkpt lat="50.476335" lon="7.787916">
+        <ele>283.7</ele>
+      </trkpt>
+      <trkpt lat="50.476463" lon="7.788065">
+        <ele>284.7</ele>
+      </trkpt>
+      <trkpt lat="50.476493" lon="7.788097">
+        <ele>284.8</ele>
+      </trkpt>
+      <trkpt lat="50.476305" lon="7.78848">
+        <ele>284.2</ele>
+      </trkpt>
+      <trkpt lat="50.476108" lon="7.788949">
+        <ele>283.7</ele>
+      </trkpt>
+      <trkpt lat="50.476352" lon="7.789296">
+        <ele>283.7</ele>
+      </trkpt>
+      <trkpt lat="50.476595" lon="7.789642">
+        <ele>283.2</ele>
+      </trkpt>
+      <trkpt lat="50.476839" lon="7.789989">
+        <ele>282.3</ele>
+      </trkpt>
+      <trkpt lat="50.476689" lon="7.790253">
+        <ele>282.1</ele>
+      </trkpt>
+      <trkpt lat="50.47654" lon="7.790518">
+        <ele>281.9</ele>
+      </trkpt>
+      <trkpt lat="50.476633" lon="7.790669">
+        <ele>281.4</ele>
+      </trkpt>
+      <trkpt lat="50.476715" lon="7.790847">
+        <ele>280.9</ele>
+      </trkpt>
+      <trkpt lat="50.476776" lon="7.791085">
+        <ele>280.2</ele>
+      </trkpt>
+      <trkpt lat="50.477045" lon="7.790884">
+        <ele>279.6</ele>
+      </trkpt>
+      <trkpt lat="50.477185" lon="7.790677">
+        <ele>279.6</ele>
+        <name>Lohmühlenstraße, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.4773" lon="7.790507">
+        <ele>279.6</ele>
+      </trkpt>
+      <trkpt lat="50.477349" lon="7.790456">
+        <ele>279.6</ele>
+      </trkpt>
+      <trkpt lat="50.477389" lon="7.790441">
+        <ele>279.4</ele>
+      </trkpt>
+      <trkpt lat="50.477438" lon="7.790446">
+        <ele>279.2</ele>
+      </trkpt>
+      <trkpt lat="50.477489" lon="7.790473">
+        <ele>278.9</ele>
+      </trkpt>
+      <trkpt lat="50.477641" lon="7.790663">
+        <ele>277.6</ele>
+      </trkpt>
+      <trkpt lat="50.477957" lon="7.791104">
+        <ele>274.8</ele>
+      </trkpt>
+      <trkpt lat="50.478048" lon="7.791174">
+        <ele>274.5</ele>
+      </trkpt>
+      <trkpt lat="50.478214" lon="7.791516">
+        <ele>274.7</ele>
+      </trkpt>
+      <trkpt lat="50.4782" lon="7.791585">
+        <ele>274.7</ele>
+        <name>Mühlwiese, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.478119" lon="7.791972">
+        <ele>274.4</ele>
+      </trkpt>
+      <trkpt lat="50.47795" lon="7.792223">
+        <ele>273.9</ele>
+      </trkpt>
+      <trkpt lat="50.47801" lon="7.792323">
+        <ele>274.0</ele>
+      </trkpt>
+      <trkpt lat="50.478045" lon="7.792392">
+        <ele>274.1</ele>
+      </trkpt>
+      <trkpt lat="50.478191" lon="7.792537">
+        <ele>274.5</ele>
+      </trkpt>
+      <trkpt lat="50.478282" lon="7.792547">
+        <ele>274.9</ele>
+      </trkpt>
+      <trkpt lat="50.478568" lon="7.792883">
+        <ele>277.7</ele>
+      </trkpt>
+      <trkpt lat="50.478879" lon="7.793193">
+        <ele>281.4</ele>
+      </trkpt>
+      <trkpt lat="50.478948" lon="7.793281">
+        <ele>282.3</ele>
+      </trkpt>
+      <trkpt lat="50.478931" lon="7.793335">
+        <ele>282.2</ele>
+      </trkpt>
+      <trkpt lat="50.479302" lon="7.793637">
+        <ele>286.7</ele>
+      </trkpt>
+      <trkpt lat="50.479415" lon="7.793728">
+        <ele>287.8</ele>
+      </trkpt>
+      <trkpt lat="50.479234" lon="7.794297">
+        <ele>287.0</ele>
+      </trkpt>
+      <trkpt lat="50.479492" lon="7.793984">
+        <ele>289.0</ele>
+      </trkpt>
+      <trkpt lat="50.479825" lon="7.793886">
+        <ele>292.3</ele>
+      </trkpt>
+      <trkpt lat="50.480158" lon="7.793788">
+        <ele>295.0</ele>
+      </trkpt>
+      <trkpt lat="50.48035" lon="7.794362">
+        <ele>297.7</ele>
+      </trkpt>
+      <trkpt lat="50.480542" lon="7.794936">
+        <ele>299.7</ele>
+      </trkpt>
+      <trkpt lat="50.480734" lon="7.79551">
+        <ele>301.1</ele>
+      </trkpt>
+      <trkpt lat="50.480926" lon="7.796084">
+        <ele>302.3</ele>
+      </trkpt>
+      <trkpt lat="50.481118" lon="7.796658">
+        <ele>303.3</ele>
+      </trkpt>
+      <trkpt lat="50.48116" lon="7.796776">
+        <ele>303.4</ele>
+      </trkpt>
+      <trkpt lat="50.481317" lon="7.797227">
+        <ele>304.2</ele>
+      </trkpt>
+      <trkpt lat="50.481473" lon="7.797677">
+        <ele>304.8</ele>
+      </trkpt>
+      <trkpt lat="50.481648" lon="7.798203">
+        <ele>305.5</ele>
+      </trkpt>
+      <trkpt lat="50.481823" lon="7.798729">
+        <ele>306.2</ele>
+      </trkpt>
+      <trkpt lat="50.481998" lon="7.799256">
+        <ele>307.6</ele>
+      </trkpt>
+      <trkpt lat="50.482173" lon="7.799782">
+        <ele>309.2</ele>
+      </trkpt>
+      <trkpt lat="50.482347" lon="7.800308">
+        <ele>311.5</ele>
+      </trkpt>
+      <trkpt lat="50.482257" lon="7.800766">
+        <ele>311.8</ele>
+      </trkpt>
+      <trkpt lat="50.482166" lon="7.801224">
+        <ele>313.9</ele>
+      </trkpt>
+      <trkpt lat="50.482075" lon="7.801682">
+        <ele>317.4</ele>
+      </trkpt>
+      <trkpt lat="50.481971" lon="7.802202">
+        <ele>321.6</ele>
+      </trkpt>
+      <trkpt lat="50.481868" lon="7.802722">
+        <ele>325.2</ele>
+      </trkpt>
+      <trkpt lat="50.481765" lon="7.803242">
+        <ele>329.2</ele>
+      </trkpt>
+      <trkpt lat="50.482017" lon="7.803352">
+        <ele>331.1</ele>
+      </trkpt>
+      <trkpt lat="50.482107" lon="7.803396">
+        <ele>331.5</ele>
+      </trkpt>
+      <trkpt lat="50.482101" lon="7.803789">
+        <ele>333.2</ele>
+      </trkpt>
+      <trkpt lat="50.482095" lon="7.804183">
+        <ele>334.3</ele>
+      </trkpt>
+      <trkpt lat="50.482119" lon="7.804367">
+        <ele>333.9</ele>
+      </trkpt>
+      <trkpt lat="50.482155" lon="7.804517">
+        <ele>333.2</ele>
+      </trkpt>
+      <trkpt lat="50.482174" lon="7.804681">
+        <ele>332.4</ele>
+      </trkpt>
+      <trkpt lat="50.48215" lon="7.804844">
+        <ele>331.5</ele>
+      </trkpt>
+      <trkpt lat="50.482084" lon="7.804997">
+        <ele>329.6</ele>
+      </trkpt>
+      <trkpt lat="50.482082" lon="7.804998">
+        <ele>329.4</ele>
+        <name>Steimelkapelle, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.481793" lon="7.805279">
+        <ele>325.9</ele>
+      </trkpt>
+      <trkpt lat="50.481576" lon="7.805406">
+        <ele>322.1</ele>
+      </trkpt>
+      <trkpt lat="50.481433" lon="7.805405">
+        <ele>319.7</ele>
+      </trkpt>
+      <trkpt lat="50.481105" lon="7.80525">
+        <ele>312.8</ele>
+      </trkpt>
+      <trkpt lat="50.480974" lon="7.80522">
+        <ele>309.4</ele>
+      </trkpt>
+      <trkpt lat="50.48066" lon="7.805057">
+        <ele>302.7</ele>
+      </trkpt>
+      <trkpt lat="50.480328" lon="7.804904">
+        <ele>297.6</ele>
+      </trkpt>
+      <trkpt lat="50.479997" lon="7.804752">
+        <ele>293.7</ele>
+      </trkpt>
+      <trkpt lat="50.479842" lon="7.805289">
+        <ele>292.4</ele>
+      </trkpt>
+      <trkpt lat="50.479687" lon="7.805827">
+        <ele>290.8</ele>
+      </trkpt>
+      <trkpt lat="50.479613" lon="7.806084">
+        <ele>290.3</ele>
+      </trkpt>
+      <trkpt lat="50.479491" lon="7.806452">
+        <ele>289.4</ele>
+      </trkpt>
+      <trkpt lat="50.479369" lon="7.806819">
+        <ele>288.3</ele>
+      </trkpt>
+      <trkpt lat="50.479197" lon="7.807413">
+        <ele>286.7</ele>
+      </trkpt>
+      <trkpt lat="50.479167" lon="7.807491">
+        <ele>286.4</ele>
+      </trkpt>
+      <trkpt lat="50.479145" lon="7.807535">
+        <ele>286.3</ele>
+      </trkpt>
+      <trkpt lat="50.479115" lon="7.80756">
+        <ele>286.2</ele>
+      </trkpt>
+      <trkpt lat="50.479082" lon="7.807571">
+        <ele>286.0</ele>
+      </trkpt>
+      <trkpt lat="50.479047" lon="7.807568">
+        <ele>285.8</ele>
+      </trkpt>
+      <trkpt lat="50.479011" lon="7.807543">
+        <ele>285.7</ele>
+      </trkpt>
+      <trkpt lat="50.478968" lon="7.807491">
+        <ele>285.5</ele>
+      </trkpt>
+      <trkpt lat="50.478862" lon="7.807343">
+        <ele>285.0</ele>
+      </trkpt>
+      <trkpt lat="50.478689" lon="7.807078">
+        <ele>284.3</ele>
+      </trkpt>
+      <trkpt lat="50.478516" lon="7.806813">
+        <ele>283.1</ele>
+      </trkpt>
+      <trkpt lat="50.478436" lon="7.806689">
+        <ele>282.5</ele>
+      </trkpt>
+      <trkpt lat="50.478178" lon="7.806289">
+        <ele>280.4</ele>
+      </trkpt>
+      <trkpt lat="50.47792" lon="7.80589">
+        <ele>278.4</ele>
+      </trkpt>
+      <trkpt lat="50.477651" lon="7.805481">
+        <ele>275.8</ele>
+      </trkpt>
+      <trkpt lat="50.477382" lon="7.805072">
+        <ele>273.6</ele>
+      </trkpt>
+      <trkpt lat="50.477218" lon="7.804824">
+        <ele>272.3</ele>
+      </trkpt>
+      <trkpt lat="50.477053" lon="7.804575">
+        <ele>271.0</ele>
+      </trkpt>
+      <trkpt lat="50.476762" lon="7.804128">
+        <ele>269.2</ele>
+      </trkpt>
+      <trkpt lat="50.476471" lon="7.803682">
+        <ele>267.7</ele>
+      </trkpt>
+      <trkpt lat="50.476411" lon="7.803596">
+        <ele>267.3</ele>
+      </trkpt>
+      <trkpt lat="50.476175" lon="7.803233">
+        <ele>265.6</ele>
+      </trkpt>
+      <trkpt lat="50.475939" lon="7.80287">
+        <ele>264.8</ele>
+      </trkpt>
+      <trkpt lat="50.475882" lon="7.8028">
+        <ele>264.7</ele>
+      </trkpt>
+      <trkpt lat="50.475817" lon="7.802736">
+        <ele>264.5</ele>
+      </trkpt>
+      <trkpt lat="50.475715" lon="7.802659">
+        <ele>264.4</ele>
+      </trkpt>
+      <trkpt lat="50.475632" lon="7.802607">
+        <ele>264.4</ele>
+      </trkpt>
+      <trkpt lat="50.475554" lon="7.802573">
+        <ele>264.2</ele>
+      </trkpt>
+      <trkpt lat="50.475464" lon="7.802548">
+        <ele>264.2</ele>
+      </trkpt>
+      <trkpt lat="50.475148" lon="7.802493">
+        <ele>263.9</ele>
+      </trkpt>
+      <trkpt lat="50.474833" lon="7.802439">
+        <ele>263.9</ele>
+      </trkpt>
+      <trkpt lat="50.474755" lon="7.802407">
+        <ele>264.0</ele>
+      </trkpt>
+      <trkpt lat="50.474711" lon="7.802387">
+        <ele>264.0</ele>
+      </trkpt>
+      <trkpt lat="50.47467" lon="7.802365">
+        <ele>264.1</ele>
+      </trkpt>
+      <trkpt lat="50.474608" lon="7.802324">
+        <ele>263.9</ele>
+      </trkpt>
+      <trkpt lat="50.474257" lon="7.802064">
+        <ele>264.1</ele>
+      </trkpt>
+      <trkpt lat="50.473906" lon="7.801805">
+        <ele>264.8</ele>
+      </trkpt>
+      <trkpt lat="50.473799" lon="7.801679">
+        <ele>265.0</ele>
+      </trkpt>
+      <trkpt lat="50.473745" lon="7.801607">
+        <ele>265.2</ele>
+      </trkpt>
+      <trkpt lat="50.473712" lon="7.801546">
+        <ele>265.3</ele>
+      </trkpt>
+      <trkpt lat="50.473705" lon="7.801526">
+        <ele>265.4</ele>
+        <name>Mittelstraße, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.473712" lon="7.801546">
+        <ele>265.3</ele>
+      </trkpt>
+      <trkpt lat="50.473674" lon="7.801589">
+        <ele>265.5</ele>
+      </trkpt>
+      <trkpt lat="50.473643" lon="7.801656">
+        <ele>265.5</ele>
+      </trkpt>
+      <trkpt lat="50.473514" lon="7.801931">
+        <ele>266.2</ele>
+      </trkpt>
+      <trkpt lat="50.473486" lon="7.801977">
+        <ele>266.4</ele>
+      </trkpt>
+      <trkpt lat="50.473458" lon="7.802012">
+        <ele>266.5</ele>
+      </trkpt>
+      <trkpt lat="50.473423" lon="7.802064">
+        <ele>266.7</ele>
+      </trkpt>
+      <trkpt lat="50.473398" lon="7.802118">
+        <ele>266.9</ele>
+      </trkpt>
+      <trkpt lat="50.473368" lon="7.802219">
+        <ele>267.2</ele>
+      </trkpt>
+      <trkpt lat="50.473065" lon="7.802028">
+        <ele>269.2</ele>
+      </trkpt>
+      <trkpt lat="50.472983" lon="7.801976">
+        <ele>269.5</ele>
+        <name>Nikolausstraße, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.472762" lon="7.801836">
+        <ele>270.5</ele>
+      </trkpt>
+      <trkpt lat="50.47252" lon="7.80168">
+        <ele>270.1</ele>
+      </trkpt>
+      <trkpt lat="50.472492" lon="7.801662">
+        <ele>270.1</ele>
+      </trkpt>
+      <trkpt lat="50.47248" lon="7.80172">
+        <ele>270.1</ele>
+        <name>Nikolausstraße, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.472409" lon="7.802064">
+        <ele>269.8</ele>
+      </trkpt>
+      <trkpt lat="50.472395" lon="7.802125">
+        <ele>269.7</ele>
+      </trkpt>
+      <trkpt lat="50.472379" lon="7.80218">
+        <ele>269.7</ele>
+      </trkpt>
+      <trkpt lat="50.472323" lon="7.802351">
+        <ele>269.5</ele>
+      </trkpt>
+      <trkpt lat="50.472307" lon="7.802411">
+        <ele>269.4</ele>
+      </trkpt>
+      <trkpt lat="50.472298" lon="7.802466">
+        <ele>269.3</ele>
+      </trkpt>
+      <trkpt lat="50.472295" lon="7.802521">
+        <ele>269.3</ele>
+      </trkpt>
+      <trkpt lat="50.472296" lon="7.802576">
+        <ele>269.2</ele>
+      </trkpt>
+      <trkpt lat="50.472253" lon="7.80259">
+        <ele>269.3</ele>
+      </trkpt>
+      <trkpt lat="50.472233" lon="7.802599">
+        <ele>269.3</ele>
+      </trkpt>
+      <trkpt lat="50.472206" lon="7.802612">
+        <ele>269.3</ele>
+      </trkpt>
+      <trkpt lat="50.472168" lon="7.80264">
+        <ele>269.2</ele>
+      </trkpt>
+      <trkpt lat="50.472132" lon="7.802671">
+        <ele>269.2</ele>
+      </trkpt>
+      <trkpt lat="50.472095" lon="7.802707">
+        <ele>269.1</ele>
+      </trkpt>
+      <trkpt lat="50.472066" lon="7.802743">
+        <ele>269.0</ele>
+      </trkpt>
+      <trkpt lat="50.472047" lon="7.802773">
+        <ele>268.9</ele>
+      </trkpt>
+      <trkpt lat="50.472026" lon="7.802813">
+        <ele>268.8</ele>
+      </trkpt>
+      <trkpt lat="50.472007" lon="7.802857">
+        <ele>268.8</ele>
+      </trkpt>
+      <trkpt lat="50.4719" lon="7.803202">
+        <ele>268.1</ele>
+      </trkpt>
+      <trkpt lat="50.471829" lon="7.803439">
+        <ele>267.8</ele>
+      </trkpt>
+      <trkpt lat="50.471787" lon="7.80362">
+        <ele>267.5</ele>
+        <name>K 145, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.471784" lon="7.80363">
+        <ele>267.5</ele>
+      </trkpt>
+      <trkpt lat="50.47171" lon="7.803992">
+        <ele>266.9</ele>
+      </trkpt>
+      <trkpt lat="50.471635" lon="7.804354">
+        <ele>266.3</ele>
+      </trkpt>
+      <trkpt lat="50.471618" lon="7.804458">
+        <ele>266.2</ele>
+      </trkpt>
+      <trkpt lat="50.471592" lon="7.804636">
+        <ele>265.9</ele>
+      </trkpt>
+      <trkpt lat="50.471583" lon="7.804698">
+        <ele>265.8</ele>
+      </trkpt>
+      <trkpt lat="50.471562" lon="7.804803">
+        <ele>265.6</ele>
+      </trkpt>
+      <trkpt lat="50.471545" lon="7.80487">
+        <ele>265.5</ele>
+      </trkpt>
+      <trkpt lat="50.471503" lon="7.805024">
+        <ele>265.3</ele>
+      </trkpt>
+      <trkpt lat="50.471481" lon="7.805013">
+        <ele>265.2</ele>
+      </trkpt>
+      <trkpt lat="50.471458" lon="7.805015">
+        <ele>265.1</ele>
+      </trkpt>
+      <trkpt lat="50.471436" lon="7.805028">
+        <ele>265.1</ele>
+      </trkpt>
+      <trkpt lat="50.471418" lon="7.805051">
+        <ele>265.0</ele>
+      </trkpt>
+      <trkpt lat="50.471406" lon="7.805082">
+        <ele>265.0</ele>
+      </trkpt>
+      <trkpt lat="50.471269" lon="7.804977">
+        <ele>264.8</ele>
+      </trkpt>
+      <trkpt lat="50.4712" lon="7.8049">
+        <ele>264.7</ele>
+      </trkpt>
+      <trkpt lat="50.471137" lon="7.804811">
+        <ele>264.6</ele>
+      </trkpt>
+      <trkpt lat="50.47109" lon="7.804728">
+        <ele>264.5</ele>
+      </trkpt>
+      <trkpt lat="50.471054" lon="7.804783">
+        <ele>264.6</ele>
+      </trkpt>
+      <trkpt lat="50.470999" lon="7.804913">
+        <ele>264.5</ele>
+      </trkpt>
+      <trkpt lat="50.470896" lon="7.805341">
+        <ele>264.1</ele>
+      </trkpt>
+      <trkpt lat="50.470778" lon="7.80564">
+        <ele>263.9</ele>
+      </trkpt>
+      <trkpt lat="50.470715" lon="7.805894">
+        <ele>263.5</ele>
+      </trkpt>
+      <trkpt lat="50.470691" lon="7.806042">
+        <ele>263.2</ele>
+      </trkpt>
+      <trkpt lat="50.470676" lon="7.806151">
+        <ele>263.0</ele>
+      </trkpt>
+      <trkpt lat="50.470659" lon="7.806224">
+        <ele>262.9</ele>
+      </trkpt>
+      <trkpt lat="50.470612" lon="7.806428">
+        <ele>262.7</ele>
+      </trkpt>
+      <trkpt lat="50.470512" lon="7.806862">
+        <ele>261.7</ele>
+      </trkpt>
+      <trkpt lat="50.470135" lon="7.806759">
+        <ele>261.8</ele>
+      </trkpt>
+      <trkpt lat="50.470052" lon="7.806735">
+        <ele>261.9</ele>
+      </trkpt>
+      <trkpt lat="50.469739" lon="7.806642">
+        <ele>262.4</ele>
+      </trkpt>
+      <trkpt lat="50.469687" lon="7.806018">
+        <ele>262.4</ele>
+      </trkpt>
+      <trkpt lat="50.469684" lon="7.805982">
+        <ele>262.5</ele>
+        <name>Daimlerstraße, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.469635" lon="7.805394">
+        <ele>263.2</ele>
+      </trkpt>
+      <trkpt lat="50.469633" lon="7.805172">
+        <ele>263.5</ele>
+      </trkpt>
+      <trkpt lat="50.46966" lon="7.804768">
+        <ele>263.7</ele>
+      </trkpt>
+      <trkpt lat="50.469686" lon="7.804364">
+        <ele>263.5</ele>
+      </trkpt>
+      <trkpt lat="50.469781" lon="7.803902">
+        <ele>263.2</ele>
+      </trkpt>
+      <trkpt lat="50.469876" lon="7.80344">
+        <ele>263.4</ele>
+      </trkpt>
+      <trkpt lat="50.469978" lon="7.802878">
+        <ele>264.2</ele>
+      </trkpt>
+      <trkpt lat="50.470081" lon="7.802316">
+        <ele>264.9</ele>
+        <name>DRK Ortsverein Wirges, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.470088" lon="7.801988">
+        <ele>265.1504</ele>
+      </trkpt>
+      <trkpt lat="50.469985" lon="7.80165">
+        <ele>265.91744</ele>
+      </trkpt>
+      <trkpt lat="50.470016" lon="7.801071">
+        <ele>266.51319</ele>
+      </trkpt>
+      <trkpt lat="50.470067" lon="7.800754">
+        <ele>266.61012</ele>
+      </trkpt>
+      <trkpt lat="50.470166" lon="7.80055">
+        <ele>266.33701</ele>
+      </trkpt>
+      <trkpt lat="50.470323" lon="7.800395">
+        <ele>265.8435</ele>
+        <name>Hausmeisterwohnung, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.470458" lon="7.800301">
+        <ele>265.7</ele>
+        <name>Hausmeisterwohnung, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.470369" lon="7.800084">
+        <ele>265.9</ele>
+      </trkpt>
+      <trkpt lat="50.470275" lon="7.799863">
+        <ele>266.2</ele>
+      </trkpt>
+      <trkpt lat="50.470154" lon="7.799597">
+        <ele>266.8</ele>
+      </trkpt>
+      <trkpt lat="50.470091" lon="7.799467">
+        <ele>267.0</ele>
+      </trkpt>
+      <trkpt lat="50.470027" lon="7.799353">
+        <ele>267.3</ele>
+      </trkpt>
+      <trkpt lat="50.469773" lon="7.798938">
+        <ele>268.3</ele>
+      </trkpt>
+      <trkpt lat="50.469567" lon="7.798599">
+        <ele>269.1</ele>
+      </trkpt>
+      <trkpt lat="50.469428" lon="7.798371">
+        <ele>269.8</ele>
+        <name>Theodor-Heuss-Realschule plus, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.469361" lon="7.798261">
+        <ele>270.1</ele>
+      </trkpt>
+      <trkpt lat="50.46931" lon="7.798167">
+        <ele>270.3</ele>
+      </trkpt>
+      <trkpt lat="50.469275" lon="7.79822">
+        <ele>270.5</ele>
+      </trkpt>
+      <trkpt lat="50.469243" lon="7.798162">
+        <ele>270.6</ele>
+      </trkpt>
+      <trkpt lat="50.469226" lon="7.798144">
+        <ele>270.7</ele>
+      </trkpt>
+      <trkpt lat="50.469193" lon="7.798119">
+        <ele>270.9</ele>
+      </trkpt>
+      <trkpt lat="50.469177" lon="7.798081">
+        <ele>271.0</ele>
+      </trkpt>
+      <trkpt lat="50.468915" lon="7.797524">
+        <ele>272.1</ele>
+      </trkpt>
+      <trkpt lat="50.468889" lon="7.797468">
+        <ele>272.1</ele>
+      </trkpt>
+      <trkpt lat="50.468718" lon="7.797196">
+        <ele>272.6</ele>
+      </trkpt>
+      <trkpt lat="50.468692" lon="7.797142">
+        <ele>272.7</ele>
+      </trkpt>
+      <trkpt lat="50.468604" lon="7.796886">
+        <ele>273.1</ele>
+      </trkpt>
+      <trkpt lat="50.4686" lon="7.796871">
+        <ele>273.1</ele>
+      </trkpt>
+      <trkpt lat="50.468602" lon="7.796858">
+        <ele>273.2</ele>
+      </trkpt>
+      <trkpt lat="50.468646" lon="7.796815">
+        <ele>273.2</ele>
+        <name>Südstraße, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.468658" lon="7.796795">
+        <ele>273.2</ele>
+      </trkpt>
+      <trkpt lat="50.468665" lon="7.796772">
+        <ele>273.3</ele>
+      </trkpt>
+      <trkpt lat="50.468666" lon="7.796732">
+        <ele>273.3</ele>
+      </trkpt>
+      <trkpt lat="50.46866" lon="7.796699">
+        <ele>273.4</ele>
+      </trkpt>
+      <trkpt lat="50.468618" lon="7.796576">
+        <ele>273.8</ele>
+      </trkpt>
+      <trkpt lat="50.468682" lon="7.796512">
+        <ele>273.8</ele>
+      </trkpt>
+      <trkpt lat="50.468663" lon="7.796469">
+        <ele>274.0</ele>
+      </trkpt>
+      <trkpt lat="50.468553" lon="7.796242">
+        <ele>274.7</ele>
+      </trkpt>
+      <trkpt lat="50.468378" lon="7.795898">
+        <ele>276.0</ele>
+      </trkpt>
+      <trkpt lat="50.468203" lon="7.795554">
+        <ele>277.9</ele>
+      </trkpt>
+      <trkpt lat="50.46797" lon="7.795086">
+        <ele>280.4</ele>
+      </trkpt>
+      <trkpt lat="50.467736" lon="7.794619">
+        <ele>283.0</ele>
+      </trkpt>
+      <trkpt lat="50.467655" lon="7.794467">
+        <ele>283.9</ele>
+      </trkpt>
+      <trkpt lat="50.467369" lon="7.794801">
+        <ele>282.3</ele>
+      </trkpt>
+      <trkpt lat="50.467172" lon="7.795054">
+        <ele>281.2</ele>
+      </trkpt>
+      <trkpt lat="50.46704" lon="7.795146">
+        <ele>280.8</ele>
+        <name>Nassauer Ring, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.466998" lon="7.795175">
+        <ele>280.7</ele>
+      </trkpt>
+      <trkpt lat="50.466813" lon="7.795354">
+        <ele>280.1</ele>
+      </trkpt>
+      <trkpt lat="50.46671" lon="7.795398">
+        <ele>279.8</ele>
+      </trkpt>
+      <trkpt lat="50.466749" lon="7.795697">
+        <ele>278.4</ele>
+      </trkpt>
+      <trkpt lat="50.46656" lon="7.795918">
+        <ele>277.3</ele>
+      </trkpt>
+      <trkpt lat="50.466335" lon="7.796244">
+        <ele>276.0</ele>
+      </trkpt>
+      <trkpt lat="50.466125" lon="7.796531">
+        <ele>275.4</ele>
+      </trkpt>
+      <trkpt lat="50.465915" lon="7.796817">
+        <ele>276.5</ele>
+      </trkpt>
+      <trkpt lat="50.465614" lon="7.797244">
+        <ele>278.1</ele>
+      </trkpt>
+      <trkpt lat="50.465287" lon="7.797004">
+        <ele>281.3</ele>
+      </trkpt>
+      <trkpt lat="50.46496" lon="7.796765">
+        <ele>283.3</ele>
+      </trkpt>
+      <trkpt lat="50.464634" lon="7.796525">
+        <ele>283.5</ele>
+      </trkpt>
+      <trkpt lat="50.464283" lon="7.79628">
+        <ele>281.4</ele>
+      </trkpt>
+      <trkpt lat="50.46393" lon="7.796024">
+        <ele>279.2</ele>
+      </trkpt>
+      <trkpt lat="50.463577" lon="7.795768">
+        <ele>276.4</ele>
+      </trkpt>
+      <trkpt lat="50.463224" lon="7.795511">
+        <ele>275.0</ele>
+      </trkpt>
+      <trkpt lat="50.462871" lon="7.795255">
+        <ele>273.1</ele>
+      </trkpt>
+      <trkpt lat="50.462815" lon="7.795215">
+        <ele>272.9</ele>
+      </trkpt>
+      <trkpt lat="50.462972" lon="7.794704">
+        <ele>274.9</ele>
+        <name>Stöckelches Weg, Dernbach (Westerwald)</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.462982" lon="7.794669">
+        <ele>275.0</ele>
+      </trkpt>
+      <trkpt lat="50.463149" lon="7.794123">
+        <ele>277.7</ele>
+      </trkpt>
+      <trkpt lat="50.463316" lon="7.793577">
+        <ele>280.3</ele>
+      </trkpt>
+      <trkpt lat="50.463483" lon="7.793031">
+        <ele>283.4</ele>
+      </trkpt>
+      <trkpt lat="50.46365" lon="7.792485">
+        <ele>286.2</ele>
+      </trkpt>
+      <trkpt lat="50.463817" lon="7.791939">
+        <ele>288.3</ele>
+      </trkpt>
+      <trkpt lat="50.46383" lon="7.791893">
+        <ele>288.3</ele>
+      </trkpt>
+      <trkpt lat="50.464" lon="7.791345">
+        <ele>288.3</ele>
+      </trkpt>
+      <trkpt lat="50.464169" lon="7.790798">
+        <ele>287.6</ele>
+      </trkpt>
+      <trkpt lat="50.464333" lon="7.79027">
+        <ele>286.1</ele>
+      </trkpt>
+      <trkpt lat="50.464497" lon="7.789743">
+        <ele>284.5</ele>
+      </trkpt>
+      <trkpt lat="50.464661" lon="7.789216">
+        <ele>283.1</ele>
+      </trkpt>
+      <trkpt lat="50.464785" lon="7.788797">
+        <ele>281.7</ele>
+      </trkpt>
+      <trkpt lat="50.46509" lon="7.788637">
+        <ele>281.8</ele>
+      </trkpt>
+      <trkpt lat="50.465396" lon="7.788478">
+        <ele>281.8</ele>
+      </trkpt>
+      <trkpt lat="50.465677" lon="7.788335">
+        <ele>281.8</ele>
+      </trkpt>
+      <trkpt lat="50.465958" lon="7.788192">
+        <ele>281.9</ele>
+      </trkpt>
+      <trkpt lat="50.466086" lon="7.788122">
+        <ele>281.9</ele>
+      </trkpt>
+      <trkpt lat="50.466295" lon="7.788014">
+        <ele>281.8</ele>
+      </trkpt>
+      <trkpt lat="50.466559" lon="7.787875">
+        <ele>281.7</ele>
+      </trkpt>
+      <trkpt lat="50.466822" lon="7.787735">
+        <ele>281.6</ele>
+      </trkpt>
+      <trkpt lat="50.466986" lon="7.787655">
+        <ele>281.7</ele>
+      </trkpt>
+      <trkpt lat="50.466891" lon="7.787399">
+        <ele>281.9</ele>
+      </trkpt>
+      <trkpt lat="50.466841" lon="7.787268">
+        <ele>281.8</ele>
+      </trkpt>
+      <trkpt lat="50.466678" lon="7.786738">
+        <ele>280.8</ele>
+      </trkpt>
+      <trkpt lat="50.466515" lon="7.786208">
+        <ele>280.9</ele>
+      </trkpt>
+      <trkpt lat="50.466508" lon="7.78612">
+        <ele>280.9</ele>
+      </trkpt>
+      <trkpt lat="50.46658" lon="7.785872">
+        <ele>281.5</ele>
+      </trkpt>
+      <trkpt lat="50.466823" lon="7.785668">
+        <ele>282.2</ele>
+      </trkpt>
+      <trkpt lat="50.467123" lon="7.785353">
+        <ele>283.1</ele>
+      </trkpt>
+      <trkpt lat="50.467243" lon="7.785228">
+        <ele>283.5</ele>
+      </trkpt>
+      <trkpt lat="50.467285" lon="7.785223">
+        <ele>283.5</ele>
+      </trkpt>
+      <trkpt lat="50.467329" lon="7.785252">
+        <ele>283.6</ele>
+      </trkpt>
+      <trkpt lat="50.467363" lon="7.785296">
+        <ele>283.6</ele>
+      </trkpt>
+      <trkpt lat="50.467404" lon="7.785341">
+        <ele>283.6</ele>
+      </trkpt>
+      <trkpt lat="50.467545" lon="7.785437">
+        <ele>283.7</ele>
+        <name>Am Bahndamm, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.467705" lon="7.785531">
+        <ele>283.8</ele>
+      </trkpt>
+      <trkpt lat="50.46774" lon="7.785527">
+        <ele>283.8</ele>
+      </trkpt>
+      <trkpt lat="50.467762" lon="7.785489">
+        <ele>283.9</ele>
+      </trkpt>
+      <trkpt lat="50.467807" lon="7.785542">
+        <ele>283.9</ele>
+      </trkpt>
+      <trkpt lat="50.467826" lon="7.785535">
+        <ele>283.9</ele>
+        <name>Bahnhofstraße, Wirges</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

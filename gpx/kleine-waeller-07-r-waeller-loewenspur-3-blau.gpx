@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gpx version="1.1" creator="outdooractive - http://www.outdooractive.com" xmlns="http://www.topografix.com/GPX/1/1" xmlns:oa="http://www.outdooractive.com/GPX/Extensions/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.outdooractive.com/GPX/Extensions/1 https://www.outdooractive.com/schema/gpx_extensions.xsd">
+  <metadata>
+    <name>Kleiner Wäller Löwenspur 3 (blau) - Hachenburg</name>
+    <author>
+      <name>Eva Lehna - Westerwald - Ganz nach deiner Natur!</name>
+    </author>
+    <link href="https://www.outdooractive.com/r/55680928"/>
+    <time>2026-03-20T07:25:20.726Z</time>
+    <extensions>
+      <oa:oaCategory>hikingTourTrail</oa:oaCategory>
+    </extensions>
+  </metadata>
+  <trk>
+    <name>Kleiner Wäller Löwenspur 3 (blau) - Hachenburg</name>
+    <desc>Der Spazierwanderweg Kleiner Wäller &quot;Löwenspur 3 blau&quot; kombiniert die Ruhe des Hachenburger Stadtwaldes mit grandiosen Ausblicken in die umliegende Landschaft.</desc>
+    <type>hikingTourTrail</type>
+    <trkseg>
+      <trkpt lat="50.662306" lon="7.826549">
+        <ele>368.60229</ele>
+        <name>50.662306,7.826549</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>17</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.662234" lon="7.826791">
+        <ele>368.58428</ele>
+      </trkpt>
+      <trkpt lat="50.662149" lon="7.827062">
+        <ele>369.55859</ele>
+      </trkpt>
+      <trkpt lat="50.662302" lon="7.827222">
+        <ele>368.61003</ele>
+      </trkpt>
+      <trkpt lat="50.662377" lon="7.827378">
+        <ele>368.33221</ele>
+      </trkpt>
+      <trkpt lat="50.662479" lon="7.827657">
+        <ele>368.07951</ele>
+      </trkpt>
+      <trkpt lat="50.66255" lon="7.827877">
+        <ele>367.99537</ele>
+      </trkpt>
+      <trkpt lat="50.662687" lon="7.828166">
+        <ele>367.54983</ele>
+      </trkpt>
+      <trkpt lat="50.662775" lon="7.828472">
+        <ele>367.6811</ele>
+      </trkpt>
+      <trkpt lat="50.66287" lon="7.828746">
+        <ele>367.85661</ele>
+      </trkpt>
+      <trkpt lat="50.66285" lon="7.828971">
+        <ele>368.58664</ele>
+      </trkpt>
+      <trkpt lat="50.662724" lon="7.829293">
+        <ele>370.01742</ele>
+      </trkpt>
+      <trkpt lat="50.662673" lon="7.829411">
+        <ele>370.49529</ele>
+      </trkpt>
+      <trkpt lat="50.662646" lon="7.829524">
+        <ele>370.81354</ele>
+      </trkpt>
+      <trkpt lat="50.662632" lon="7.829835">
+        <ele>371.34443</ele>
+      </trkpt>
+      <trkpt lat="50.662632" lon="7.830033">
+        <ele>371.61562</ele>
+      </trkpt>
+      <trkpt lat="50.66271" lon="7.830892">
+        <ele>372.38835</ele>
+      </trkpt>
+      <trkpt lat="50.66284" lon="7.831729">
+        <ele>372.82018</ele>
+      </trkpt>
+      <trkpt lat="50.662649" lon="7.831771">
+        <ele>373.19754</ele>
+      </trkpt>
+      <trkpt lat="50.662375" lon="7.831609">
+        <ele>373.73367</ele>
+      </trkpt>
+      <trkpt lat="50.662263" lon="7.831271">
+        <ele>373.67031</ele>
+      </trkpt>
+      <trkpt lat="50.662211" lon="7.831334">
+        <ele>374.0</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.662242" lon="7.831444">
+        <ele>374.1</ele>
+      </trkpt>
+      <trkpt lat="50.662267" lon="7.83153">
+        <ele>374.2</ele>
+      </trkpt>
+      <trkpt lat="50.662256" lon="7.831564">
+        <ele>374.5</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.662197" lon="7.831744">
+        <ele>375.8</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.662185" lon="7.831778">
+        <ele>376.1</ele>
+      </trkpt>
+      <trkpt lat="50.661841" lon="7.831526">
+        <ele>376.7</ele>
+      </trkpt>
+      <trkpt lat="50.661625" lon="7.831417">
+        <ele>375.9</ele>
+      </trkpt>
+      <trkpt lat="50.661351" lon="7.831333">
+        <ele>374.2</ele>
+      </trkpt>
+      <trkpt lat="50.661015" lon="7.831271">
+        <ele>371.9</ele>
+      </trkpt>
+      <trkpt lat="50.660831" lon="7.831243">
+        <ele>370.0</ele>
+      </trkpt>
+      <trkpt lat="50.660641" lon="7.831252">
+        <ele>367.2</ele>
+      </trkpt>
+      <trkpt lat="50.660634" lon="7.831252">
+        <ele>367.1</ele>
+        <name>Adolphweg, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.660557" lon="7.831256">
+        <ele>365.8</ele>
+      </trkpt>
+      <trkpt lat="50.660153" lon="7.831333">
+        <ele>359.2</ele>
+      </trkpt>
+      <trkpt lat="50.659993" lon="7.831341">
+        <ele>356.5</ele>
+        <name>Adolphweg, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.659976" lon="7.831342">
+        <ele>356.2</ele>
+      </trkpt>
+      <trkpt lat="50.659796" lon="7.831392">
+        <ele>353.3</ele>
+      </trkpt>
+      <trkpt lat="50.659724" lon="7.831422">
+        <ele>352.5</ele>
+      </trkpt>
+      <trkpt lat="50.659677" lon="7.831419">
+        <ele>352.4</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.659557" lon="7.831414">
+        <ele>352.2</ele>
+      </trkpt>
+      <trkpt lat="50.659525" lon="7.831318">
+        <ele>352.0</ele>
+      </trkpt>
+      <trkpt lat="50.659522" lon="7.831316">
+        <ele>352.0</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.659497" lon="7.831305">
+        <ele>352.1</ele>
+      </trkpt>
+      <trkpt lat="50.659464" lon="7.831317">
+        <ele>352.2</ele>
+      </trkpt>
+      <trkpt lat="50.659438" lon="7.831359">
+        <ele>352.5</ele>
+      </trkpt>
+      <trkpt lat="50.659432" lon="7.831397">
+        <ele>352.6</ele>
+      </trkpt>
+      <trkpt lat="50.659376" lon="7.831405">
+        <ele>352.9</ele>
+        <name>Alte Frankfurter Straße, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.65932" lon="7.831413">
+        <ele>353.1</ele>
+      </trkpt>
+      <trkpt lat="50.659266" lon="7.831208">
+        <ele>352.6</ele>
+      </trkpt>
+      <trkpt lat="50.659113" lon="7.83065">
+        <ele>350.9</ele>
+      </trkpt>
+      <trkpt lat="50.65896" lon="7.830092">
+        <ele>349.3</ele>
+      </trkpt>
+      <trkpt lat="50.658807" lon="7.829534">
+        <ele>348.3</ele>
+      </trkpt>
+      <trkpt lat="50.658654" lon="7.828975">
+        <ele>347.6</ele>
+      </trkpt>
+      <trkpt lat="50.658553" lon="7.828518">
+        <ele>347.0</ele>
+      </trkpt>
+      <trkpt lat="50.658452" lon="7.82806">
+        <ele>346.5</ele>
+      </trkpt>
+      <trkpt lat="50.65835" lon="7.827602">
+        <ele>346.5</ele>
+      </trkpt>
+      <trkpt lat="50.658319" lon="7.827626">
+        <ele>346.8</ele>
+        <name>Am Schwimmbad, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.658027" lon="7.827848">
+        <ele>349.7</ele>
+      </trkpt>
+      <trkpt lat="50.657704" lon="7.828093">
+        <ele>353.8</ele>
+      </trkpt>
+      <trkpt lat="50.657398" lon="7.828336">
+        <ele>357.2</ele>
+      </trkpt>
+      <trkpt lat="50.657071" lon="7.82856">
+        <ele>361.2</ele>
+      </trkpt>
+      <trkpt lat="50.656799" lon="7.828768">
+        <ele>364.0</ele>
+      </trkpt>
+      <trkpt lat="50.656528" lon="7.828976">
+        <ele>366.7</ele>
+      </trkpt>
+      <trkpt lat="50.656257" lon="7.829183">
+        <ele>369.3</ele>
+      </trkpt>
+      <trkpt lat="50.656126" lon="7.82928">
+        <ele>370.4</ele>
+      </trkpt>
+      <trkpt lat="50.65594" lon="7.829416">
+        <ele>372.4</ele>
+      </trkpt>
+      <trkpt lat="50.655539" lon="7.829712">
+        <ele>384.7</ele>
+      </trkpt>
+      <trkpt lat="50.65553" lon="7.829724">
+        <ele>384.8</ele>
+        <name>Sebastian-Kneipp-Straße, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.655258" lon="7.830114">
+        <ele>387.6</ele>
+      </trkpt>
+      <trkpt lat="50.654978" lon="7.830545">
+        <ele>393.9</ele>
+      </trkpt>
+      <trkpt lat="50.654697" lon="7.830977">
+        <ele>399.5</ele>
+      </trkpt>
+      <trkpt lat="50.654603" lon="7.831168">
+        <ele>401.5</ele>
+      </trkpt>
+      <trkpt lat="50.654558" lon="7.83126">
+        <ele>402.4</ele>
+      </trkpt>
+      <trkpt lat="50.654375" lon="7.831632">
+        <ele>405.5</ele>
+      </trkpt>
+      <trkpt lat="50.654259" lon="7.831743">
+        <ele>406.7</ele>
+      </trkpt>
+      <trkpt lat="50.653869" lon="7.831805">
+        <ele>409.8</ele>
+      </trkpt>
+      <trkpt lat="50.653595" lon="7.831849">
+        <ele>411.6</ele>
+        <name>Sebastian-Kneipp-Straße, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.653479" lon="7.831868">
+        <ele>412.4</ele>
+      </trkpt>
+      <trkpt lat="50.653089" lon="7.83193">
+        <ele>414.7</ele>
+      </trkpt>
+      <trkpt lat="50.652828" lon="7.831972">
+        <ele>416.1</ele>
+      </trkpt>
+      <trkpt lat="50.652567" lon="7.832014">
+        <ele>417.5</ele>
+      </trkpt>
+      <trkpt lat="50.652235" lon="7.832047">
+        <ele>419.0</ele>
+      </trkpt>
+      <trkpt lat="50.651904" lon="7.83208">
+        <ele>420.3</ele>
+      </trkpt>
+      <trkpt lat="50.651572" lon="7.832113">
+        <ele>421.4</ele>
+      </trkpt>
+      <trkpt lat="50.651125" lon="7.832064">
+        <ele>422.8</ele>
+      </trkpt>
+      <trkpt lat="50.650677" lon="7.832015">
+        <ele>424.1</ele>
+        <name>Zur Helenenruh, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.650535" lon="7.831617">
+        <ele>424.5</ele>
+      </trkpt>
+      <trkpt lat="50.65033" lon="7.831044">
+        <ele>424.8</ele>
+      </trkpt>
+      <trkpt lat="50.650125" lon="7.830471">
+        <ele>424.8</ele>
+      </trkpt>
+      <trkpt lat="50.64992" lon="7.829898">
+        <ele>424.0</ele>
+      </trkpt>
+      <trkpt lat="50.649852" lon="7.829312">
+        <ele>422.3</ele>
+      </trkpt>
+      <trkpt lat="50.649784" lon="7.828726">
+        <ele>420.4</ele>
+      </trkpt>
+      <trkpt lat="50.649715" lon="7.82814">
+        <ele>418.7</ele>
+      </trkpt>
+      <trkpt lat="50.649679" lon="7.827829">
+        <ele>417.8</ele>
+      </trkpt>
+      <trkpt lat="50.649356" lon="7.827858">
+        <ele>417.4</ele>
+        <name>Zur Helenenruh, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.649296" lon="7.827863">
+        <ele>417.3</ele>
+      </trkpt>
+      <trkpt lat="50.649208" lon="7.827621">
+        <ele>416.3</ele>
+      </trkpt>
+      <trkpt lat="50.649082" lon="7.827306">
+        <ele>415.0</ele>
+      </trkpt>
+      <trkpt lat="50.648956" lon="7.82699">
+        <ele>413.8</ele>
+      </trkpt>
+      <trkpt lat="50.648759" lon="7.826555">
+        <ele>412.0</ele>
+      </trkpt>
+      <trkpt lat="50.648562" lon="7.82612">
+        <ele>410.3</ele>
+      </trkpt>
+      <trkpt lat="50.648365" lon="7.825685">
+        <ele>408.3</ele>
+      </trkpt>
+      <trkpt lat="50.648199" lon="7.825285">
+        <ele>406.3</ele>
+      </trkpt>
+      <trkpt lat="50.648033" lon="7.824885">
+        <ele>403.9</ele>
+      </trkpt>
+      <trkpt lat="50.647833" lon="7.82442">
+        <ele>400.8</ele>
+      </trkpt>
+      <trkpt lat="50.647634" lon="7.823955">
+        <ele>397.4</ele>
+      </trkpt>
+      <trkpt lat="50.64745" lon="7.823547">
+        <ele>394.2</ele>
+      </trkpt>
+      <trkpt lat="50.647395" lon="7.823418">
+        <ele>393.2</ele>
+      </trkpt>
+      <trkpt lat="50.647293" lon="7.823208">
+        <ele>391.5</ele>
+      </trkpt>
+      <trkpt lat="50.647044" lon="7.822623">
+        <ele>386.8</ele>
+      </trkpt>
+      <trkpt lat="50.646795" lon="7.822038">
+        <ele>382.1</ele>
+      </trkpt>
+      <trkpt lat="50.646545" lon="7.821453">
+        <ele>377.5</ele>
+      </trkpt>
+      <trkpt lat="50.646296" lon="7.820868">
+        <ele>373.2</ele>
+      </trkpt>
+      <trkpt lat="50.646096" lon="7.820408">
+        <ele>369.8</ele>
+      </trkpt>
+      <trkpt lat="50.645896" lon="7.819948">
+        <ele>366.4</ele>
+      </trkpt>
+      <trkpt lat="50.645724" lon="7.819552">
+        <ele>363.5</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.645696" lon="7.819488">
+        <ele>363.0</ele>
+      </trkpt>
+      <trkpt lat="50.645936" lon="7.819193">
+        <ele>362.0</ele>
+      </trkpt>
+      <trkpt lat="50.646177" lon="7.818898">
+        <ele>360.7</ele>
+      </trkpt>
+      <trkpt lat="50.646418" lon="7.818604">
+        <ele>359.4</ele>
+      </trkpt>
+      <trkpt lat="50.646719" lon="7.818349">
+        <ele>358.6</ele>
+      </trkpt>
+      <trkpt lat="50.647021" lon="7.818094">
+        <ele>357.8</ele>
+      </trkpt>
+      <trkpt lat="50.647031" lon="7.818085">
+        <ele>357.8</ele>
+      </trkpt>
+      <trkpt lat="50.647273" lon="7.817873">
+        <ele>357.1</ele>
+      </trkpt>
+      <trkpt lat="50.647475" lon="7.817691">
+        <ele>356.4</ele>
+      </trkpt>
+      <trkpt lat="50.647585" lon="7.817592">
+        <ele>355.9</ele>
+      </trkpt>
+      <trkpt lat="50.647703" lon="7.817487">
+        <ele>355.5</ele>
+      </trkpt>
+      <trkpt lat="50.647952" lon="7.817264">
+        <ele>354.4</ele>
+      </trkpt>
+      <trkpt lat="50.648075" lon="7.817159">
+        <ele>354.0</ele>
+      </trkpt>
+      <trkpt lat="50.648091" lon="7.817148">
+        <ele>354.0</ele>
+        <name>Steinebacher Straße, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.648075" lon="7.817159">
+        <ele>354.0</ele>
+      </trkpt>
+      <trkpt lat="50.648041" lon="7.817003">
+        <ele>352.6</ele>
+      </trkpt>
+      <trkpt lat="50.647972" lon="7.81679">
+        <ele>350.9</ele>
+      </trkpt>
+      <trkpt lat="50.647901" lon="7.816666">
+        <ele>350.0</ele>
+      </trkpt>
+      <trkpt lat="50.64786" lon="7.816597">
+        <ele>349.6</ele>
+      </trkpt>
+      <trkpt lat="50.647821" lon="7.816533">
+        <ele>349.3</ele>
+      </trkpt>
+      <trkpt lat="50.64771" lon="7.816352">
+        <ele>349.3</ele>
+      </trkpt>
+      <trkpt lat="50.647643" lon="7.816272">
+        <ele>350.1</ele>
+      </trkpt>
+      <trkpt lat="50.647568" lon="7.816132">
+        <ele>351.5</ele>
+      </trkpt>
+      <trkpt lat="50.64754" lon="7.81601">
+        <ele>352.7</ele>
+      </trkpt>
+      <trkpt lat="50.647542" lon="7.815839">
+        <ele>354.1</ele>
+      </trkpt>
+      <trkpt lat="50.647559" lon="7.815783">
+        <ele>354.3</ele>
+      </trkpt>
+      <trkpt lat="50.647583" lon="7.815773">
+        <ele>354.1</ele>
+        <name>Steinebacher Straße, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.647864" lon="7.815644">
+        <ele>351.5</ele>
+      </trkpt>
+      <trkpt lat="50.647992" lon="7.815563">
+        <ele>350.5</ele>
+      </trkpt>
+      <trkpt lat="50.648158" lon="7.815429">
+        <ele>349.6</ele>
+      </trkpt>
+      <trkpt lat="50.64845" lon="7.815042">
+        <ele>350.0</ele>
+      </trkpt>
+      <trkpt lat="50.648537" lon="7.814983">
+        <ele>349.6</ele>
+      </trkpt>
+      <trkpt lat="50.648631" lon="7.814776">
+        <ele>350.4</ele>
+      </trkpt>
+      <trkpt lat="50.648679" lon="7.81462">
+        <ele>351.3</ele>
+      </trkpt>
+      <trkpt lat="50.648694" lon="7.814601">
+        <ele>351.3</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.648768" lon="7.81451">
+        <ele>351.3</ele>
+      </trkpt>
+      <trkpt lat="50.649052" lon="7.814224">
+        <ele>350.7</ele>
+      </trkpt>
+      <trkpt lat="50.64918" lon="7.814129">
+        <ele>350.2</ele>
+      </trkpt>
+      <trkpt lat="50.6493" lon="7.814042">
+        <ele>349.7</ele>
+      </trkpt>
+      <trkpt lat="50.649315" lon="7.814031">
+        <ele>349.7</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.649511" lon="7.813888">
+        <ele>349.0</ele>
+      </trkpt>
+      <trkpt lat="50.64967" lon="7.813773">
+        <ele>348.7</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.649723" lon="7.813735">
+        <ele>348.6</ele>
+      </trkpt>
+      <trkpt lat="50.64969" lon="7.813546">
+        <ele>350.2</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.649675" lon="7.813455">
+        <ele>350.9</ele>
+      </trkpt>
+      <trkpt lat="50.64956" lon="7.812791">
+        <ele>356.2</ele>
+      </trkpt>
+      <trkpt lat="50.649583" lon="7.812788">
+        <ele>356.0</ele>
+        <name>Steinebacher Straße, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.649854" lon="7.812714">
+        <ele>352.94726</ele>
+      </trkpt>
+      <trkpt lat="50.649841" lon="7.81265">
+        <ele>353.9499</ele>
+      </trkpt>
+      <trkpt lat="50.64925" lon="7.812395">
+        <ele>360.86376</ele>
+      </trkpt>
+      <trkpt lat="50.649124" lon="7.812014">
+        <ele>363.92056</ele>
+      </trkpt>
+      <trkpt lat="50.649092" lon="7.811555">
+        <ele>366.84634</ele>
+      </trkpt>
+      <trkpt lat="50.649115" lon="7.811351">
+        <ele>367.98787</ele>
+      </trkpt>
+      <trkpt lat="50.649256" lon="7.811123">
+        <ele>368.93759</ele>
+      </trkpt>
+      <trkpt lat="50.649256" lon="7.810979">
+        <ele>369.89094</ele>
+        <name>Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.649066" lon="7.809863">
+        <ele>374.45478</ele>
+      </trkpt>
+      <trkpt lat="50.653134" lon="7.808007">
+        <ele>378.74762</ele>
+      </trkpt>
+      <trkpt lat="50.655201" lon="7.81062">
+        <ele>355.09398</ele>
+      </trkpt>
+      <trkpt lat="50.655317" lon="7.811414">
+        <ele>349.66618</ele>
+      </trkpt>
+      <trkpt lat="50.655275" lon="7.81165">
+        <ele>347.60242</ele>
+      </trkpt>
+      <trkpt lat="50.655309" lon="7.811742">
+        <ele>346.42498</ele>
+      </trkpt>
+      <trkpt lat="50.655268" lon="7.811849">
+        <ele>345.53546</ele>
+      </trkpt>
+      <trkpt lat="50.655193" lon="7.8123">
+        <ele>339.36973</ele>
+      </trkpt>
+      <trkpt lat="50.655329" lon="7.812353">
+        <ele>336.39839</ele>
+      </trkpt>
+      <trkpt lat="50.655407" lon="7.812461">
+        <ele>333.65543</ele>
+      </trkpt>
+      <trkpt lat="50.655683" lon="7.81231">
+        <ele>332.40394</ele>
+      </trkpt>
+      <trkpt lat="50.655753" lon="7.812637">
+        <ele>330.44571</ele>
+      </trkpt>
+      <trkpt lat="50.65604" lon="7.813239">
+        <ele>328.71477</ele>
+      </trkpt>
+      <trkpt lat="50.656025" lon="7.813479">
+        <ele>328.90359</ele>
+      </trkpt>
+      <trkpt lat="50.656428" lon="7.813464">
+        <ele>327.35879</ele>
+      </trkpt>
+      <trkpt lat="50.656646" lon="7.813582">
+        <ele>327.01774</ele>
+      </trkpt>
+      <trkpt lat="50.656755" lon="7.813722">
+        <ele>327.28613</ele>
+      </trkpt>
+      <trkpt lat="50.656776" lon="7.81384">
+        <ele>327.54891</ele>
+      </trkpt>
+      <trkpt lat="50.657807" lon="7.81379">
+        <ele>322.55366</ele>
+      </trkpt>
+      <trkpt lat="50.65796" lon="7.814085">
+        <ele>323.62881</ele>
+      </trkpt>
+      <trkpt lat="50.658433" lon="7.814601">
+        <ele>327.29178</ele>
+      </trkpt>
+      <trkpt lat="50.658283" lon="7.814993">
+        <ele>330.42476</ele>
+      </trkpt>
+      <trkpt lat="50.658123" lon="7.81531">
+        <ele>332.62918</ele>
+      </trkpt>
+      <trkpt lat="50.657946" lon="7.815578">
+        <ele>333.07455</ele>
+      </trkpt>
+      <trkpt lat="50.657797" lon="7.815914">
+        <ele>333.51386</ele>
+      </trkpt>
+      <trkpt lat="50.657586" lon="7.816209">
+        <ele>332.18561</ele>
+      </trkpt>
+      <trkpt lat="50.657518" lon="7.816397">
+        <ele>332.19048</ele>
+      </trkpt>
+      <trkpt lat="50.65748" lon="7.816651">
+        <ele>332.80233</ele>
+      </trkpt>
+      <trkpt lat="50.657412" lon="7.816726">
+        <ele>332.36319</ele>
+      </trkpt>
+      <trkpt lat="50.65718" lon="7.81685">
+        <ele>331.45206</ele>
+      </trkpt>
+      <trkpt lat="50.656888" lon="7.817129">
+        <ele>331.78808</ele>
+      </trkpt>
+      <trkpt lat="50.656911" lon="7.817258">
+        <ele>332.18526</ele>
+      </trkpt>
+      <trkpt lat="50.657402" lon="7.816946">
+        <ele>333.28192</ele>
+      </trkpt>
+      <trkpt lat="50.65745" lon="7.817196">
+        <ele>335.38559</ele>
+        <name>Am Hopfengarten, Hachenburg</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>18</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+      <trkpt lat="50.657514" lon="7.817504">
+        <ele>337.72694</ele>
+      </trkpt>
+      <trkpt lat="50.657562" lon="7.818158">
+        <ele>338.69993</ele>
+      </trkpt>
+      <trkpt lat="50.657848" lon="7.819551">
+        <ele>339.31913</ele>
+      </trkpt>
+      <trkpt lat="50.657889" lon="7.819993">
+        <ele>338.55133</ele>
+      </trkpt>
+      <trkpt lat="50.657698" lon="7.820249">
+        <ele>336.47089</ele>
+      </trkpt>
+      <trkpt lat="50.657691" lon="7.820229">
+        <ele>336.4438</ele>
+      </trkpt>
+      <trkpt lat="50.657514" lon="7.820057">
+        <ele>336.17781</ele>
+      </trkpt>
+      <trkpt lat="50.657657" lon="7.821686">
+        <ele>337.63297</ele>
+      </trkpt>
+      <trkpt lat="50.657603" lon="7.821978">
+        <ele>338.3</ele>
+      </trkpt>
+      <trkpt lat="50.657617" lon="7.822354">
+        <ele>339.36718</ele>
+      </trkpt>
+      <trkpt lat="50.658018" lon="7.823285">
+        <ele>341.9029</ele>
+      </trkpt>
+      <trkpt lat="50.65829" lon="7.823481">
+        <ele>342.39437</ele>
+      </trkpt>
+      <trkpt lat="50.658453" lon="7.823596">
+        <ele>344.1</ele>
+      </trkpt>
+      <trkpt lat="50.658678" lon="7.82361">
+        <ele>349.51917</ele>
+      </trkpt>
+      <trkpt lat="50.658733" lon="7.823588">
+        <ele>350.9821</ele>
+      </trkpt>
+      <trkpt lat="50.658732" lon="7.823339">
+        <ele>351.04023</ele>
+      </trkpt>
+      <trkpt lat="50.658746" lon="7.822944">
+        <ele>352.1911</ele>
+      </trkpt>
+      <trkpt lat="50.65876" lon="7.822783">
+        <ele>353.05303</ele>
+      </trkpt>
+      <trkpt lat="50.65882" lon="7.822759">
+        <ele>354.63833</ele>
+      </trkpt>
+      <trkpt lat="50.659174" lon="7.822706">
+        <ele>359.95436</ele>
+      </trkpt>
+      <trkpt lat="50.659897" lon="7.822236">
+        <ele>365.63377</ele>
+      </trkpt>
+      <trkpt lat="50.660741" lon="7.82186">
+        <ele>365.67936</ele>
+      </trkpt>
+      <trkpt lat="50.660857" lon="7.821989">
+        <ele>365.62785</ele>
+      </trkpt>
+      <trkpt lat="50.661047" lon="7.821592">
+        <ele>364.52381</ele>
+      </trkpt>
+      <trkpt lat="50.661476" lon="7.822086">
+        <ele>363.98873</ele>
+      </trkpt>
+      <trkpt lat="50.661105" lon="7.823006">
+        <ele>370.6544</ele>
+      </trkpt>
+      <trkpt lat="50.661071" lon="7.822995">
+        <ele>370.67274</ele>
+      </trkpt>
+      <trkpt lat="50.661035" lon="7.823715">
+        <ele>373.13508</ele>
+      </trkpt>
+      <trkpt lat="50.661029" lon="7.824241">
+        <ele>375.53562</ele>
+      </trkpt>
+      <trkpt lat="50.660827" lon="7.824267">
+        <ele>374.06697</ele>
+      </trkpt>
+      <trkpt lat="50.660814" lon="7.824585">
+        <ele>374.95223</ele>
+      </trkpt>
+      <trkpt lat="50.660773" lon="7.824847">
+        <ele>375.39267</ele>
+      </trkpt>
+      <trkpt lat="50.660682" lon="7.825067">
+        <ele>375.09439</ele>
+      </trkpt>
+      <trkpt lat="50.660613" lon="7.825228">
+        <ele>374.87166</ele>
+      </trkpt>
+      <trkpt lat="50.660619" lon="7.825667">
+        <ele>376.43442</ele>
+      </trkpt>
+      <trkpt lat="50.660674" lon="7.825897">
+        <ele>377.79818</ele>
+      </trkpt>
+      <trkpt lat="50.660722" lon="7.826094">
+        <ele>378.84003</ele>
+      </trkpt>
+      <trkpt lat="50.660794" lon="7.826012">
+        <ele>379.05384</ele>
+      </trkpt>
+      <trkpt lat="50.661035" lon="7.826581">
+        <ele>378.44878</ele>
+      </trkpt>
+      <trkpt lat="50.661042" lon="7.82671">
+        <ele>378.13346</ele>
+      </trkpt>
+      <trkpt lat="50.661247" lon="7.826722">
+        <ele>377.28099</ele>
+      </trkpt>
+      <trkpt lat="50.661334" lon="7.826631">
+        <ele>376.98573</ele>
+      </trkpt>
+      <trkpt lat="50.661397" lon="7.826709">
+        <ele>376.45414</ele>
+      </trkpt>
+      <trkpt lat="50.661452" lon="7.826887">
+        <ele>375.84421</ele>
+      </trkpt>
+      <trkpt lat="50.661736" lon="7.826899">
+        <ele>373.54664</ele>
+      </trkpt>
+      <trkpt lat="50.661819" lon="7.82691">
+        <ele>372.71813</ele>
+      </trkpt>
+      <trkpt lat="50.661931" lon="7.826915">
+        <ele>371.5028</ele>
+      </trkpt>
+      <trkpt lat="50.662044" lon="7.826926">
+        <ele>370.27633</ele>
+      </trkpt>
+      <trkpt lat="50.662156" lon="7.826931">
+        <ele>369.1932</ele>
+      </trkpt>
+      <trkpt lat="50.662233" lon="7.82674">
+        <ele>368.62446</ele>
+      </trkpt>
+      <trkpt lat="50.662306" lon="7.826549">
+        <ele>368.60229</ele>
+        <name>50.662306,7.826549</name>
+        <extensions>
+          <oa:Extension>
+            <oa:mapZoom>15</oa:mapZoom>
+          </oa:Extension>
+        </extensions>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

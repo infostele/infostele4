@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>GPX-Downloader · Guck ma, Westerwald</title>
+<style>
+  body { font-family: -apple-system, system-ui, sans-serif; background: #f4f4f4; padding: 24px; max-width: 1100px; margin: 0 auto; color: #222; }
+  h1 { color: #1d6b3e; }
+  .info { background: #fff; padding: 16px 20px; border-radius: 8px; border-left: 4px solid #1d6b3e; margin-bottom: 24px; line-height: 1.55; }
+  .controls { background: #fff; padding: 16px 20px; border-radius: 8px; margin-bottom: 16px; }
+  button { background: #1d6b3e; color: #fff; border: 0; padding: 10px 18px; border-radius: 6px; font-weight: 600; cursor: pointer; font-size: 14px; }
+  button:hover { background: #145130; }
+  button:disabled { background: #999; cursor: not-allowed; }
+  .progress { margin-top: 12px; font-size: 0.92em; color: #444; }
+  .progress-bar { background: #ddd; border-radius: 6px; height: 8px; overflow: hidden; margin-top: 8px; }
+  .progress-bar-fill { background: #1d6b3e; height: 100%; width: 0; transition: width 0.3s; }
+  table { width: 100%; background: #fff; border-collapse: collapse; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  th { background: #1d6b3e; color: #fff; padding: 10px 14px; text-align: left; font-weight: 600; font-size: 0.85em; }
+  td { padding: 8px 14px; border-bottom: 1px solid #eee; font-size: 0.88em; vertical-align: top; }
+  td.status-ok    { background: #e7f5e1; color: #1d6b3e; font-weight: 600; }
+  td.status-fehler { background: #fbe5e2; color: #c0392b; font-weight: 600; }
+  td.status-lade  { background: #fff5d7; color: #b85c00; font-weight: 600; }
+  td.status-warte { color: #888; }
+  .nr { color: #888; width: 50px; }
+  .gruppe { font-weight: 600; color: #1d6b3e; }
+  .dateiname { font-family: ui-monospace, monospace; font-size: 0.82em; color: #444; }
+</style>
+</head>
+<body>
+
+<h1>🗺️ GPX-Downloader · 121 Routen</h1>
+
+<div class="info">
+  <p><strong>Was dieses Tool macht:</strong> Öffnet nacheinander 121 GPX-Download-Dialoge vom Tourenplaner Rheinland-Pfalz mit korrekt benannten Dateien.</p>
+  <p><strong>Wichtig vorher:</strong> Stelle in deinem Browser ein, dass <strong>Downloads ohne Rückfrage</strong> in einen festen Ordner gespeichert werden. Sonst bekommst du 121 "Speichern unter"-Dialoge.</p>
+  <ul style="margin: 8px 0 8px 20px; padding: 0;">
+    <li><strong>Edge/Chrome:</strong> Einstellungen → Downloads → "Vor jedem Download nach dem Speicherort fragen" <strong>ausschalten</strong></li>
+    <li><strong>Firefox:</strong> Einstellungen → Dateien & Anwendungen → "Dateien speichern in:" auswählen statt "Jedes Mal nachfragen"</li>
+  </ul>
+  <p><strong>Vorgehen:</strong> 1) "Alle Downloads starten" klicken. 2) Browser lädt die Dateien nacheinander in den Download-Ordner. 3) Die Dateien in einen Ordner <code>gpx/</code> verschieben und in dein GitHub-Repo hochladen.</p>
+  <p><strong>Verzögerung:</strong> 2 Sekunden zwischen Downloads (schont den Tourenplaner-Server). Gesamtdauer: ca. 4 Minuten.</p>
+</div>
+
+<div class="controls">
+  <button id="btn-start" onclick="starteDownload()">📥 Alle Downloads starten</button>
+  <button id="btn-stop" onclick="abbruch=true" style="background:#c0392b; margin-left:8px;" disabled>Stopp</button>
+  <div class="progress" id="progress">Bereit. 121 Routen vorbereitet.</div>
+  <div class="progress-bar"><div class="progress-bar-fill" id="progress-bar"></div></div>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nr.</th>
+      <th>Gruppe</th>
+      <th>Titel</th>
+      <th>Dateiname</th>
+      <th>Status</th>
+      <th>Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr id="zeile-0">
+      <td class="nr">1</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 01. Etappe Herborn – Breitscheid (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-01-herborn-breitscheid-ost-west.gpx</td>
+      <td class="status status-warte" id="status-0">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1512441&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-1">
+      <td class="nr">2</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 02. Etappe Breitscheid – Rehe (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-02-breitscheid-rehe-ost-west.gpx</td>
+      <td class="status status-warte" id="status-1">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522827&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-2">
+      <td class="nr">3</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 03. Etappe Rehe – Rennerod (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-03-rehe-rennerod-ost-west.gpx</td>
+      <td class="status status-warte" id="status-2">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1543858&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-3">
+      <td class="nr">4</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 04. Etappe Rennerod – Westerburg (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-04-rennerod-westerburg-ost-west.gpx</td>
+      <td class="status status-warte" id="status-3">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1495683&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-4">
+      <td class="nr">5</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 05. Etappe Westerburg – Freilingen (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-05-westerburg-freilingen-ost-wes.gpx</td>
+      <td class="status status-warte" id="status-4">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1483380&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-5">
+      <td class="nr">6</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 06. Etappe Freilingen – Nistertal (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-06-freilingen-nistertal-ost-west.gpx</td>
+      <td class="status status-warte" id="status-5">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522831&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-6">
+      <td class="nr">7</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 07. Etappe Nistertal – Bad Marienberg (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-07-nistertal-bad-marienberg-ost.gpx</td>
+      <td class="status status-warte" id="status-6">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1558427&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-7">
+      <td class="nr">8</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 08. Etappe Bad Marienberg – Hachenburg (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-08-bad-marienberg-hachenburg-ost.gpx</td>
+      <td class="status status-warte" id="status-7">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522832&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-8">
+      <td class="nr">9</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 09. Etappe Hachenburg – Limbach (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-09-hachenburg-limbach-ost-west.gpx</td>
+      <td class="status status-warte" id="status-8">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1491573&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-9">
+      <td class="nr">10</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 10. Etappe Limbach – Kloster Marienthal (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-10-limbach-kloster-marienthal-os.gpx</td>
+      <td class="status status-warte" id="status-9">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1550926&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-10">
+      <td class="nr">11</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 11. Etappe Kloster Marienthal – Weyerbusch (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-11-kloster-marienthal-weyerbusch.gpx</td>
+      <td class="status status-warte" id="status-10">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1543859&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-11">
+      <td class="nr">12</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 12. Etappe Weyerbusch – Flammersfeld (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-12-weyerbusch-flammersfeld-ost-w.gpx</td>
+      <td class="status status-warte" id="status-11">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1533429&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-12">
+      <td class="nr">13</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 13. Etappe Flammersfeld – Horhausen (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-13-flammersfeld-horhausen-ost-we.gpx</td>
+      <td class="status status-warte" id="status-12">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522837&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-13">
+      <td class="nr">14</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 14. Etappe Horhausen – Strauscheid (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-14-horhausen-strauscheid-ost-wes.gpx</td>
+      <td class="status status-warte" id="status-13">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522838&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-14">
+      <td class="nr">15</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 15. Etappe Strauscheid – Waldbreitbach (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-15-strauscheid-waldbreitbach-ost.gpx</td>
+      <td class="status status-warte" id="status-14">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522839&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-15">
+      <td class="nr">16</td>
+      <td class="gruppe">westerwaldsteig</td>
+      <td>WesterwaldSteig 16. Etappe Waldbreitbach – Bad Hönningen/Rheinbrohl (Ost-West)</td>
+      <td class="dateiname">westerwaldsteig-16-waldbreitbach-bad-hoenningen.gpx</td>
+      <td class="status status-warte" id="status-15">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1543862&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-16">
+      <td class="nr">17</td>
+      <td class="gruppe">druidensteig</td>
+      <td>Druidensteig 01. Etappe Freusburg – Kirchen (Sieg)</td>
+      <td class="dateiname">druidensteig-01-freusburg-kirchen-sieg.gpx</td>
+      <td class="status status-warte" id="status-16">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=805001097&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-17">
+      <td class="nr">18</td>
+      <td class="gruppe">druidensteig</td>
+      <td>Druidensteig 02. Etappe Kirchen (Sieg) – Herdorf-Sassenroth</td>
+      <td class="dateiname">druidensteig-02-kirchen-sieg-herdorf-sassenroth.gpx</td>
+      <td class="status status-warte" id="status-17">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=51697446&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-18">
+      <td class="nr">19</td>
+      <td class="gruppe">druidensteig</td>
+      <td>Druidensteig 03. Etappe Herdorf-Sassenroth – Daaden</td>
+      <td class="dateiname">druidensteig-03-herdorf-sassenroth-daaden.gpx</td>
+      <td class="status status-warte" id="status-18">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=51697437&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-19">
+      <td class="nr">20</td>
+      <td class="gruppe">druidensteig</td>
+      <td>Druidensteig 04. Etappe Daaden – Elkenrother Weiher</td>
+      <td class="dateiname">druidensteig-04-daaden-elkenrother-weiher.gpx</td>
+      <td class="status status-warte" id="status-19">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=51785643&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-20">
+      <td class="nr">21</td>
+      <td class="gruppe">druidensteig</td>
+      <td>Druidensteig 05. Etappe Elkenrother Weiher – Betzdorf</td>
+      <td class="dateiname">druidensteig-05-elkenrother-weiher-betzdorf.gpx</td>
+      <td class="status status-warte" id="status-20">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=51785665&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-21">
+      <td class="nr">22</td>
+      <td class="gruppe">druidensteig</td>
+      <td>Druidensteig 06. Etappe Betzdorf – Steinebach</td>
+      <td class="dateiname">druidensteig-06-betzdorf-steinebach.gpx</td>
+      <td class="status status-warte" id="status-21">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=51785715&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-22">
+      <td class="nr">23</td>
+      <td class="gruppe">druidensteig</td>
+      <td>Druidensteig 07. Etappe Grube Bindweide – Hachenburg</td>
+      <td class="dateiname">druidensteig-07-grube-bindweide-hachenburg.gpx</td>
+      <td class="status status-warte" id="status-22">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=127007878&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-23">
+      <td class="nr">24</td>
+      <td class="gruppe">wiedweg</td>
+      <td>Wiedweg 01. Etappe Hachenburg – Linden</td>
+      <td class="dateiname">wiedweg-01-hachenburg-linden.gpx</td>
+      <td class="status status-warte" id="status-23">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=805102562&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-24">
+      <td class="nr">25</td>
+      <td class="gruppe">wiedweg</td>
+      <td>Wiedweg 02. Etappe Linden – Höchstenbach</td>
+      <td class="dateiname">wiedweg-02-linden-hoechstenbach.gpx</td>
+      <td class="status status-warte" id="status-24">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=38077762&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-25">
+      <td class="nr">26</td>
+      <td class="gruppe">wiedweg</td>
+      <td>Wiedweg 03. Etappe Höchstenbach – Altenkirchen</td>
+      <td class="dateiname">wiedweg-03-hoechstenbach-altenkirchen.gpx</td>
+      <td class="status status-warte" id="status-25">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892805&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-26">
+      <td class="nr">27</td>
+      <td class="gruppe">wiedweg</td>
+      <td>Wiedweg 04. Etappe Altenkirchen – Oberlahr</td>
+      <td class="dateiname">wiedweg-04-altenkirchen-oberlahr.gpx</td>
+      <td class="status status-warte" id="status-26">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892811&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-27">
+      <td class="nr">28</td>
+      <td class="gruppe">wiedweg</td>
+      <td>Wiedweg 05. Etappe Oberlahr – Neustadt (Wied)</td>
+      <td class="dateiname">wiedweg-05-oberlahr-neustadt-wied.gpx</td>
+      <td class="status status-warte" id="status-27">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892833&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-28">
+      <td class="nr">29</td>
+      <td class="gruppe">wiedweg</td>
+      <td>Wiedweg 06. Etappe Neustadt (Wied) – Roßbach/Wied</td>
+      <td class="dateiname">wiedweg-06-neustadt-wied-rossbach-wied.gpx</td>
+      <td class="status status-warte" id="status-28">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892843&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-29">
+      <td class="nr">30</td>
+      <td class="gruppe">wiedweg</td>
+      <td>Wiedweg 07. Etappe Roßbach/Wied – Niederbreitbach</td>
+      <td class="dateiname">wiedweg-07-rossbach-wied-niederbreitbach.gpx</td>
+      <td class="status status-warte" id="status-29">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892848&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-30">
+      <td class="nr">31</td>
+      <td class="gruppe">wiedweg</td>
+      <td>Wiedweg 08. Etappe Niederbreitbach – Irlich (Neuwied)</td>
+      <td class="dateiname">wiedweg-08-niederbreitbach-irlich-neuwied.gpx</td>
+      <td class="status status-warte" id="status-30">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892861&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-31">
+      <td class="nr">32</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Häubchen-Tour</td>
+      <td class="dateiname">kleine-waeller-01-r-waeller-haeubchen-tour.gpx</td>
+      <td class="status status-warte" id="status-31">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=116326927&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-32">
+      <td class="nr">33</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Wied-Runde</td>
+      <td class="dateiname">kleine-waeller-02-r-waeller-wied-runde.gpx</td>
+      <td class="status status-warte" id="status-32">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=113242615&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-33">
+      <td class="nr">34</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller MalbergSeeBlick</td>
+      <td class="dateiname">kleine-waeller-03-r-waeller-malbergseeblick.gpx</td>
+      <td class="status status-warte" id="status-33">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=65818530&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-34">
+      <td class="nr">35</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Zwergenweg 2</td>
+      <td class="dateiname">kleine-waeller-04-r-waeller-zwergenweg-2.gpx</td>
+      <td class="status status-warte" id="status-34">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=104390062&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-35">
+      <td class="nr">36</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Löwenspur 1 (orange)</td>
+      <td class="dateiname">kleine-waeller-05-r-waeller-loewenspur-1-orange.gpx</td>
+      <td class="status status-warte" id="status-35">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55681021&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-36">
+      <td class="nr">37</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Löwenspur 2 (rot)</td>
+      <td class="dateiname">kleine-waeller-06-r-waeller-loewenspur-2-rot.gpx</td>
+      <td class="status status-warte" id="status-36">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55680978&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-37">
+      <td class="nr">38</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Löwenspur 3 (blau)</td>
+      <td class="dateiname">kleine-waeller-07-r-waeller-loewenspur-3-blau.gpx</td>
+      <td class="status status-warte" id="status-37">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55680928&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-38">
+      <td class="nr">39</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Basalt + Wasser</td>
+      <td class="dateiname">kleine-waeller-08-r-waeller-basalt-wasser.gpx</td>
+      <td class="status status-warte" id="status-38">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=42055496&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-39">
+      <td class="nr">40</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Sagenweg</td>
+      <td class="dateiname">kleine-waeller-09-r-waeller-sagenweg.gpx</td>
+      <td class="status status-warte" id="status-39">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=46240217&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-40">
+      <td class="nr">41</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Klangpfad</td>
+      <td class="dateiname">kleine-waeller-10-r-waeller-klangpfad.gpx</td>
+      <td class="status status-warte" id="status-40">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=67038293&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-41">
+      <td class="nr">42</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Kunst + Natur</td>
+      <td class="dateiname">kleine-waeller-11-r-waeller-kunst-natur.gpx</td>
+      <td class="status status-warte" id="status-41">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=42055425&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-42">
+      <td class="nr">43</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Wolfsteine</td>
+      <td class="dateiname">kleine-waeller-12-r-waeller-wolfsteine.gpx</td>
+      <td class="status status-warte" id="status-42">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=42055470&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-43">
+      <td class="nr">44</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Weg der Sinne</td>
+      <td class="dateiname">kleine-waeller-13-r-waeller-weg-der-sinne.gpx</td>
+      <td class="status status-warte" id="status-43">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=46240272&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-44">
+      <td class="nr">45</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller Vitalparcours</td>
+      <td class="dateiname">kleine-waeller-14-r-waeller-vitalparcours.gpx</td>
+      <td class="status status-warte" id="status-44">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=801436094&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-45">
+      <td class="nr">46</td>
+      <td class="gruppe">kleine-waeller</td>
+      <td>Kleiner Wäller und GeoRoute Glasstadt Wirges</td>
+      <td class="dateiname">kleine-waeller-15-r-waeller-und-georoute-glasstadt-wirges.gpx</td>
+      <td class="status status-warte" id="status-45">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=806181053&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-46">
+      <td class="nr">47</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Altenkirchener Radrundweg - Tallandschaften um Altenkirchen</td>
+      <td class="dateiname">rundradwege-01-altenkirchener-radrundweg-tallandschaften-um-altenkirch.gpx</td>
+      <td class="status status-warte" id="status-46">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=56633653&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-47">
+      <td class="nr">48</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Bäche-Tour (XIII): Erkunde die Landschaft zwischen Brexbach und Saynbach</td>
+      <td class="dateiname">rundradwege-02-baeche-tour-xiii-erkunde-die-landschaft-zwischen-brexba.gpx</td>
+      <td class="status status-warte" id="status-47">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=24344450&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-48">
+      <td class="nr">49</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Kannenbäckerland-Route: Abwechslung zwischen Töpfereien, Westerwälder Dom und Erlenhofsee</td>
+      <td class="dateiname">rundradwege-03-kannenbaeckerland-route-abwechslung-zwischen-toepfereie.gpx</td>
+      <td class="status status-warte" id="status-48">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=37926269&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-49">
+      <td class="nr">50</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Viel erleben auf dem Radrundweg Seenplatte (I)</td>
+      <td class="dateiname">rundradwege-04-viel-erleben-auf-dem-radrundweg-seenplatte-i.gpx</td>
+      <td class="status status-warte" id="status-49">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=37134837&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-50">
+      <td class="nr">51</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Nister-Wiesensee-Tour: eine große Rundfahrt um den Wiesensee</td>
+      <td class="dateiname">rundradwege-05-nister-wiesensee-tour-eine-grosse-rundfahrt-um-den-wies.gpx</td>
+      <td class="status status-warte" id="status-50">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330843&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-51">
+      <td class="nr">52</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Rund um den Knoten: malerische Fahrt durch typische Landschaften</td>
+      <td class="dateiname">rundradwege-06-rund-um-den-knoten-malerische-fahrt-durch-typische-land.gpx</td>
+      <td class="status status-warte" id="status-51">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14247866&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-52">
+      <td class="nr">53</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Höferadeln ab Flammersfeld</td>
+      <td class="dateiname">rundradwege-07-hoeferadeln-ab-flammersfeld.gpx</td>
+      <td class="status status-warte" id="status-52">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=800218208&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-53">
+      <td class="nr">54</td>
+      <td class="gruppe">rundradwege</td>
+      <td>5-Seen Radweg: Natur und Wasser erleben</td>
+      <td class="dateiname">rundradwege-08-5-seen-radweg-natur-und-wasser-erleben.gpx</td>
+      <td class="status status-warte" id="status-53">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=24981223&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-54">
+      <td class="nr">55</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Anspruchsvoll und kurzweilig: unterwegs auf dem Rundradweg WW1</td>
+      <td class="dateiname">rundradwege-09-anspruchsvoll-und-kurzweilig-unterwegs-auf-dem-rundradw.gpx</td>
+      <td class="status status-warte" id="status-54">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=23396776&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-55">
+      <td class="nr">56</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Hachenburger Westerwald: Abwechslungsreiche Rundtour</td>
+      <td class="dateiname">rundradwege-10-hachenburger-westerwald-abwechslungsreiche-rundtour.gpx</td>
+      <td class="status status-warte" id="status-55">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14417554&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-56">
+      <td class="nr">57</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Helmenzen - AK-Radtour 5 "Von Tal zu Tal"</td>
+      <td class="dateiname">rundradwege-11-helmenzen-ak-radtour-5-von-tal-zu-tal.gpx</td>
+      <td class="status status-warte" id="status-56">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55655531&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-57">
+      <td class="nr">58</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Mammelzen - AK-Radtour 8 "Die kleine Tour"</td>
+      <td class="dateiname">rundradwege-12-mammelzen-ak-radtour-8-die-kleine-tour.gpx</td>
+      <td class="status status-warte" id="status-57">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55679699&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-58">
+      <td class="nr">59</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Die Backesdörfer-Tour: Genussvolles Radfahren zwischen Wallmerod und Westerburg</td>
+      <td class="dateiname">rundradwege-13-die-backesdoerfer-tour-genussvolles-radfahren-zwischen.gpx</td>
+      <td class="status status-warte" id="status-58">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=20715791&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-59">
+      <td class="nr">60</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Bad Marienberg-Tour: Abenteuer für Fortgeschrittene</td>
+      <td class="dateiname">rundradwege-14-bad-marienberg-tour-abenteuer-fuer-fortgeschrittene.gpx</td>
+      <td class="status status-warte" id="status-59">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330701&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-60">
+      <td class="nr">61</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Saynbachroute: aus dem Saynbachtal hinauf zum Wölferlinger Kopf</td>
+      <td class="dateiname">rundradwege-15-saynbachroute-aus-dem-saynbachtal-hinauf-zum-woelferlin.gpx</td>
+      <td class="status status-warte" id="status-60">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417656&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-61">
+      <td class="nr">62</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Radrundtour Puderbacher Land: eine Fahrt mit Höhen und Tiefen</td>
+      <td class="dateiname">rundradwege-16-radrundtour-puderbacher-land-eine-fahrt-mit-hoehen-und.gpx</td>
+      <td class="status status-warte" id="status-61">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417589&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-62">
+      <td class="nr">63</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Hohlwege um Altenkirchen mit dem Rad entdecken</td>
+      <td class="dateiname">rundradwege-17-hohlwege-um-altenkirchen-mit-dem-rad-entdecken.gpx</td>
+      <td class="status status-warte" id="status-62">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=59627800&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-63">
+      <td class="nr">64</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Weyerbusch - AK-Radtour 2 "Wassergrenze zwischen Wied und Sieg"</td>
+      <td class="dateiname">rundradwege-18-weyerbusch-ak-radtour-2-wassergrenze-zwischen-wied-und.gpx</td>
+      <td class="status status-warte" id="status-63">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55444130&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-64">
+      <td class="nr">65</td>
+      <td class="gruppe">rundradwege</td>
+      <td>AHRound-Tour (II): Entdecke malerische Dörfer auf einer kleinen Runde</td>
+      <td class="dateiname">rundradwege-19-ahround-tour-ii-entdecke-malerische-doerfer-auf-einer-k.gpx</td>
+      <td class="status status-warte" id="status-64">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=37134865&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-65">
+      <td class="nr">66</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Hilkhausen - AK-Radtour 3 "Zwischen Birnbach- und Mehrbachtal"</td>
+      <td class="dateiname">rundradwege-20-hilkhausen-ak-radtour-3-zwischen-birnbach-und-mehrbacht.gpx</td>
+      <td class="status status-warte" id="status-65">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55448772&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-66">
+      <td class="nr">67</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Aubach-Tour (XVII): Schöne Rundtour für einen entspannten Nachmittag</td>
+      <td class="dateiname">rundradwege-21-aubach-tour-xvii-schoene-rundtour-fuer-einen-entspannte.gpx</td>
+      <td class="status status-warte" id="status-66">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=24344471&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-67">
+      <td class="nr">68</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Kircheib - AK-Radtour 1 "Kirchen und andere Altertümer"</td>
+      <td class="dateiname">rundradwege-22-kircheib-ak-radtour-1-kirchen-und-andere-altertuemer.gpx</td>
+      <td class="status status-warte" id="status-67">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55252270&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-68">
+      <td class="nr">69</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Oberwambach - AK-Radtour 7 "Herzberg oder Harzburg"</td>
+      <td class="dateiname">rundradwege-23-oberwambach-ak-radtour-7-herzberg-oder-harzburg.gpx</td>
+      <td class="status status-warte" id="status-68">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55669734&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-69">
+      <td class="nr">70</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Köppel-Route: Unterwegs im Kannenbäckerland zwischen Höhr-Grenzhausen und Montabaur</td>
+      <td class="dateiname">rundradwege-24-koeppel-route-unterwegs-im-kannenbaeckerland-zwischen-h.gpx</td>
+      <td class="status status-warte" id="status-69">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=56200840&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-70">
+      <td class="nr">71</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Stöffelmaus-Tour: Rund um die Stöffelmaus unterwegs in wunderbaren Landschaften</td>
+      <td class="dateiname">rundradwege-25-stoeffelmaus-tour-rund-um-die-stoeffelmaus-unterwegs-in.gpx</td>
+      <td class="status status-warte" id="status-70">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330967&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-71">
+      <td class="nr">72</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Bahntrassen-Tour: von Bad Marienberg ins schöne Nistertal</td>
+      <td class="dateiname">rundradwege-26-bahntrassen-tour-von-bad-marienberg-ins-schoene-nistert.gpx</td>
+      <td class="status status-warte" id="status-71">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330848&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-72">
+      <td class="nr">73</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Altenkirchen - AK-Radtour 4 "Blick über Altenkirchen"</td>
+      <td class="dateiname">rundradwege-27-altenkirchen-ak-radtour-4-blick-ueber-altenkirchen.gpx</td>
+      <td class="status status-warte" id="status-72">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55560657&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-73">
+      <td class="nr">74</td>
+      <td class="gruppe">rundradwege</td>
+      <td>WällerLand-Manöver: In reizvollen Schleifen durch das Wäller Land</td>
+      <td class="dateiname">rundradwege-28-waellerland-manoever-in-reizvollen-schleifen-durch-das.gpx</td>
+      <td class="status status-warte" id="status-73">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=56042769&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-74">
+      <td class="nr">75</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Fuchskauten Tour</td>
+      <td class="dateiname">rundradwege-29-fuchskauten-tour.gpx</td>
+      <td class="status status-warte" id="status-74">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330853&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-75">
+      <td class="nr">76</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Buchfinken-Gelbach-Tour (XII): bezaubernde Region zwischen Buchfinkenlandschaft und Gelbachtal</td>
+      <td class="dateiname">rundradwege-30-buchfinken-gelbach-tour-xii-bezaubernde-region-zwischen.gpx</td>
+      <td class="status status-warte" id="status-75">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=24343803&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-76">
+      <td class="nr">77</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Hilgenroth - AK-Radtour 6 "Am höchsten Punkt"</td>
+      <td class="dateiname">rundradwege-31-hilgenroth-ak-radtour-6-am-hoechsten-punkt.gpx</td>
+      <td class="status status-warte" id="status-76">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55667781&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-77">
+      <td class="nr">78</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Kleine Nister-Tour: Waldreiche Tour und malerische Orte im Gebiet der Kleinen Nister</td>
+      <td class="dateiname">rundradwege-32-kleine-nister-tour-waldreiche-tour-und-malerische-orte.gpx</td>
+      <td class="status status-warte" id="status-77">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330943&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-78">
+      <td class="nr">79</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Raiffeisen-Runde</td>
+      <td class="dateiname">rundradwege-33-raiffeisen-runde.gpx</td>
+      <td class="status status-warte" id="status-78">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=801446956&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-79">
+      <td class="nr">80</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Höferadeln ab Altenkirchen (Westerwald)</td>
+      <td class="dateiname">rundradwege-34-hoeferadeln-ab-altenkirchen-westerwald.gpx</td>
+      <td class="status status-warte" id="status-79">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=800044407&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-80">
+      <td class="nr">81</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Familien-Radtour in der Verbandsgemeinde Asbach</td>
+      <td class="dateiname">rundradwege-35-familien-radtour-in-der-verbandsgemeinde-asbach.gpx</td>
+      <td class="status status-warte" id="status-80">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=804371983&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-81">
+      <td class="nr">82</td>
+      <td class="gruppe">rundradwege</td>
+      <td>Mit dem Bike durch "Licht und Schatten rund um Selters"</td>
+      <td class="dateiname">rundradwege-36-mit-dem-bike-durch-licht-und-schatten-rund-um-selters.gpx</td>
+      <td class="status status-warte" id="status-81">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=800723937&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-82">
+      <td class="nr">83</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Auf dem Wied-Radweg durch herrliche Flusstäler radeln</td>
+      <td class="dateiname">streckenradwege-01-auf-dem-wied-radweg-durch-herrliche-flusstaeler-radeln.gpx</td>
+      <td class="status status-warte" id="status-82">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=7751131&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-83">
+      <td class="nr">84</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Nister-Radweg: eine reizvolle Tour von der Quelle bis zur Mündung</td>
+      <td class="dateiname">streckenradwege-02-nister-radweg-eine-reizvolle-tour-von-der-quelle-bis-zu.gpx</td>
+      <td class="status status-warte" id="status-83">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417903&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-84">
+      <td class="nr">85</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Radtour Südlicher Westerwald: eine schöne Fahrt für Anspruchsvolle</td>
+      <td class="dateiname">streckenradwege-03-radtour-suedlicher-westerwald-eine-schoene-fahrt-fuer-a.gpx</td>
+      <td class="status status-warte" id="status-84">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417754&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-85">
+      <td class="nr">86</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Auf der Westerwaldschleife in vier Etappen durch die Region</td>
+      <td class="dateiname">streckenradwege-04-auf-der-westerwaldschleife-in-vier-etappen-durch-die-re.gpx</td>
+      <td class="status status-warte" id="status-85">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=8485669&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-86">
+      <td class="nr">87</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Westerwaldschleife: Linz/Rhein - Wissen/Sieg</td>
+      <td class="dateiname">streckenradwege-05-westerwaldschleife-linz-rhein-wissen-sieg.gpx</td>
+      <td class="status status-warte" id="status-86">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=52014430&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-87">
+      <td class="nr">88</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Westerwaldschleife: Wissen - Daaden</td>
+      <td class="dateiname">streckenradwege-06-westerwaldschleife-wissen-daaden.gpx</td>
+      <td class="status status-warte" id="status-87">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=52014967&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-88">
+      <td class="nr">89</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Westerwaldschleife: Daaden - Wiesensee</td>
+      <td class="dateiname">streckenradwege-07-westerwaldschleife-daaden-wiesensee.gpx</td>
+      <td class="status status-warte" id="status-88">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=52015426&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-89">
+      <td class="nr">90</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Westerwaldschleife: Wiesensee - Diez</td>
+      <td class="dateiname">streckenradwege-08-westerwaldschleife-wiesensee-diez.gpx</td>
+      <td class="status status-warte" id="status-89">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=52015751&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-90">
+      <td class="nr">91</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Anspruchsvoll und kurzweilig: unterwegs auf dem Rundradweg WW1</td>
+      <td class="dateiname">streckenradwege-09-anspruchsvoll-und-kurzweilig-unterwegs-auf-dem-rundradw.gpx</td>
+      <td class="status status-warte" id="status-90">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=23396776&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-91">
+      <td class="nr">92</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>WW1: Fuchskaute - Hachenburg</td>
+      <td class="dateiname">streckenradwege-10-ww1-fuchskaute-hachenburg.gpx</td>
+      <td class="status status-warte" id="status-91">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=50556855&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-92">
+      <td class="nr">93</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>WW1: Grenzau - Nomborn</td>
+      <td class="dateiname">streckenradwege-11-ww1-grenzau-nomborn.gpx</td>
+      <td class="status status-warte" id="status-92">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=50555237&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-93">
+      <td class="nr">94</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>WW1: Nomborn - Fuchskaute</td>
+      <td class="dateiname">streckenradwege-12-ww1-nomborn-fuchskaute.gpx</td>
+      <td class="status status-warte" id="status-93">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=50556453&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-94">
+      <td class="nr">95</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>WW1: Hachenburg - Grenzau</td>
+      <td class="dateiname">streckenradwege-13-ww1-hachenburg-grenzau.gpx</td>
+      <td class="status status-warte" id="status-94">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=50553586&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-95">
+      <td class="nr">96</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Ruhr-Sieg-Radweg</td>
+      <td class="dateiname">streckenradwege-14-ruhr-sieg-radweg.gpx</td>
+      <td class="status status-warte" id="status-95">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417720&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-96">
+      <td class="nr">97</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Mit dem Westerwald-Lahn-Radweg einmal quer durch die Region</td>
+      <td class="dateiname">streckenradwege-15-mit-dem-westerwald-lahn-radweg-einmal-quer-durch-die-re.gpx</td>
+      <td class="status status-warte" id="status-96">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=24196067&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-97">
+      <td class="nr">98</td>
+      <td class="gruppe">streckenradwege</td>
+      <td>Westerwald-Rhein-Radweg: von der Kirchlinde bis zum Limes</td>
+      <td class="dateiname">streckenradwege-16-westerwald-rhein-radweg-von-der-kirchlinde-bis-zum-lime.gpx</td>
+      <td class="status status-warte" id="status-97">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417839&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-98">
+      <td class="nr">99</td>
+      <td class="gruppe">gravelbike</td>
+      <td>Hachenburger Westerwald: Abwechslungsreiche Rundtour</td>
+      <td class="dateiname">gravelbike-01-hachenburger-westerwald-abwechslungsreiche-rundtour.gpx</td>
+      <td class="status status-warte" id="status-98">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14417554&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-99">
+      <td class="nr">100</td>
+      <td class="gruppe">gravelbike</td>
+      <td>Bad Marienberg-Tour: Abenteuer für Fortgeschrittene</td>
+      <td class="dateiname">gravelbike-02-bad-marienberg-tour-abenteuer-fuer-fortgeschrittene.gpx</td>
+      <td class="status status-warte" id="status-99">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330701&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-100">
+      <td class="nr">101</td>
+      <td class="gruppe">gravelbike</td>
+      <td>Kannenbäckerland-Route: Abwechslung zwischen Töpfereien, Westerwälder Dom und Erlenhofsee</td>
+      <td class="dateiname">gravelbike-03-kannenbaeckerland-route-abwechslung-zwischen-toepfereie.gpx</td>
+      <td class="status status-warte" id="status-100">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=37926269&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-101">
+      <td class="nr">102</td>
+      <td class="gruppe">gravelbike</td>
+      <td>Fuchskauten Tour</td>
+      <td class="dateiname">gravelbike-04-fuchskauten-tour.gpx</td>
+      <td class="status status-warte" id="status-101">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330853&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-102">
+      <td class="nr">103</td>
+      <td class="gruppe">gravelbike</td>
+      <td>Rund um den Knoten: malerische Fahrt durch typische Landschaften</td>
+      <td class="dateiname">gravelbike-05-rund-um-den-knoten-malerische-fahrt-durch-typische-land.gpx</td>
+      <td class="status status-warte" id="status-102">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14247866&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-103">
+      <td class="nr">104</td>
+      <td class="gruppe">gravelbike</td>
+      <td>Sechs-Bäche-Tour - Gravel & eMTB | Wiedtal-Westerwald</td>
+      <td class="dateiname">gravelbike-06-sechs-baeche-tour-gravel-emtb-wiedtal-westerwald.gpx</td>
+      <td class="status status-warte" id="status-103">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=67738080&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-104">
+      <td class="nr">105</td>
+      <td class="gruppe">gravelbike</td>
+      <td>Schottern durchs Rengsdorfer Land - Gravel & eMTB | Wiedtal-Westerwald</td>
+      <td class="dateiname">gravelbike-07-schottern-durchs-rengsdorfer-land-gravel-emtb-wiedtal-w.gpx</td>
+      <td class="status status-warte" id="status-104">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=67738373&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-105">
+      <td class="nr">106</td>
+      <td class="gruppe">gravelbike</td>
+      <td>Holy Gravel! - Gravel & eMTB | Wiedtal-Westerwald</td>
+      <td class="dateiname">gravelbike-08-holy-gravel-gravel-emtb-wiedtal-westerwald.gpx</td>
+      <td class="status status-warte" id="status-105">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=807370581&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-106">
+      <td class="nr">107</td>
+      <td class="gruppe">gravelbike</td>
+      <td>WiedHeights - Gravel & eMTB | Wiedtal-Westerwald</td>
+      <td class="dateiname">gravelbike-09-wiedheights-gravel-emtb-wiedtal-westerwald.gpx</td>
+      <td class="status status-warte" id="status-106">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=807270910&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-107">
+      <td class="nr">108</td>
+      <td class="gruppe">mountainbike</td>
+      <td>Hauptroute (A): sportliche Mountainbike-Tour mit kleineren sowie drei großen Anstiegen</td>
+      <td class="dateiname">mountainbike-01-hauptroute-a-sportliche-mountainbike-tour-mit-kleineren.gpx</td>
+      <td class="status status-warte" id="status-107">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3234381&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-108">
+      <td class="nr">109</td>
+      <td class="gruppe">mountainbike</td>
+      <td>Füsseberg-Runde (B): auf der Einsteigertour durch den Nördlichen Westerwald</td>
+      <td class="dateiname">mountainbike-02-fuesseberg-runde-b-auf-der-einsteigertour-durch-den-noe.gpx</td>
+      <td class="status status-warte" id="status-108">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3234451&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-109">
+      <td class="nr">110</td>
+      <td class="gruppe">mountainbike</td>
+      <td>Bergmannspfad (C): reizvolle Tour mit rund 100 Metern Höhenunterschied</td>
+      <td class="dateiname">mountainbike-03-bergmannspfad-c-reizvolle-tour-mit-rund-100-metern-hoeh.gpx</td>
+      <td class="status status-warte" id="status-109">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3234466&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-110">
+      <td class="nr">111</td>
+      <td class="gruppe">mountainbike</td>
+      <td>Galgenkopf-Runde (D): sportliche Mountainbike-Herausforderung im Tierschutzgebiet Westerwald</td>
+      <td class="dateiname">mountainbike-04-galgenkopf-runde-d-sportliche-mountainbike-herausforder.gpx</td>
+      <td class="status status-warte" id="status-110">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3234473&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-111">
+      <td class="nr">112</td>
+      <td class="gruppe">mountainbike</td>
+      <td>Scheuerberg-Schleife (E): herausfordernde Mountainbike-Tour durch den Wald südwestlich von Betzdorf</td>
+      <td class="dateiname">mountainbike-05-scheuerberg-schleife-e-herausfordernde-mountainbike-tou.gpx</td>
+      <td class="status status-warte" id="status-111">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3234479&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-112">
+      <td class="nr">113</td>
+      <td class="gruppe">mountainbike</td>
+      <td>Sechs-Bäche-Tour - Gravel & eMTB | Wiedtal-Westerwald</td>
+      <td class="dateiname">mountainbike-06-sechs-baeche-tour-gravel-emtb-wiedtal-westerwald.gpx</td>
+      <td class="status status-warte" id="status-112">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=67738080&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-113">
+      <td class="nr">114</td>
+      <td class="gruppe">mountainbike</td>
+      <td>Schottern durchs Rengsdorfer Land - Gravel & eMTB | Wiedtal-Westerwald</td>
+      <td class="dateiname">mountainbike-07-schottern-durchs-rengsdorfer-land-gravel-emtb-wiedtal-w.gpx</td>
+      <td class="status status-warte" id="status-113">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=67738373&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-114">
+      <td class="nr">115</td>
+      <td class="gruppe">mountainbike</td>
+      <td>Holy Gravel! - Gravel & eMTB | Wiedtal-Westerwald</td>
+      <td class="dateiname">mountainbike-08-holy-gravel-gravel-emtb-wiedtal-westerwald.gpx</td>
+      <td class="status status-warte" id="status-114">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=807370581&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-115">
+      <td class="nr">116</td>
+      <td class="gruppe">mountainbike</td>
+      <td>WiedHeights - Gravel & eMTB | Wiedtal-Westerwald</td>
+      <td class="dateiname">mountainbike-09-wiedheights-gravel-emtb-wiedtal-westerwald.gpx</td>
+      <td class="status status-warte" id="status-115">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=807270910&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-116">
+      <td class="nr">117</td>
+      <td class="gruppe">rennrad</td>
+      <td>Westerwälder Express-Runde</td>
+      <td class="dateiname">rennrad-01-westerwaelder-express-runde.gpx</td>
+      <td class="status status-warte" id="status-116">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=18441102&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-117">
+      <td class="nr">118</td>
+      <td class="gruppe">rennrad</td>
+      <td>Westerwälder Seen-Runde</td>
+      <td class="dateiname">rennrad-02-westerwaelder-seen-runde.gpx</td>
+      <td class="status status-warte" id="status-117">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=18441144&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-118">
+      <td class="nr">119</td>
+      <td class="gruppe">rennrad</td>
+      <td>Westerwälder Klassiker-Runde</td>
+      <td class="dateiname">rennrad-03-westerwaelder-klassiker-runde.gpx</td>
+      <td class="status status-warte" id="status-118">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=18441150&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-119">
+      <td class="nr">120</td>
+      <td class="gruppe">rennrad</td>
+      <td>Westerwälder Feierabend-Runde</td>
+      <td class="dateiname">rennrad-04-westerwaelder-feierabend-runde.gpx</td>
+      <td class="status status-warte" id="status-119">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=18741156&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+    <tr id="zeile-120">
+      <td class="nr">121</td>
+      <td class="gruppe">rennrad</td>
+      <td>Westerwälder Stadt-Land-Klosterrunde</td>
+      <td class="dateiname">rennrad-05-westerwaelder-stadt-land-klosterrunde.gpx</td>
+      <td class="status status-warte" id="status-120">Bereit</td>
+      <td><a href="https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=18830570&project=oar-rlp" target="_blank" rel="noopener">↗</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+var MAPPING = [{"typ":"wandern","gruppe":"westerwaldsteig","idx":0,"id":"1512441","titel":"WesterwaldSteig 01. Etappe Herborn – Breitscheid (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1512441&project=oar-rlp","dateiname":"westerwaldsteig-01-herborn-breitscheid-ost-west.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":1,"id":"1522827","titel":"WesterwaldSteig 02. Etappe Breitscheid – Rehe (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522827&project=oar-rlp","dateiname":"westerwaldsteig-02-breitscheid-rehe-ost-west.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":2,"id":"1543858","titel":"WesterwaldSteig 03. Etappe Rehe – Rennerod (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1543858&project=oar-rlp","dateiname":"westerwaldsteig-03-rehe-rennerod-ost-west.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":3,"id":"1495683","titel":"WesterwaldSteig 04. Etappe Rennerod – Westerburg (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1495683&project=oar-rlp","dateiname":"westerwaldsteig-04-rennerod-westerburg-ost-west.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":4,"id":"1483380","titel":"WesterwaldSteig 05. Etappe Westerburg – Freilingen (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1483380&project=oar-rlp","dateiname":"westerwaldsteig-05-westerburg-freilingen-ost-wes.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":5,"id":"1522831","titel":"WesterwaldSteig 06. Etappe Freilingen – Nistertal (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522831&project=oar-rlp","dateiname":"westerwaldsteig-06-freilingen-nistertal-ost-west.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":6,"id":"1558427","titel":"WesterwaldSteig 07. Etappe Nistertal – Bad Marienberg (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1558427&project=oar-rlp","dateiname":"westerwaldsteig-07-nistertal-bad-marienberg-ost.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":7,"id":"1522832","titel":"WesterwaldSteig 08. Etappe Bad Marienberg – Hachenburg (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522832&project=oar-rlp","dateiname":"westerwaldsteig-08-bad-marienberg-hachenburg-ost.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":8,"id":"1491573","titel":"WesterwaldSteig 09. Etappe Hachenburg – Limbach (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1491573&project=oar-rlp","dateiname":"westerwaldsteig-09-hachenburg-limbach-ost-west.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":9,"id":"1550926","titel":"WesterwaldSteig 10. Etappe Limbach – Kloster Marienthal (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1550926&project=oar-rlp","dateiname":"westerwaldsteig-10-limbach-kloster-marienthal-os.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":10,"id":"1543859","titel":"WesterwaldSteig 11. Etappe Kloster Marienthal – Weyerbusch (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1543859&project=oar-rlp","dateiname":"westerwaldsteig-11-kloster-marienthal-weyerbusch.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":11,"id":"1533429","titel":"WesterwaldSteig 12. Etappe Weyerbusch – Flammersfeld (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1533429&project=oar-rlp","dateiname":"westerwaldsteig-12-weyerbusch-flammersfeld-ost-w.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":12,"id":"1522837","titel":"WesterwaldSteig 13. Etappe Flammersfeld – Horhausen (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522837&project=oar-rlp","dateiname":"westerwaldsteig-13-flammersfeld-horhausen-ost-we.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":13,"id":"1522838","titel":"WesterwaldSteig 14. Etappe Horhausen – Strauscheid (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522838&project=oar-rlp","dateiname":"westerwaldsteig-14-horhausen-strauscheid-ost-wes.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":14,"id":"1522839","titel":"WesterwaldSteig 15. Etappe Strauscheid – Waldbreitbach (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1522839&project=oar-rlp","dateiname":"westerwaldsteig-15-strauscheid-waldbreitbach-ost.gpx"},{"typ":"wandern","gruppe":"westerwaldsteig","idx":15,"id":"1543862","titel":"WesterwaldSteig 16. Etappe Waldbreitbach – Bad Hönningen/Rheinbrohl (Ost-West)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=1543862&project=oar-rlp","dateiname":"westerwaldsteig-16-waldbreitbach-bad-hoenningen.gpx"},{"typ":"wandern","gruppe":"druidensteig","idx":0,"id":"805001097","titel":"Druidensteig 01. Etappe Freusburg – Kirchen (Sieg)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=805001097&project=oar-rlp","dateiname":"druidensteig-01-freusburg-kirchen-sieg.gpx"},{"typ":"wandern","gruppe":"druidensteig","idx":1,"id":"51697446","titel":"Druidensteig 02. Etappe Kirchen (Sieg) – Herdorf-Sassenroth","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=51697446&project=oar-rlp","dateiname":"druidensteig-02-kirchen-sieg-herdorf-sassenroth.gpx"},{"typ":"wandern","gruppe":"druidensteig","idx":2,"id":"51697437","titel":"Druidensteig 03. Etappe Herdorf-Sassenroth – Daaden","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=51697437&project=oar-rlp","dateiname":"druidensteig-03-herdorf-sassenroth-daaden.gpx"},{"typ":"wandern","gruppe":"druidensteig","idx":3,"id":"51785643","titel":"Druidensteig 04. Etappe Daaden – Elkenrother Weiher","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=51785643&project=oar-rlp","dateiname":"druidensteig-04-daaden-elkenrother-weiher.gpx"},{"typ":"wandern","gruppe":"druidensteig","idx":4,"id":"51785665","titel":"Druidensteig 05. Etappe Elkenrother Weiher – Betzdorf","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=51785665&project=oar-rlp","dateiname":"druidensteig-05-elkenrother-weiher-betzdorf.gpx"},{"typ":"wandern","gruppe":"druidensteig","idx":5,"id":"51785715","titel":"Druidensteig 06. Etappe Betzdorf – Steinebach","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=51785715&project=oar-rlp","dateiname":"druidensteig-06-betzdorf-steinebach.gpx"},{"typ":"wandern","gruppe":"druidensteig","idx":6,"id":"127007878","titel":"Druidensteig 07. Etappe Grube Bindweide – Hachenburg","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=127007878&project=oar-rlp","dateiname":"druidensteig-07-grube-bindweide-hachenburg.gpx"},{"typ":"wandern","gruppe":"wiedweg","idx":0,"id":"805102562","titel":"Wiedweg 01. Etappe Hachenburg – Linden","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=805102562&project=oar-rlp","dateiname":"wiedweg-01-hachenburg-linden.gpx"},{"typ":"wandern","gruppe":"wiedweg","idx":1,"id":"38077762","titel":"Wiedweg 02. Etappe Linden – Höchstenbach","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=38077762&project=oar-rlp","dateiname":"wiedweg-02-linden-hoechstenbach.gpx"},{"typ":"wandern","gruppe":"wiedweg","idx":2,"id":"2892805","titel":"Wiedweg 03. Etappe Höchstenbach – Altenkirchen","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892805&project=oar-rlp","dateiname":"wiedweg-03-hoechstenbach-altenkirchen.gpx"},{"typ":"wandern","gruppe":"wiedweg","idx":3,"id":"2892811","titel":"Wiedweg 04. Etappe Altenkirchen – Oberlahr","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892811&project=oar-rlp","dateiname":"wiedweg-04-altenkirchen-oberlahr.gpx"},{"typ":"wandern","gruppe":"wiedweg","idx":4,"id":"2892833","titel":"Wiedweg 05. Etappe Oberlahr – Neustadt (Wied)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892833&project=oar-rlp","dateiname":"wiedweg-05-oberlahr-neustadt-wied.gpx"},{"typ":"wandern","gruppe":"wiedweg","idx":5,"id":"2892843","titel":"Wiedweg 06. Etappe Neustadt (Wied) – Roßbach/Wied","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892843&project=oar-rlp","dateiname":"wiedweg-06-neustadt-wied-rossbach-wied.gpx"},{"typ":"wandern","gruppe":"wiedweg","idx":6,"id":"2892848","titel":"Wiedweg 07. Etappe Roßbach/Wied – Niederbreitbach","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892848&project=oar-rlp","dateiname":"wiedweg-07-rossbach-wied-niederbreitbach.gpx"},{"typ":"wandern","gruppe":"wiedweg","idx":7,"id":"2892861","titel":"Wiedweg 08. Etappe Niederbreitbach – Irlich (Neuwied)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=2892861&project=oar-rlp","dateiname":"wiedweg-08-niederbreitbach-irlich-neuwied.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":0,"id":"116326927","titel":"Kleiner Wäller Häubchen-Tour","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=116326927&project=oar-rlp","dateiname":"kleine-waeller-01-r-waeller-haeubchen-tour.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":1,"id":"113242615","titel":"Kleiner Wäller Wied-Runde","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=113242615&project=oar-rlp","dateiname":"kleine-waeller-02-r-waeller-wied-runde.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":2,"id":"65818530","titel":"Kleiner Wäller MalbergSeeBlick","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=65818530&project=oar-rlp","dateiname":"kleine-waeller-03-r-waeller-malbergseeblick.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":3,"id":"104390062","titel":"Kleiner Wäller Zwergenweg 2","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=104390062&project=oar-rlp","dateiname":"kleine-waeller-04-r-waeller-zwergenweg-2.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":4,"id":"55681021","titel":"Kleiner Wäller Löwenspur 1 (orange)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55681021&project=oar-rlp","dateiname":"kleine-waeller-05-r-waeller-loewenspur-1-orange.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":5,"id":"55680978","titel":"Kleiner Wäller Löwenspur 2 (rot)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55680978&project=oar-rlp","dateiname":"kleine-waeller-06-r-waeller-loewenspur-2-rot.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":6,"id":"55680928","titel":"Kleiner Wäller Löwenspur 3 (blau)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55680928&project=oar-rlp","dateiname":"kleine-waeller-07-r-waeller-loewenspur-3-blau.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":7,"id":"42055496","titel":"Kleiner Wäller Basalt + Wasser","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=42055496&project=oar-rlp","dateiname":"kleine-waeller-08-r-waeller-basalt-wasser.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":8,"id":"46240217","titel":"Kleiner Wäller Sagenweg","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=46240217&project=oar-rlp","dateiname":"kleine-waeller-09-r-waeller-sagenweg.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":9,"id":"67038293","titel":"Kleiner Wäller Klangpfad","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=67038293&project=oar-rlp","dateiname":"kleine-waeller-10-r-waeller-klangpfad.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":10,"id":"42055425","titel":"Kleiner Wäller Kunst + Natur","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=42055425&project=oar-rlp","dateiname":"kleine-waeller-11-r-waeller-kunst-natur.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":11,"id":"42055470","titel":"Kleiner Wäller Wolfsteine","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=42055470&project=oar-rlp","dateiname":"kleine-waeller-12-r-waeller-wolfsteine.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":12,"id":"46240272","titel":"Kleiner Wäller Weg der Sinne","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=46240272&project=oar-rlp","dateiname":"kleine-waeller-13-r-waeller-weg-der-sinne.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":13,"id":"801436094","titel":"Kleiner Wäller Vitalparcours","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=801436094&project=oar-rlp","dateiname":"kleine-waeller-14-r-waeller-vitalparcours.gpx"},{"typ":"wandern","gruppe":"kleine-waeller","idx":14,"id":"806181053","titel":"Kleiner Wäller und GeoRoute Glasstadt Wirges","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=806181053&project=oar-rlp","dateiname":"kleine-waeller-15-r-waeller-und-georoute-glasstadt-wirges.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":0,"id":"56633653","titel":"Altenkirchener Radrundweg - Tallandschaften um Altenkirchen","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=56633653&project=oar-rlp","dateiname":"rundradwege-01-altenkirchener-radrundweg-tallandschaften-um-altenkirch.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":1,"id":"24344450","titel":"Bäche-Tour (XIII): Erkunde die Landschaft zwischen Brexbach und Saynbach","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=24344450&project=oar-rlp","dateiname":"rundradwege-02-baeche-tour-xiii-erkunde-die-landschaft-zwischen-brexba.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":2,"id":"37926269","titel":"Kannenbäckerland-Route: Abwechslung zwischen Töpfereien, Westerwälder Dom und Erlenhofsee","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=37926269&project=oar-rlp","dateiname":"rundradwege-03-kannenbaeckerland-route-abwechslung-zwischen-toepfereie.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":3,"id":"37134837","titel":"Viel erleben auf dem Radrundweg Seenplatte (I)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=37134837&project=oar-rlp","dateiname":"rundradwege-04-viel-erleben-auf-dem-radrundweg-seenplatte-i.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":4,"id":"14330843","titel":"Nister-Wiesensee-Tour: eine große Rundfahrt um den Wiesensee","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330843&project=oar-rlp","dateiname":"rundradwege-05-nister-wiesensee-tour-eine-grosse-rundfahrt-um-den-wies.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":5,"id":"14247866","titel":"Rund um den Knoten: malerische Fahrt durch typische Landschaften","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14247866&project=oar-rlp","dateiname":"rundradwege-06-rund-um-den-knoten-malerische-fahrt-durch-typische-land.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":6,"id":"800218208","titel":"Höferadeln ab Flammersfeld","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=800218208&project=oar-rlp","dateiname":"rundradwege-07-hoeferadeln-ab-flammersfeld.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":7,"id":"24981223","titel":"5-Seen Radweg: Natur und Wasser erleben","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=24981223&project=oar-rlp","dateiname":"rundradwege-08-5-seen-radweg-natur-und-wasser-erleben.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":8,"id":"23396776","titel":"Anspruchsvoll und kurzweilig: unterwegs auf dem Rundradweg WW1","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=23396776&project=oar-rlp","dateiname":"rundradwege-09-anspruchsvoll-und-kurzweilig-unterwegs-auf-dem-rundradw.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":9,"id":"14417554","titel":"Hachenburger Westerwald: Abwechslungsreiche Rundtour","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14417554&project=oar-rlp","dateiname":"rundradwege-10-hachenburger-westerwald-abwechslungsreiche-rundtour.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":10,"id":"55655531","titel":"Helmenzen - AK-Radtour 5 \"Von Tal zu Tal\"","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55655531&project=oar-rlp","dateiname":"rundradwege-11-helmenzen-ak-radtour-5-von-tal-zu-tal.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":11,"id":"55679699","titel":"Mammelzen - AK-Radtour 8 \"Die kleine Tour\"","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55679699&project=oar-rlp","dateiname":"rundradwege-12-mammelzen-ak-radtour-8-die-kleine-tour.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":12,"id":"20715791","titel":"Die Backesdörfer-Tour: Genussvolles Radfahren zwischen Wallmerod und Westerburg","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=20715791&project=oar-rlp","dateiname":"rundradwege-13-die-backesdoerfer-tour-genussvolles-radfahren-zwischen.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":13,"id":"14330701","titel":"Bad Marienberg-Tour: Abenteuer für Fortgeschrittene","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330701&project=oar-rlp","dateiname":"rundradwege-14-bad-marienberg-tour-abenteuer-fuer-fortgeschrittene.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":14,"id":"3417656","titel":"Saynbachroute: aus dem Saynbachtal hinauf zum Wölferlinger Kopf","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417656&project=oar-rlp","dateiname":"rundradwege-15-saynbachroute-aus-dem-saynbachtal-hinauf-zum-woelferlin.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":15,"id":"3417589","titel":"Radrundtour Puderbacher Land: eine Fahrt mit Höhen und Tiefen","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417589&project=oar-rlp","dateiname":"rundradwege-16-radrundtour-puderbacher-land-eine-fahrt-mit-hoehen-und.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":16,"id":"59627800","titel":"Hohlwege um Altenkirchen mit dem Rad entdecken","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=59627800&project=oar-rlp","dateiname":"rundradwege-17-hohlwege-um-altenkirchen-mit-dem-rad-entdecken.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":17,"id":"55444130","titel":"Weyerbusch - AK-Radtour 2 \"Wassergrenze zwischen Wied und Sieg\"","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55444130&project=oar-rlp","dateiname":"rundradwege-18-weyerbusch-ak-radtour-2-wassergrenze-zwischen-wied-und.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":18,"id":"37134865","titel":"AHRound-Tour (II): Entdecke malerische Dörfer auf einer kleinen Runde","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=37134865&project=oar-rlp","dateiname":"rundradwege-19-ahround-tour-ii-entdecke-malerische-doerfer-auf-einer-k.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":19,"id":"55448772","titel":"Hilkhausen - AK-Radtour 3 \"Zwischen Birnbach- und Mehrbachtal\"","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55448772&project=oar-rlp","dateiname":"rundradwege-20-hilkhausen-ak-radtour-3-zwischen-birnbach-und-mehrbacht.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":20,"id":"24344471","titel":"Aubach-Tour (XVII): Schöne Rundtour für einen entspannten Nachmittag","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=24344471&project=oar-rlp","dateiname":"rundradwege-21-aubach-tour-xvii-schoene-rundtour-fuer-einen-entspannte.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":21,"id":"55252270","titel":"Kircheib - AK-Radtour 1 \"Kirchen und andere Altertümer\"","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55252270&project=oar-rlp","dateiname":"rundradwege-22-kircheib-ak-radtour-1-kirchen-und-andere-altertuemer.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":22,"id":"55669734","titel":"Oberwambach - AK-Radtour 7 \"Herzberg oder Harzburg\"","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55669734&project=oar-rlp","dateiname":"rundradwege-23-oberwambach-ak-radtour-7-herzberg-oder-harzburg.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":23,"id":"56200840","titel":"Köppel-Route: Unterwegs im Kannenbäckerland zwischen Höhr-Grenzhausen und Montabaur","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=56200840&project=oar-rlp","dateiname":"rundradwege-24-koeppel-route-unterwegs-im-kannenbaeckerland-zwischen-h.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":24,"id":"14330967","titel":"Stöffelmaus-Tour: Rund um die Stöffelmaus unterwegs in wunderbaren Landschaften","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330967&project=oar-rlp","dateiname":"rundradwege-25-stoeffelmaus-tour-rund-um-die-stoeffelmaus-unterwegs-in.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":25,"id":"14330848","titel":"Bahntrassen-Tour: von Bad Marienberg ins schöne Nistertal","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330848&project=oar-rlp","dateiname":"rundradwege-26-bahntrassen-tour-von-bad-marienberg-ins-schoene-nistert.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":26,"id":"55560657","titel":"Altenkirchen - AK-Radtour 4 \"Blick über Altenkirchen\"","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55560657&project=oar-rlp","dateiname":"rundradwege-27-altenkirchen-ak-radtour-4-blick-ueber-altenkirchen.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":27,"id":"56042769","titel":"WällerLand-Manöver: In reizvollen Schleifen durch das Wäller Land","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=56042769&project=oar-rlp","dateiname":"rundradwege-28-waellerland-manoever-in-reizvollen-schleifen-durch-das.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":28,"id":"14330853","titel":"Fuchskauten Tour","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330853&project=oar-rlp","dateiname":"rundradwege-29-fuchskauten-tour.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":29,"id":"24343803","titel":"Buchfinken-Gelbach-Tour (XII): bezaubernde Region zwischen Buchfinkenlandschaft und Gelbachtal","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=24343803&project=oar-rlp","dateiname":"rundradwege-30-buchfinken-gelbach-tour-xii-bezaubernde-region-zwischen.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":30,"id":"55667781","titel":"Hilgenroth - AK-Radtour 6 \"Am höchsten Punkt\"","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=55667781&project=oar-rlp","dateiname":"rundradwege-31-hilgenroth-ak-radtour-6-am-hoechsten-punkt.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":31,"id":"14330943","titel":"Kleine Nister-Tour: Waldreiche Tour und malerische Orte im Gebiet der Kleinen Nister","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330943&project=oar-rlp","dateiname":"rundradwege-32-kleine-nister-tour-waldreiche-tour-und-malerische-orte.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":32,"id":"801446956","titel":"Raiffeisen-Runde","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=801446956&project=oar-rlp","dateiname":"rundradwege-33-raiffeisen-runde.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":33,"id":"800044407","titel":"Höferadeln ab Altenkirchen (Westerwald)","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=800044407&project=oar-rlp","dateiname":"rundradwege-34-hoeferadeln-ab-altenkirchen-westerwald.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":34,"id":"804371983","titel":"Familien-Radtour in der Verbandsgemeinde Asbach","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=804371983&project=oar-rlp","dateiname":"rundradwege-35-familien-radtour-in-der-verbandsgemeinde-asbach.gpx"},{"typ":"rad","gruppe":"rundradwege","idx":35,"id":"800723937","titel":"Mit dem Bike durch \"Licht und Schatten rund um Selters\"","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=800723937&project=oar-rlp","dateiname":"rundradwege-36-mit-dem-bike-durch-licht-und-schatten-rund-um-selters.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":0,"id":"7751131","titel":"Auf dem Wied-Radweg durch herrliche Flusstäler radeln","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=7751131&project=oar-rlp","dateiname":"streckenradwege-01-auf-dem-wied-radweg-durch-herrliche-flusstaeler-radeln.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":1,"id":"3417903","titel":"Nister-Radweg: eine reizvolle Tour von der Quelle bis zur Mündung","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417903&project=oar-rlp","dateiname":"streckenradwege-02-nister-radweg-eine-reizvolle-tour-von-der-quelle-bis-zu.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":2,"id":"3417754","titel":"Radtour Südlicher Westerwald: eine schöne Fahrt für Anspruchsvolle","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417754&project=oar-rlp","dateiname":"streckenradwege-03-radtour-suedlicher-westerwald-eine-schoene-fahrt-fuer-a.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":3,"id":"8485669","titel":"Auf der Westerwaldschleife in vier Etappen durch die Region","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=8485669&project=oar-rlp","dateiname":"streckenradwege-04-auf-der-westerwaldschleife-in-vier-etappen-durch-die-re.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":4,"id":"52014430","titel":"Westerwaldschleife: Linz/Rhein - Wissen/Sieg","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=52014430&project=oar-rlp","dateiname":"streckenradwege-05-westerwaldschleife-linz-rhein-wissen-sieg.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":5,"id":"52014967","titel":"Westerwaldschleife: Wissen - Daaden","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=52014967&project=oar-rlp","dateiname":"streckenradwege-06-westerwaldschleife-wissen-daaden.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":6,"id":"52015426","titel":"Westerwaldschleife: Daaden - Wiesensee","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=52015426&project=oar-rlp","dateiname":"streckenradwege-07-westerwaldschleife-daaden-wiesensee.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":7,"id":"52015751","titel":"Westerwaldschleife: Wiesensee - Diez","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=52015751&project=oar-rlp","dateiname":"streckenradwege-08-westerwaldschleife-wiesensee-diez.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":8,"id":"23396776","titel":"Anspruchsvoll und kurzweilig: unterwegs auf dem Rundradweg WW1","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=23396776&project=oar-rlp","dateiname":"streckenradwege-09-anspruchsvoll-und-kurzweilig-unterwegs-auf-dem-rundradw.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":9,"id":"50556855","titel":"WW1: Fuchskaute - Hachenburg","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=50556855&project=oar-rlp","dateiname":"streckenradwege-10-ww1-fuchskaute-hachenburg.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":10,"id":"50555237","titel":"WW1: Grenzau - Nomborn","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=50555237&project=oar-rlp","dateiname":"streckenradwege-11-ww1-grenzau-nomborn.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":11,"id":"50556453","titel":"WW1: Nomborn - Fuchskaute","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=50556453&project=oar-rlp","dateiname":"streckenradwege-12-ww1-nomborn-fuchskaute.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":12,"id":"50553586","titel":"WW1: Hachenburg - Grenzau","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=50553586&project=oar-rlp","dateiname":"streckenradwege-13-ww1-hachenburg-grenzau.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":13,"id":"3417720","titel":"Ruhr-Sieg-Radweg","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417720&project=oar-rlp","dateiname":"streckenradwege-14-ruhr-sieg-radweg.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":14,"id":"24196067","titel":"Mit dem Westerwald-Lahn-Radweg einmal quer durch die Region","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=24196067&project=oar-rlp","dateiname":"streckenradwege-15-mit-dem-westerwald-lahn-radweg-einmal-quer-durch-die-re.gpx"},{"typ":"rad","gruppe":"streckenradwege","idx":15,"id":"3417839","titel":"Westerwald-Rhein-Radweg: von der Kirchlinde bis zum Limes","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3417839&project=oar-rlp","dateiname":"streckenradwege-16-westerwald-rhein-radweg-von-der-kirchlinde-bis-zum-lime.gpx"},{"typ":"rad","gruppe":"gravelbike","idx":0,"id":"14417554","titel":"Hachenburger Westerwald: Abwechslungsreiche Rundtour","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14417554&project=oar-rlp","dateiname":"gravelbike-01-hachenburger-westerwald-abwechslungsreiche-rundtour.gpx"},{"typ":"rad","gruppe":"gravelbike","idx":1,"id":"14330701","titel":"Bad Marienberg-Tour: Abenteuer für Fortgeschrittene","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330701&project=oar-rlp","dateiname":"gravelbike-02-bad-marienberg-tour-abenteuer-fuer-fortgeschrittene.gpx"},{"typ":"rad","gruppe":"gravelbike","idx":2,"id":"37926269","titel":"Kannenbäckerland-Route: Abwechslung zwischen Töpfereien, Westerwälder Dom und Erlenhofsee","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=37926269&project=oar-rlp","dateiname":"gravelbike-03-kannenbaeckerland-route-abwechslung-zwischen-toepfereie.gpx"},{"typ":"rad","gruppe":"gravelbike","idx":3,"id":"14330853","titel":"Fuchskauten Tour","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14330853&project=oar-rlp","dateiname":"gravelbike-04-fuchskauten-tour.gpx"},{"typ":"rad","gruppe":"gravelbike","idx":4,"id":"14247866","titel":"Rund um den Knoten: malerische Fahrt durch typische Landschaften","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=14247866&project=oar-rlp","dateiname":"gravelbike-05-rund-um-den-knoten-malerische-fahrt-durch-typische-land.gpx"},{"typ":"rad","gruppe":"gravelbike","idx":5,"id":"67738080","titel":"Sechs-Bäche-Tour - Gravel & eMTB | Wiedtal-Westerwald","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=67738080&project=oar-rlp","dateiname":"gravelbike-06-sechs-baeche-tour-gravel-emtb-wiedtal-westerwald.gpx"},{"typ":"rad","gruppe":"gravelbike","idx":6,"id":"67738373","titel":"Schottern durchs Rengsdorfer Land - Gravel & eMTB | Wiedtal-Westerwald","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=67738373&project=oar-rlp","dateiname":"gravelbike-07-schottern-durchs-rengsdorfer-land-gravel-emtb-wiedtal-w.gpx"},{"typ":"rad","gruppe":"gravelbike","idx":7,"id":"807370581","titel":"Holy Gravel! - Gravel & eMTB | Wiedtal-Westerwald","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=807370581&project=oar-rlp","dateiname":"gravelbike-08-holy-gravel-gravel-emtb-wiedtal-westerwald.gpx"},{"typ":"rad","gruppe":"gravelbike","idx":8,"id":"807270910","titel":"WiedHeights - Gravel & eMTB | Wiedtal-Westerwald","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=807270910&project=oar-rlp","dateiname":"gravelbike-09-wiedheights-gravel-emtb-wiedtal-westerwald.gpx"},{"typ":"rad","gruppe":"mountainbike","idx":0,"id":"3234381","titel":"Hauptroute (A): sportliche Mountainbike-Tour mit kleineren sowie drei großen Anstiegen","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3234381&project=oar-rlp","dateiname":"mountainbike-01-hauptroute-a-sportliche-mountainbike-tour-mit-kleineren.gpx"},{"typ":"rad","gruppe":"mountainbike","idx":1,"id":"3234451","titel":"Füsseberg-Runde (B): auf der Einsteigertour durch den Nördlichen Westerwald","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3234451&project=oar-rlp","dateiname":"mountainbike-02-fuesseberg-runde-b-auf-der-einsteigertour-durch-den-noe.gpx"},{"typ":"rad","gruppe":"mountainbike","idx":2,"id":"3234466","titel":"Bergmannspfad (C): reizvolle Tour mit rund 100 Metern Höhenunterschied","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3234466&project=oar-rlp","dateiname":"mountainbike-03-bergmannspfad-c-reizvolle-tour-mit-rund-100-metern-hoeh.gpx"},{"typ":"rad","gruppe":"mountainbike","idx":3,"id":"3234473","titel":"Galgenkopf-Runde (D): sportliche Mountainbike-Herausforderung im Tierschutzgebiet Westerwald","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3234473&project=oar-rlp","dateiname":"mountainbike-04-galgenkopf-runde-d-sportliche-mountainbike-herausforder.gpx"},{"typ":"rad","gruppe":"mountainbike","idx":4,"id":"3234479","titel":"Scheuerberg-Schleife (E): herausfordernde Mountainbike-Tour durch den Wald südwestlich von Betzdorf","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=3234479&project=oar-rlp","dateiname":"mountainbike-05-scheuerberg-schleife-e-herausfordernde-mountainbike-tou.gpx"},{"typ":"rad","gruppe":"mountainbike","idx":5,"id":"67738080","titel":"Sechs-Bäche-Tour - Gravel & eMTB | Wiedtal-Westerwald","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=67738080&project=oar-rlp","dateiname":"mountainbike-06-sechs-baeche-tour-gravel-emtb-wiedtal-westerwald.gpx"},{"typ":"rad","gruppe":"mountainbike","idx":6,"id":"67738373","titel":"Schottern durchs Rengsdorfer Land - Gravel & eMTB | Wiedtal-Westerwald","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=67738373&project=oar-rlp","dateiname":"mountainbike-07-schottern-durchs-rengsdorfer-land-gravel-emtb-wiedtal-w.gpx"},{"typ":"rad","gruppe":"mountainbike","idx":7,"id":"807370581","titel":"Holy Gravel! - Gravel & eMTB | Wiedtal-Westerwald","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=807370581&project=oar-rlp","dateiname":"mountainbike-08-holy-gravel-gravel-emtb-wiedtal-westerwald.gpx"},{"typ":"rad","gruppe":"mountainbike","idx":8,"id":"807270910","titel":"WiedHeights - Gravel & eMTB | Wiedtal-Westerwald","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=807270910&project=oar-rlp","dateiname":"mountainbike-09-wiedheights-gravel-emtb-wiedtal-westerwald.gpx"},{"typ":"rad","gruppe":"rennrad","idx":0,"id":"18441102","titel":"Westerwälder Express-Runde","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=18441102&project=oar-rlp","dateiname":"rennrad-01-westerwaelder-express-runde.gpx"},{"typ":"rad","gruppe":"rennrad","idx":1,"id":"18441144","titel":"Westerwälder Seen-Runde","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=18441144&project=oar-rlp","dateiname":"rennrad-02-westerwaelder-seen-runde.gpx"},{"typ":"rad","gruppe":"rennrad","idx":2,"id":"18441150","titel":"Westerwälder Klassiker-Runde","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=18441150&project=oar-rlp","dateiname":"rennrad-03-westerwaelder-klassiker-runde.gpx"},{"typ":"rad","gruppe":"rennrad","idx":3,"id":"18741156","titel":"Westerwälder Feierabend-Runde","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=18741156&project=oar-rlp","dateiname":"rennrad-04-westerwaelder-feierabend-runde.gpx"},{"typ":"rad","gruppe":"rennrad","idx":4,"id":"18830570","titel":"Westerwälder Stadt-Land-Klosterrunde","gpxUrl":"https://www.tourenplaner-rheinland-pfalz.de/de/download.tour.gpx?i=18830570&project=oar-rlp","dateiname":"rennrad-05-westerwaelder-stadt-land-klosterrunde.gpx"}];
+var abbruch = false;
+
+function setzeStatus(i, txt, klasse) {
+  var el = document.getElementById('status-' + i);
+  el.textContent = txt;
+  el.className = 'status status-' + klasse;
+}
+
+function downloadEinzeln(eintrag, idx) {
+  setzeStatus(idx, 'Starte…', 'lade');
+  return new Promise(function(resolve) {
+    try {
+      // Browser-Navigation per <a download> erzwingt einen "Speichern unter"-
+      // Workflow, der CORS NICHT prüft (anders als fetch). Der Tourenplaner
+      // liefert die Datei aus, der Browser speichert sie unter unserem Namen.
+      //
+      // Wichtig: Das funktioniert nur, wenn der Server NICHT Content-Disposition
+      // mit einem anderen Dateinamen sendet. Tourenplaner-RLP sendet GPX als
+      // Stream, daher greift unser download-Attribut.
+      var a = document.createElement('a');
+      a.href = eintrag.gpxUrl;
+      a.download = eintrag.dateiname;
+      a.rel = 'noopener';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setzeStatus(idx, '✓ Gesendet', 'ok');
+      resolve(true);
+    } catch (e) {
+      setzeStatus(idx, '✗ ' + e.message, 'fehler');
+      resolve(false);
+    }
+  });
+}
+
+async function starteDownload() {
+  abbruch = false;
+  document.getElementById('btn-start').disabled = true;
+  document.getElementById('btn-stop').disabled = false;
+  var ok = 0, fehler = 0;
+  for (var i = 0; i < MAPPING.length; i++) {
+    if (abbruch) break;
+    var erfolg = await downloadEinzeln(MAPPING[i], i);
+    if (erfolg) ok++; else fehler++;
+    document.getElementById('progress').textContent =
+      (i+1) + ' / ' + MAPPING.length + ' angestoßen · ' + ok + ' OK · ' + fehler + ' Fehler';
+    document.getElementById('progress-bar').style.width = ((i+1)*100/MAPPING.length) + '%';
+    // 2000ms Pause damit der Server und der Browser nicht überrannt werden
+    await new Promise(function(r) { setTimeout(r, 2000); });
+  }
+  document.getElementById('btn-start').disabled = false;
+  document.getElementById('btn-stop').disabled = true;
+  document.getElementById('progress').textContent =
+    'Fertig: ' + ok + ' von ' + MAPPING.length + ' Downloads angestoßen. ' + fehler + ' Fehler. Prüfe deinen Download-Ordner.';
+}
+</script>
+</body>
+</html>

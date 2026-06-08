@@ -1,0 +1,26 @@
+/* E-Bike Infrastruktur – Verleih, Werkstätten, Akku-Wechselstationen */
+var DATA_EBIKE_INFRASTRUKTUR = [
+{id:1, type:"Fahrradverleih", name:"E-Bike Verleih: Zweirad Schnell", ort:"Hachenburg", address:"Koblenzer Stra\u00dfe 38a, 57627 Hachenburg"},
+{id:2, type:"E-Bike/Pedelec Akku-Wechselstation", name:"Ladestation f\u00fcr E-Bikes und Pedelecs", ort:"Rennerod", address:"Verbandsgemeindeverwaltung Rennerod"},
+{id:3, type:"E-Bike/Pedelec Akku-Wechselstation", name:"Ladestationen f\u00fcr e-Bikes und Pedelecs Rathaus", ort:"Haiger", address:"Vor dem Rathaus in Haiger"},
+{id:4, type:"E-Bike/Pedelec Akku-Wechselstation", name:"E Bike Ladestation Steimel", ort:"Steimel", address:null},
+{id:5, type:"Campingplatz", name:"Camping Im Eichenwald", ort:"Mittelhof", address:null},
+{id:6, type:"Fahrradreparatur", name:"Bikesport Meyer", ort:"Daaden", address:null},
+{id:7, type:"E-Bike/Pedelec Akku-Wechselstation", name:"E-Bike Ladestation am Dorfgemeinschaftshaus", ort:"Giesenhausen", address:"Hauptstra\u00dfe 22, 57612 Giesenhausen"},
+{id:8, type:"Fahrradreparatur", name:"Fahrrad-Reparaturstation am Dreifelder Weiher", ort:"Steinebach/Wied", address:"Haus am See, Seeburger Stra\u00dfe 1"},
+{id:9, type:"E-Bike/Pedelec Akku-Wechselstation", name:"E Bike Ladestation Puderbach", ort:"Puderbach", address:null},
+{id:10, type:"E-Bike/Pedelec Akku-Wechselstation", name:"E Bike Ladestation Raubach", ort:"Raubach", address:null},
+{id:11, type:"Gesch\u00e4fte/Shops", name:"W\u00e4ller Sport - Der HAMMER in Altenkirchen", ort:"Altenkirchen", address:"Sportfachh\u00e4ndler am Westerwaldsteig"},
+{id:12, type:"Gesch\u00e4fte/Shops", name:"Tretm\u00fchle Betzdorf", ort:"Betzdorf", address:null},
+{id:13, type:"E-Bike- und Pedelec-Stationen", name:"E-Bike Ladestation an der Tourist-Information", ort:"Hachenburg", address:"Alter Markt 4-6, 57627 Hachenburg"},
+{id:14, type:"E-Bike/Pedelec Akku-Wechselstation", name:"E Bike Ladestation D\u00f6ttesfeld", ort:"D\u00f6ttesfeld", address:null},
+{id:15, type:"E-Bike/Pedelec Akku-Wechselstation", name:"E-Bike Ladestation an der Verbandsgemeinde", ort:"Hachenburg", address:"Gartenstra\u00dfe 11, 57627 Hachenburg"},
+{id:16, type:"Gesch\u00e4fte/Shops", name:"Tretm\u00fchle Wissen", ort:"Wissen", address:null},
+{id:17, type:"Fahrradreparatur", name:"Fahrrad-Reparaturstation am Wilhelmsteg", ort:"Heuzert", address:"Wilhelmsteg 1, 57627 Heuzert"},
+{id:18, type:"E-Bike/Pedelec Akku-Wechselstation", name:"E Bike Ladestation Urbach", ort:"Urbach", address:null},
+{id:19, type:"E-Bike/Pedelec Akku-Wechselstation", name:"E-Bike Ladestation am Hotel Hammerm\u00fchle", ort:"Wahlrod", address:"Hammerm\u00fchle 1, 57614 Wahlrod"},
+{id:20, type:"E-Bike/Pedelec Akku-Wechselstation", name:"Akkuwechselstation Hotel-Restaurant Im Heisterholz", ort:"Hammelzen", address:null},
+{id:21, type:"Gesch\u00e4fte/Shops", name:"Zweiradhaus K\u00e4mpflein", ort:"Daaden", address:null},
+{id:22, type:"E-Bike/Pedelec Akku-Wechselstation", name:"Ladestation f\u00fcr e-Bikes und Pedelecs", ort:"Neustadt/Wied", address:null},
+{id:23, type:"E-Bike/Pedelec Akku-Wechselstation", name:"Ladestation f\u00fcr e-Bikes und Pedelecs", ort:"Selters", address:null}
+];
