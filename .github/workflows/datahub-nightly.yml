@@ -143,5 +143,16 @@ jobs:
             echo "Keine Aenderungen -- nichts zu committen."
           else
             git commit -m "chore: DataHub-Daten aktualisiert ($(date +%Y-%m-%d))"
-            git push
+            # Push mit Retry: Wenn waehrend des Workflow-Laufs (kann 2-3 Std
+            # dauern) auf main weitergepusht wurde, rebase und nochmal pushen.
+            for versuch in 1 2 3 4 5; do
+              if git push; then
+                echo "Push erfolgreich (Versuch $versuch)."
+                break
+              fi
+              echo "Push abgelehnt (Versuch $versuch) -- hole Remote-Stand mit pull --rebase ..."
+              git pull --rebase origin main
+              sleep 5
+            done
           fi
+
