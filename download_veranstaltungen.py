@@ -134,7 +134,9 @@ def main():
             if status == 200 and daten is not None:
                 with open(ziel, "w", encoding="utf-8") as f:
                     json.dump(daten, f, ensure_ascii=False, indent=2)
-                anz = len(daten.get("data", []))
+                # Die Veranstaltungs-API liefert JSON-LD-Format mit '@graph'
+                # (nicht JSON:API mit 'data' wie die anderen Endpoints!).
+                anz = len(daten.get("@graph", []) or daten.get("data", []))
                 groesse_kb = os.path.getsize(ziel) // 1024
                 print(f"OK ({anz} Eintraege, {groesse_kb} KB)")
                 erfolgreich += 1
