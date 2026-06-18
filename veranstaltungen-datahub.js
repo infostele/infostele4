@@ -1,7 +1,7 @@
 /* ================================================================
    Veranstaltungen aus DataHub RLP (dataCycle)
    Quelle: gespeicherte Suche gmw-veranstaltungen-ww
-   Generiert: 18.06.2026 09:26
+   Generiert: 18.06.2026 12:00
    Eintraege: 3673 (nur zukuenftige Termine ab 18.06.2026)
    ================================================================ */
 
