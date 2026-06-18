@@ -82,6 +82,13 @@ jobs:
           DATAHUB_PASS:  ${{ secrets.DATAHUB_PASS }}
         run: python download_wandertouren.py
 
+        - name: Druidensteig herunterladen (Etappen + Gesamtroute)
+        env:
+          DATAHUB_TOKEN: ${{ secrets.DATAHUB_TOKEN }}
+          DATAHUB_USER:  ${{ secrets.DATAHUB_USER }}
+          DATAHUB_PASS:  ${{ secrets.DATAHUB_PASS }}
+        run: python download_druidensteig.py
+
       - name: Radtouren herunterladen
         env:
           DATAHUB_TOKEN: ${{ secrets.DATAHUB_TOKEN }}
