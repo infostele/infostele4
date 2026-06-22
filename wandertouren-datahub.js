@@ -1,6 +1,6 @@
 // ════════════════════════════════════════════════════════════════
 // AUTO-GENERIERT von build_wandertouren.py — nicht von Hand editieren!
-// Stand: 2026-06-21T09:16:59
+// Stand: 2026-06-22T09:39:43
 // Quelle: DataHub RLP, gespeicherte Suche 'gmw-wandertouren-ww'
 // Anzahl Touren: 207
 // ════════════════════════════════════════════════════════════════
