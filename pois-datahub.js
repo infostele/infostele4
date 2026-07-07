@@ -1,6 +1,6 @@
 // ════════════════════════════════════════════════════════════════
 // AUTO-GENERIERT von build_pois.py — nicht von Hand editieren!
-// Stand: 2026-07-06T08:46:33
+// Stand: 2026-07-07T08:48:23
 // Quelle: DataHub RLP, gespeicherte Suche 'gmw-pois-ww'
 // Anzahl POIs: 1534
 // ════════════════════════════════════════════════════════════════
