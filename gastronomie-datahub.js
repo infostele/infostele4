@@ -1,6 +1,6 @@
 // ════════════════════════════════════════════════════════════════
 // AUTO-GENERIERT — nicht von Hand editieren!
-// Stand: 2026-08-09T06:08:05
+// Stand: 2026-08-10T06:21:52
 // Quelle: DataHub RLP, gespeicherte Suche 'gmw-unterkuenfte-ww'
 // Anzahl Unterkuenfte: 603
 // ════════════════════════════════════════════════════════════════
