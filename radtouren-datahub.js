@@ -1,6 +1,6 @@
 // ════════════════════════════════════════════════════════════════
 // AUTO-GENERIERT von build_radtouren.py — nicht von Hand editieren!
-// Stand: 2026-11-27T12:55:47
+// Stand: 2026-11-28T12:11:17
 // Quelle: DataHub RLP, gespeicherte Suche 'gmw-radtouren-ww'
 // Anzahl Radtouren: 87
 // ════════════════════════════════════════════════════════════════
